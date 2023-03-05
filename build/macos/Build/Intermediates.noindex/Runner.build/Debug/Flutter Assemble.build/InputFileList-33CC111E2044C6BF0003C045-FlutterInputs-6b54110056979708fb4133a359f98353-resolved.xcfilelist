@@ -167,11 +167,11 @@
 /Users/gimjeonghun/.pub-cache/hosted/pub.dev/vector_math-2.1.4/lib/src/vector_math_64/vector3.dart
 /Users/gimjeonghun/.pub-cache/hosted/pub.dev/vector_math-2.1.4/lib/src/vector_math_64/vector4.dart
 /Users/gimjeonghun/.pub-cache/hosted/pub.dev/vector_math-2.1.4/lib/vector_math_64.dart
-/Users/gimjeonghun/.pub-cache/hosted/pub.dev/video_player-2.5.1/LICENSE
-/Users/gimjeonghun/.pub-cache/hosted/pub.dev/video_player-2.5.1/lib/src/closed_caption_file.dart
-/Users/gimjeonghun/.pub-cache/hosted/pub.dev/video_player-2.5.1/lib/src/sub_rip.dart
-/Users/gimjeonghun/.pub-cache/hosted/pub.dev/video_player-2.5.1/lib/src/web_vtt.dart
-/Users/gimjeonghun/.pub-cache/hosted/pub.dev/video_player-2.5.1/lib/video_player.dart
+/Users/gimjeonghun/.pub-cache/hosted/pub.dev/video_player-2.4.10/LICENSE
+/Users/gimjeonghun/.pub-cache/hosted/pub.dev/video_player-2.4.10/lib/src/closed_caption_file.dart
+/Users/gimjeonghun/.pub-cache/hosted/pub.dev/video_player-2.4.10/lib/src/sub_rip.dart
+/Users/gimjeonghun/.pub-cache/hosted/pub.dev/video_player-2.4.10/lib/src/web_vtt.dart
+/Users/gimjeonghun/.pub-cache/hosted/pub.dev/video_player-2.4.10/lib/video_player.dart
 /Users/gimjeonghun/.pub-cache/hosted/pub.dev/video_player_android-2.3.10/LICENSE
 /Users/gimjeonghun/.pub-cache/hosted/pub.dev/video_player_android-2.3.10/lib/src/android_video_player.dart
 /Users/gimjeonghun/.pub-cache/hosted/pub.dev/video_player_android-2.3.10/lib/src/messages.g.dart
@@ -191,6 +191,8 @@
 /Users/gimjeonghun/.pub-cache/hosted/pub.dev/visibility_detector-0.3.3/lib/src/visibility_detector_layer.dart
 /Users/gimjeonghun/.pub-cache/hosted/pub.dev/visibility_detector-0.3.3/lib/visibility_detector.dart
 /Users/gimjeonghun/Documents/GitHub/tiktok_clone/LICENSE
+/Users/gimjeonghun/Documents/GitHub/tiktok_clone/assets/images/placeholder.jpg
+/Users/gimjeonghun/Documents/GitHub/tiktok_clone/assets/videos/video.mp4
 /Users/gimjeonghun/Documents/GitHub/tiktok_clone/lib/constants/breakpoints.dart
 /Users/gimjeonghun/Documents/GitHub/tiktok_clone/lib/constants/gaps.dart
 /Users/gimjeonghun/Documents/GitHub/tiktok_clone/lib/constants/sizes.dart
