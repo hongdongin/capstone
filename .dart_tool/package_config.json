@@ -206,13 +206,19 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "visibility_detector",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/visibility_detector-0.3.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "tiktok_clone",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-03-06T17:20:21.953913Z",
+  "generated": "2023-03-07T11:51:16.593743Z",
   "generator": "pub",
   "generatorVersion": "2.19.2"
 }
