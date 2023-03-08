@@ -30,7 +30,9 @@ class _VideoPostState extends State<VideoPost>
   late final AnimationController _animationController;
 
   bool _isPaused = false;
-  final TextOverflow _textOverflow = TextOverflow.ellipsis;
+  bool _lengthCheck = false;
+
+  final String _inputText = "This is the flight to Gimpo.";
 
   void _onVideoChange() {
     if (_videoPlayerController.value.isInitialized) {
@@ -85,6 +87,18 @@ class _VideoPostState extends State<VideoPost>
     setState(() {
       _isPaused = !_isPaused;
     });
+  }
+
+  void _onTapMore() {
+    setState(() {
+      _lengthCheck = !_lengthCheck;
+    });
+  }
+
+  String _checkLength() {
+    return _inputText.length > 25
+        ? "${_inputText.substring(0, 25)} ..."
+        : _inputText;
   }
 
   @override
@@ -146,26 +160,22 @@ class _VideoPostState extends State<VideoPost>
                 Gaps.v10,
                 Row(
                   children: [
-                    SizedBox(
-                      width: 200,
-                      child: Text(
-                        overflow: _textOverflow,
-                        maxLines: 1,
-                        "This is the flight to Gimpo.1111111111111111",
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: Sizes.size16,
-                        ),
+                    Text(
+                      _lengthCheck ? _inputText : _checkLength(),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: Sizes.size16,
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {},
-                      child: const Text(
-                        "more",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: Sizes.size16,
-                            fontWeight: FontWeight.bold),
+                      onTap: _onTapMore,
+                      child: Text(
+                        _lengthCheck ? "Close" : "more",
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: Sizes.size18,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ],
