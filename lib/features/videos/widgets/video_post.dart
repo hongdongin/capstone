@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 import 'package:tiktok_clone/features/videos/widgets/event_button.dart';
+import 'package:tiktok_clone/features/videos/widgets/video_comments.dart';
 import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
@@ -71,8 +72,13 @@ class _VideoPostState extends State<VideoPost>
   }
 
   void _onVisibilityChanged(VisibilityInfo info) {
-    if (info.visibleFraction == 1 && !_videoPlayerController.value.isPlaying) {
+    if (info.visibleFraction == 1 &&
+        !_isPaused &&
+        !_videoPlayerController.value.isPlaying) {
       _videoPlayerController.play();
+    }
+    if (_videoPlayerController.value.isPlaying && info.visibleFraction == 0) {
+      _onTogglePause();
     }
   }
 
@@ -99,6 +105,22 @@ class _VideoPostState extends State<VideoPost>
     return _inputText.length > 25
         ? "${_inputText.substring(0, 25)} ..."
         : _inputText;
+  }
+
+  void _onCommentsTap(BuildContext context) async {
+    if (_videoPlayerController.value.isPlaying) {
+      _onTogglePause();
+    }
+    await showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(Sizes.size18),
+      ),
+      builder: (context) => const VideoComments(),
+    );
+    _onTogglePause();
   }
 
   @override
@@ -187,8 +209,8 @@ class _VideoPostState extends State<VideoPost>
             bottom: 20,
             right: 20,
             child: Column(
-              children: const [
-                CircleAvatar(
+              children: [
+                const CircleAvatar(
                   radius: 25,
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,
@@ -197,17 +219,20 @@ class _VideoPostState extends State<VideoPost>
                   child: Text("nara"),
                 ),
                 Gaps.v24,
-                EventButton(
+                const EventButton(
                   icon: FontAwesomeIcons.solidHeart,
                   text: "2.9M",
                 ),
                 Gaps.v24,
-                EventButton(
-                  icon: FontAwesomeIcons.solidComment,
-                  text: "3.3K",
+                GestureDetector(
+                  onTap: () => _onCommentsTap(context),
+                  child: const EventButton(
+                    icon: FontAwesomeIcons.solidComment,
+                    text: "3.3K",
+                  ),
                 ),
                 Gaps.v24,
-                EventButton(
+                const EventButton(
                   icon: FontAwesomeIcons.share,
                   text: "share",
                 ),
