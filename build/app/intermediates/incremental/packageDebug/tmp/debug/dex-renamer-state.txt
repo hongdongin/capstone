@@ -1,4 +1,4 @@
-#Sat Jan 28 16:01:36 KST 2023
+#Mon Mar 13 10:48:01 KST 2023
 base.0=/Users/gimjeonghun/Documents/GitHub/tiktok_clone/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
