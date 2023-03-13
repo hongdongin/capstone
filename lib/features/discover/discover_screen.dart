@@ -41,6 +41,14 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
     });
   }
 
+  void _indexChanged(int n) {
+    if (tabs[n].isNotEmpty) {
+      setState(() {
+        FocusScope.of(context).unfocus();
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -57,6 +65,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
               onSubmitted: _onSubmitted,
             ),
             bottom: TabBar(
+              onTap: _indexChanged,
               splashFactory: NoSplash.splashFactory,
               padding: const EdgeInsets.symmetric(horizontal: Sizes.size16),
               isScrollable: true,
