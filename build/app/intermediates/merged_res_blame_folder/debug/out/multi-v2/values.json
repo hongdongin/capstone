@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/gimjeonghun/Documents/GitHub/tiktok_clone/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/gimjeonghun/Documents/GitHub/capstone/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/Users/gimjeonghun/.gradle/caches/transforms-3/6ec2c823b2ddfa9d4aff16fd99b56b89/transformed/jetified-exoplayer-core-2.18.1/res/values/values.xml",
@@ -40,6 +40,25 @@
                     }
                 },
                 {
+                    "source": "/Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "173,818",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "476,982"
+                    },
+                    "to": {
+                        "startLines": "103,108",
+                        "startColumns": "4,4",
+                        "startOffsets": "6151,6459",
+                        "endLines": "107,110",
+                        "endColumns": "12,12",
+                        "endOffsets": "6454,6623"
+                    }
+                },
+                {
                     "source": "/Users/gimjeonghun/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/res/values/values.xml",
                     "from": {
                         "startLines": "2,7,8,9,10,11,19,23,34,51",
@@ -56,25 +75,6 @@
                         "endLines": "7,8,9,10,72,131,135,287,304,312",
                         "endColumns": "11,59,51,44,59,24,24,24,24,24",
                         "endOffsets": "289,349,401,446,4387,7938,8135,17257,18371,18764"
-                    }
-                },
-                {
-                    "source": "/Users/gimjeonghun/Documents/GitHub/tiktok_clone/android/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "173,818",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "476,982"
-                    },
-                    "to": {
-                        "startLines": "103,108",
-                        "startColumns": "4,4",
-                        "startOffsets": "6151,6459",
-                        "endLines": "107,110",
-                        "endColumns": "12,12",
-                        "endOffsets": "6454,6623"
                     }
                 },
                 {

@@ -135,33 +135,35 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                           color: Colors.grey.shade600,
                           fontWeight: FontWeight.bold,
                         ),
-                        child: Row(
-                          children: [
-                            const CircleAvatar(
-                              radius: 12,
-                              backgroundImage: NetworkImage(
-                                "https://p.kakaocdn.net/th/talkp/wl4bsCBor2/896IHydowqOQbAUgmxFOX0/josobb_110x110_c.jpg",
+                        child: Expanded(
+                          child: Row(
+                            children: [
+                              const CircleAvatar(
+                                radius: 12,
+                                backgroundImage: NetworkImage(
+                                  "https://p.kakaocdn.net/th/talkp/wl4bsCBor2/896IHydowqOQbAUgmxFOX0/josobb_110x110_c.jpg",
+                                ),
                               ),
-                            ),
-                            Gaps.h4,
-                            const Expanded(
-                              child: Text(
-                                "this is a very long caption for my tiktok that im upload just now currently.",
-                                overflow: TextOverflow.ellipsis,
-                                maxLines: 1,
+                              Gaps.h4,
+                              const Expanded(
+                                child: Text(
+                                  "this is a very long caption for my tiktok that im upload just now currently.",
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 1,
+                                ),
                               ),
-                            ),
-                            Gaps.h4,
-                            FaIcon(
-                              FontAwesomeIcons.heart,
-                              size: Sizes.size16,
-                              color: Colors.grey.shade600,
-                            ),
-                            Gaps.h2,
-                            const Text(
-                              "2.5M",
-                            ),
-                          ],
+                              Gaps.h4,
+                              FaIcon(
+                                FontAwesomeIcons.heart,
+                                size: Sizes.size16,
+                                color: Colors.grey.shade600,
+                              ),
+                              Gaps.h2,
+                              const Text(
+                                "2.5M",
+                              ),
+                            ],
+                          ),
                         ),
                       )
                     ],

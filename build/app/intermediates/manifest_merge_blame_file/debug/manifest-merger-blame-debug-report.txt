@@ -13,8 +13,8 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->/Users/gimjeonghun/Documents/GitHub/tiktok_clone/android/app/src/debug/AndroidManifest.xml:7:5-66
-15-->/Users/gimjeonghun/Documents/GitHub/tiktok_clone/android/app/src/debug/AndroidManifest.xml:7:22-64
+15-->/Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/debug/AndroidManifest.xml:7:5-66
+15-->/Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/debug/AndroidManifest.xml:7:22-64
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 16-->[com.google.android.exoplayer:exoplayer-core:2.18.1] /Users/gimjeonghun/.gradle/caches/transforms-3/6ec2c823b2ddfa9d4aff16fd99b56b89/transformed/jetified-exoplayer-core-2.18.1/AndroidManifest.xml:24:5-79
 16-->[com.google.android.exoplayer:exoplayer-core:2.18.1] /Users/gimjeonghun/.gradle/caches/transforms-3/6ec2c823b2ddfa9d4aff16fd99b56b89/transformed/jetified-exoplayer-core-2.18.1/AndroidManifest.xml:24:22-76
