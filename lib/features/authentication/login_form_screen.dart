@@ -73,6 +73,7 @@ class _LoginFormScreenState extends State<LoginFormScreen> {
               ),
               Gaps.v16,
               TextFormField(
+                obscureText: true,
                 decoration: InputDecoration(
                   hintText: 'Password',
                   enabledBorder: UnderlineInputBorder(

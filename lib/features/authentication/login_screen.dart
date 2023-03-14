@@ -32,7 +32,7 @@ class LoginScreen extends StatelessWidget {
             children: [
               Gaps.v80,
               const Text(
-                "Log in to TikTok",
+                "Log in to P.M.",
                 style: TextStyle(
                   fontSize: Sizes.size24,
                   fontWeight: FontWeight.w700,
@@ -54,11 +54,6 @@ class LoginScreen extends StatelessWidget {
                   icon: FaIcon(FontAwesomeIcons.user),
                   text: "Use email & password",
                 ),
-              ),
-              Gaps.v16,
-              const AuthButton(
-                icon: FaIcon(FontAwesomeIcons.apple),
-                text: "Continue with Apple",
               ),
             ],
           ),

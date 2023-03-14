@@ -38,7 +38,7 @@ class SignUpScreen extends StatelessWidget {
             children: [
               Gaps.v80,
               const Text(
-                "Sign up for TikTok",
+                "Sign up for P.M.",
                 style: TextStyle(
                   fontSize: Sizes.size24,
                   fontWeight: FontWeight.w700,
@@ -60,11 +60,6 @@ class SignUpScreen extends StatelessWidget {
                   icon: FaIcon(FontAwesomeIcons.user),
                   text: "Use email & password",
                 ),
-              ),
-              Gaps.v16,
-              const AuthButton(
-                icon: FaIcon(FontAwesomeIcons.apple),
-                text: "Continue with Apple",
               ),
             ],
           ),
