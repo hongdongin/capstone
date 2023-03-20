@@ -46,7 +46,11 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
+<<<<<<< Updated upstream
 		iZZSVwUWrkP2kqJJLbCpHTYJymc=
+=======
+		2Jro8P5efDBn19y0pyGx4ncbppQ=
+>>>>>>> Stashed changes
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,7 +58,11 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
+<<<<<<< Updated upstream
 		jlUMnY4LcRXuG4ua/NYjA9zZCTY=
+=======
+		csEpMG5BvmBfA6RxGiPnrQ4EibY=
+>>>>>>> Stashed changes
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
@@ -86,7 +94,11 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
+<<<<<<< Updated upstream
 		cmn3A+NG0dDqmPQUv6KMvoes2WI=
+=======
+		5xXG+kGkmX0Tl9M621y0cp6E6n8=
+>>>>>>> Stashed changes
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -114,7 +126,11 @@
 		</data>
 		<key>Frameworks/FBLPromises.framework/FBLPromises</key>
 		<data>
+<<<<<<< Updated upstream
 		lZLlYU0qAlUeWJG1tY4KdOzs0Ic=
+=======
+		qEMTypYVxScsUQc0Mpm2ab9bC+0=
+>>>>>>> Stashed changes
 		</data>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
 		<data>
@@ -126,7 +142,11 @@
 		</data>
 		<key>Frameworks/FirebaseCore.framework/FirebaseCore</key>
 		<data>
+<<<<<<< Updated upstream
 		C2MQiHsrWIAptrNhCvmg9A+/emQ=
+=======
+		5lEAhwVvnTSwtFl/7hIVbokrO/U=
+>>>>>>> Stashed changes
 		</data>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
 		<data>
@@ -138,7 +158,11 @@
 		</data>
 		<key>Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal</key>
 		<data>
+<<<<<<< Updated upstream
 		A5Z9FF2YbM/JQK+XeDK6R27QLRw=
+=======
+		HJ33WIzrwcJ76+4MsmcA5pCpWAw=
+>>>>>>> Stashed changes
 		</data>
 		<key>Frameworks/FirebaseCoreInternal.framework/Info.plist</key>
 		<data>
@@ -234,7 +258,11 @@
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities</key>
 		<data>
+<<<<<<< Updated upstream
 		EHt0yjw95dSbDYw2bbtdGyMZLto=
+=======
+		imBCKo1T/L627HNQiwrCybrJY7c=
+>>>>>>> Stashed changes
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
 		<data>
@@ -254,7 +282,11 @@
 		</data>
 		<key>Frameworks/path_provider_foundation.framework/path_provider_foundation</key>
 		<data>
+<<<<<<< Updated upstream
 		erxM23IrJ5A5ktnOKC0rfbHpZWc=
+=======
+		62n32bDhoU3TFjKQWRYGGUQJnGc=
+>>>>>>> Stashed changes
 		</data>
 		<key>Frameworks/video_player_avfoundation.framework/Info.plist</key>
 		<data>
@@ -266,7 +298,11 @@
 		</data>
 		<key>Frameworks/video_player_avfoundation.framework/video_player_avfoundation</key>
 		<data>
+<<<<<<< Updated upstream
 		ESNrFUYVIDHoB5g3B+HKj36Kpgo=
+=======
+		QpphIVuF8pRCZmo+Tsjauindezw=
+>>>>>>> Stashed changes
 		</data>
 		<key>GoogleService-Info.plist</key>
 		<data>
@@ -274,7 +310,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
+<<<<<<< Updated upstream
 		MyDOT/lgGNAdXay5r09jaAHCgGE=
+=======
+		1/zyBT0AowW0LqlqnLnDJlL1qYQ=
+>>>>>>> Stashed changes
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -357,7 +397,11 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< Updated upstream
 			VhmdMZf2wY/+Erof3jFapCW1nEggPKTdn6za4nERqb4=
+=======
+			9UEJ6GKOpAIPAqNF3OyHD6kW4WEqRVdWSslvZYeRW0I=
+>>>>>>> Stashed changes
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -371,7 +415,11 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< Updated upstream
 			ZgexoDaiY1/JFXkZq0SB7QoDaTLdjVpQ/0L8Je9P35w=
+=======
+			LcndMeTDXPaNBTqR/0gqrQZCh1EpOEnInuUibIzZnVg=
+>>>>>>> Stashed changes
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
@@ -427,7 +475,11 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< Updated upstream
 			rAlYT4c1q55GBo27L1doaHROH/EKAql0hjmkUHtzcDU=
+=======
+			fgPegphtz3BDjuXHIP2zHHL8R8T6dk1t8Od2/bKi934=
+>>>>>>> Stashed changes
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -476,7 +528,11 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< Updated upstream
 			UJear53xjjAmqsApE7jExEUv6Bo8I1DTFVx1Qowj5yA=
+=======
+			+xXivuoLlDtcRCx+9hWsAva1vW1oo4EbaZByZwgVZAo=
+>>>>>>> Stashed changes
 			</data>
 		</dict>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
@@ -497,7 +553,11 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< Updated upstream
 			50SZjw1OWcMmhziSeH5bBHVU4cxmAHZzyRvzUbRk3JA=
+=======
+			xJOSsrWtE0TiB1Pl4gic7kMSlLaynw3JLnzhqAipBhc=
+>>>>>>> Stashed changes
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
@@ -518,7 +578,11 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< Updated upstream
 			F5aKXp1RIflXEN9Jgax9CnYH4W1Rqif+viIc8EEEvPI=
+=======
+			mvH+GHS9fKNDYtssnLigbVUXSrz2Z8MJCFCVr7piPTk=
+>>>>>>> Stashed changes
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCoreInternal.framework/Info.plist</key>
@@ -686,7 +750,11 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< Updated upstream
 			sznbNpwvQI8XKOWUyGQjLZLA4hXqHhLW77D9yvoAOI4=
+=======
+			e5j4wVxReucYWSWTNfDsHpeUSZJQxRosdc0JqejhGmY=
+>>>>>>> Stashed changes
 			</data>
 		</dict>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
@@ -721,7 +789,11 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< Updated upstream
 			sfdGOMUUpJ4DI5EZy5x1UjAyY1jcCYHu0/4UGhfMO6s=
+=======
+			ZVyckykzdReFY3M9v7FvmpCFE3TLiQjcotKKJMk6tHI=
+>>>>>>> Stashed changes
 			</data>
 		</dict>
 		<key>Frameworks/video_player_avfoundation.framework/Info.plist</key>
@@ -742,7 +814,11 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< Updated upstream
 			DvsbZv6St01Ml5L0vB6473gqTYIc/W22vthSacjImJk=
+=======
+			5iQHotPL3wjxGqfEYCgFHZlHhsdxgVIy6vRlTYy8q6U=
+>>>>>>> Stashed changes
 			</data>
 		</dict>
 		<key>GoogleService-Info.plist</key>
