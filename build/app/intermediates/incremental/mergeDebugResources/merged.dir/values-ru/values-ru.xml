@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="common_google_play_services_unknown_issue">Приложению \"%1$s\" не удается подключиться к сервисам Google Play. Повторите попытку.</string>
     <string name="exo_download_completed">Скачивание завершено</string>
     <string name="exo_download_description">Скачать</string>
     <string name="exo_download_downloading">Скачивание…</string>

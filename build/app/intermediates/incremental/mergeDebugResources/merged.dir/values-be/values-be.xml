@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="common_google_play_services_unknown_issue">У праграмы %1$s узніклі праблемы са службамі Google Play. Паўтарыце спробу.</string>
     <string name="exo_download_completed">Спампоўка завершана</string>
     <string name="exo_download_description">Спампаваць</string>
     <string name="exo_download_downloading">Спампоўваецца</string>

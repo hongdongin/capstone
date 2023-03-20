@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="common_google_play_services_unknown_issue">%1$s á í vandræðum með þjónustu Google Play. Reyndu aftur.</string>
     <string name="exo_download_completed">Niðurhali lokið</string>
     <string name="exo_download_description">Sækja</string>
     <string name="exo_download_downloading">Sækir</string>

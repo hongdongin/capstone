@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="common_google_play_services_unknown_issue">Η εφαρμογή %1$s αντιμετωπίζει κάποιο πρόβλημα με τις υπηρεσίες Google Play. Προσπαθήστε ξανά.</string>
     <string name="exo_download_completed">Η λήψη ολοκληρώθηκε</string>
     <string name="exo_download_description">Λήψη</string>
     <string name="exo_download_downloading">Λήψη</string>

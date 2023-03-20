@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="common_google_play_services_unknown_issue">%1$s Google Play సేవలతో సమస్య కలిగి ఉంది. దయచేసి మళ్లీ ప్రయత్నించండి.</string>
     <string name="exo_download_completed">డౌన్‌లోడ్ పూర్తయింది</string>
     <string name="exo_download_description">డౌన్‌లోడ్ చేయి</string>
     <string name="exo_download_downloading">డౌన్‌లోడ్ చేస్తోంది</string>

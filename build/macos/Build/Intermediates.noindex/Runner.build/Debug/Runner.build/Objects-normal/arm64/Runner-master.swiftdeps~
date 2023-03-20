@@ -1,8 +1,0 @@
-version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
-options: "c4bcd740b0ebc0cec2ea9f1bd424de0e3a37996dd8707dbd2922a90e4fb3a7f5"
-build_start_time: [1674889597, 273632049]
-build_end_time: [1674889597, 390894889]
-inputs:
-  "/Users/gimjeonghun/Documents/GitHub/tiktok_clone/macos/Flutter/GeneratedPluginRegistrant.swift": !private [1674889579, 746354579]
-  "/Users/gimjeonghun/Documents/GitHub/tiktok_clone/macos/Runner/AppDelegate.swift": !private [1664393672, 0]
-  "/Users/gimjeonghun/Documents/GitHub/tiktok_clone/macos/Runner/MainFlutterWindow.swift": !private [1664393672, 0]

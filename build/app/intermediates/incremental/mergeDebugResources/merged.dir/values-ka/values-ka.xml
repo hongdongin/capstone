@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="common_google_play_services_unknown_issue">%1$s-ს Google Play Services-თან პრობლემა შეექმნა. გთხოვთ, ცადოთ ხელახლა.</string>
     <string name="exo_download_completed">ჩამოტვირთვა დასრულდა</string>
     <string name="exo_download_description">ჩამოტვირთვა</string>
     <string name="exo_download_downloading">მიმდინარეობს ჩამოტვირთვა</string>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="common_google_play_services_unknown_issue">%1$s té problemes amb Serveis de Google Play. Torna-ho a provar.</string>
     <string name="exo_download_completed">S\'ha completat la baixada</string>
     <string name="exo_download_description">Baixa</string>
     <string name="exo_download_downloading">S\'està baixant</string>

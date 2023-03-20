@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="common_google_play_services_unknown_issue">У додатку %1$s виникла проблема із сервісами Google Play. Повторіть спробу.</string>
     <string name="exo_download_completed">Завантаження завершено</string>
     <string name="exo_download_description">Завантажити</string>
     <string name="exo_download_downloading">Завантажується</string>

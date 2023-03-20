@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="common_google_play_services_unknown_issue">Aplikácia %1$s má problémy so službami Google Play. Skúste to znova.</string>
     <string name="exo_download_completed">Sťahovanie bolo dokončené</string>
     <string name="exo_download_description">Stiahnuť</string>
     <string name="exo_download_downloading">Sťahuje sa</string>

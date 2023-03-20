@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="common_google_play_services_unknown_issue">L\'application %1$s éprouve un problème avec les services Google Play. Veuillez réessayer.</string>
     <string name="exo_download_completed">Téléchargement terminé</string>
     <string name="exo_download_description">Télécharger</string>
     <string name="exo_download_downloading">Téléchargement en cours…</string>

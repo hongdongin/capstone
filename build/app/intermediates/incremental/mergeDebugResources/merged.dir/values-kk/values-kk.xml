@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="common_google_play_services_unknown_issue">%1$s қолданбасында Google Play қызметіне байланысты белгісіз қате шықты. Әрекетті қайталаңыз.</string>
     <string name="exo_download_completed">Жүктеп алынды</string>
     <string name="exo_download_description">Жүктеп алу</string>
     <string name="exo_download_downloading">Жүктеп алынуда</string>

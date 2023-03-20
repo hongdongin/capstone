@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <attr format="reference" name="nestedScrollViewStyle"/>
     <attr format="enum" name="splitLayoutDirection">
         <enum name="locale" value="0"/>
@@ -90,7 +90,10 @@
     <item name="text2" type="id"/>
     <item name="title" type="id"/>
     <id name="view_tree_lifecycle_owner"/>
+    <integer name="google_play_services_version">12451000</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <string name="common_google_play_services_unknown_issue"><ns1:g id="app_name">%1$s</ns1:g> is having trouble with Google Play services. Please try again.</string>
+    <string name="default_web_client_id" translatable="false">11142186328-g5c2belvjoi8ovmqnm73joqfg75tgtmt.apps.googleusercontent.com</string>
     <string name="exo_download_completed">Download completed</string>
     <string name="exo_download_description">Download</string>
     <string name="exo_download_downloading">Downloading</string>
@@ -100,6 +103,12 @@
     <string name="exo_download_paused_for_network">Downloads waiting for network</string>
     <string name="exo_download_paused_for_wifi">Downloads waiting for WiFi</string>
     <string name="exo_download_removing">Removing downloads</string>
+    <string name="gcm_defaultSenderId" translatable="false">11142186328</string>
+    <string name="google_api_key" translatable="false">AIzaSyCXLdTr34AKqhXT2OLXdwhT2KvQ0qm5Jao</string>
+    <string name="google_app_id" translatable="false">1:11142186328:android:3cda7761245d0dade7112d</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCXLdTr34AKqhXT2OLXdwhT2KvQ0qm5Jao</string>
+    <string name="google_storage_bucket" translatable="false">capstone-37874.appspot.com</string>
+    <string name="project_id" translatable="false">capstone-37874</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
         <!-- Show a splash screen on the activity. Automatically removed when

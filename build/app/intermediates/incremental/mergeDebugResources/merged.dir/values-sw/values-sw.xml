@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="common_google_play_services_unknown_issue">%1$s inakumbwa na hitilafu ya huduma za Google Play. Tafadhali jaribu tena.</string>
     <string name="exo_download_completed">Imepakuliwa</string>
     <string name="exo_download_description">Pakua</string>
     <string name="exo_download_downloading">Inapakua</string>

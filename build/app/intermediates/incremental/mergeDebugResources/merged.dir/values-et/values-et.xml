@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="common_google_play_services_unknown_issue">Rakendusel %1$s on probleeme Google Play teenustega. Proovige uuesti.</string>
     <string name="exo_download_completed">Allalaadimine lõpetati</string>
     <string name="exo_download_description">Allalaadimine</string>
     <string name="exo_download_downloading">Allalaadimine</string>

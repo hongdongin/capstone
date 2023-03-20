@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="common_google_play_services_unknown_issue">「%1$s」存取 Google Play 服務時發生問題。請稍後再試一次。</string>
     <string name="exo_download_completed">下載完畢</string>
     <string name="exo_download_description">下載</string>
     <string name="exo_download_downloading">正在下載</string>
