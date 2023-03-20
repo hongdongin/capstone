@@ -30,7 +30,11 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
           headerSliverBuilder: (context, innerBoxIsScrolled) {
             return [
               SliverAppBar(
-                title: const Text('정훈'),
+                elevation: 1,
+                title: const Padding(
+                  padding: EdgeInsets.only(left: Sizes.size56 * 3),
+                  child: Text('정훈'),
+                ),
                 actions: [
                   IconButton(
                     onPressed: _onGearPressed,

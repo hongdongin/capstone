@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
-
-import '../../../constants/gaps.dart';
+import 'package:tiktok_clone/generated/l10n.dart';
+import 'package:tiktok_clone/utils.dart';
 
 class VideoComments extends StatefulWidget {
   const VideoComments({super.key});
@@ -12,19 +13,12 @@ class VideoComments extends StatefulWidget {
 }
 
 class _VideoCommentsState extends State<VideoComments> {
-  bool _isLiked = false;
   bool _isWriting = false;
 
   final ScrollController _scrollController = ScrollController();
 
   void _onClosePressed() {
     Navigator.of(context).pop();
-  }
-
-  void _onHeart() {
-    setState(() {
-      _isLiked = !_isLiked;
-    });
   }
 
   void _stopWriting() {
@@ -43,26 +37,23 @@ class _VideoCommentsState extends State<VideoComments> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final isDark = isDarkMode(context);
     return Container(
-      height: size.height * 0.7,
+      height: size.height * 0.75,
       clipBehavior: Clip.hardEdge,
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(
-          Radius.circular(Sizes.size18),
-        ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(Sizes.size14),
       ),
       child: Scaffold(
-        backgroundColor: Colors.grey.shade50,
+        backgroundColor: isDark ? null : Colors.grey.shade50,
         appBar: AppBar(
-          backgroundColor: Colors.grey.shade50,
+          backgroundColor: isDark ? null : Colors.grey.shade50,
           automaticallyImplyLeading: false,
-          title: const Text("22796 comments"),
+          title: Text(S.of(context).commentTitle(987987, 987987)),
           actions: [
             IconButton(
               onPressed: _onClosePressed,
-              icon: const FaIcon(
-                FontAwesomeIcons.xmark,
-              ),
+              icon: const FaIcon(FontAwesomeIcons.xmark),
             ),
           ],
         ),
@@ -85,9 +76,10 @@ class _VideoCommentsState extends State<VideoComments> {
                   itemBuilder: (context, index) => Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const CircleAvatar(
+                      CircleAvatar(
                         radius: 18,
-                        child: Text("정훈"),
+                        backgroundColor: isDark ? Colors.grey.shade500 : null,
+                        child: const Text("니꼬"),
                       ),
                       Gaps.h10,
                       Expanded(
@@ -95,41 +87,33 @@ class _VideoCommentsState extends State<VideoComments> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "정훈",
+                              '니꼬',
                               style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: Sizes.size14,
-                                color: Colors.grey.shade500,
-                              ),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: Sizes.size14,
+                                  color: Colors.grey.shade500),
                             ),
                             Gaps.v3,
                             const Text(
-                              "If the [style] argument is null, the text will use .",
-                            )
+                                "That's not it l've seen the same thing but also in a cave,")
                           ],
                         ),
                       ),
                       Gaps.h10,
                       Column(
                         children: [
-                          GestureDetector(
-                            onTap: _onHeart,
-                            child: FaIcon(
-                              _isLiked
-                                  ? FontAwesomeIcons.solidHeart
-                                  : FontAwesomeIcons.heart,
-                              size: Sizes.size20,
-                              color:
-                                  _isLiked ? Colors.red : Colors.grey.shade500,
-                            ),
+                          FaIcon(
+                            FontAwesomeIcons.heart,
+                            size: Sizes.size20,
+                            color: Colors.grey.shade500,
                           ),
                           Gaps.v2,
                           Text(
-                            '52.2k',
+                            '52.2K',
                             style: TextStyle(
                               color: Colors.grey.shade500,
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ],
@@ -139,23 +123,22 @@ class _VideoCommentsState extends State<VideoComments> {
               Positioned(
                 bottom: 0,
                 width: size.width,
-                child: BottomAppBar(
-                  color: Colors.white,
+                child: Container(
+                  color: Theme.of(context).scaffoldBackgroundColor,
                   child: Padding(
                     padding: const EdgeInsets.only(
-                      top: Sizes.size8,
-                      bottom: Sizes.size8,
-                      left: Sizes.size18,
-                      right: Sizes.size12,
+                      left: Sizes.size16,
+                      right: Sizes.size16,
+                      top: Sizes.size10,
+                      bottom: Sizes.size48,
                     ),
                     child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         CircleAvatar(
                           radius: 18,
                           backgroundColor: Colors.grey.shade500,
                           foregroundColor: Colors.white,
-                          child: const Text("정훈"),
+                          child: const Text("니꼬"),
                         ),
                         Gaps.h10,
                         Expanded(
@@ -169,60 +152,67 @@ class _VideoCommentsState extends State<VideoComments> {
                               textInputAction: TextInputAction.newline,
                               cursorColor: Theme.of(context).primaryColor,
                               decoration: InputDecoration(
-                                hintText: "Write a comment...",
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(
-                                    Sizes.size12,
+                                  hintText: "Add comment...",
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(
+                                      Sizes.size12,
+                                    ),
+                                    borderSide: BorderSide.none,
                                   ),
-                                  borderSide: BorderSide.none,
-                                ),
-                                filled: true,
-                                fillColor: Colors.grey.shade300,
-                                contentPadding: const EdgeInsets.symmetric(
-                                  horizontal: Sizes.size12,
-                                ),
-                                suffixIcon: Padding(
-                                  padding: const EdgeInsets.only(
-                                    right: Sizes.size14,
+                                  filled: true,
+                                  fillColor: isDark
+                                      ? Colors.grey.shade800
+                                      : Colors.grey.shade200,
+                                  contentPadding: const EdgeInsets.symmetric(
+                                    horizontal: Sizes.size12,
                                   ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      FaIcon(
-                                        FontAwesomeIcons.at,
-                                        color: Colors.grey.shade900,
-                                      ),
-                                      Gaps.h14,
-                                      FaIcon(
-                                        FontAwesomeIcons.gift,
-                                        color: Colors.grey.shade900,
-                                      ),
-                                      Gaps.h14,
-                                      FaIcon(
-                                        FontAwesomeIcons.faceSmile,
-                                        color: Colors.grey.shade900,
-                                      ),
-                                      Gaps.h14,
-                                      if (_isWriting)
-                                        GestureDetector(
-                                          onTap: _stopWriting,
-                                          child: FaIcon(
-                                            FontAwesomeIcons.paperPlane,
-                                            color: Colors.blue.shade700,
-                                          ),
+                                  suffixIcon: Padding(
+                                    padding: const EdgeInsets.only(
+                                        right: Sizes.size14),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        FaIcon(
+                                          FontAwesomeIcons.at,
+                                          color: isDark
+                                              ? Colors.grey.shade500
+                                              : Colors.grey.shade900,
                                         ),
-                                    ],
-                                  ),
-                                ),
-                              ),
+                                        Gaps.h14,
+                                        FaIcon(
+                                          FontAwesomeIcons.gift,
+                                          color: isDark
+                                              ? Colors.grey.shade500
+                                              : Colors.grey.shade900,
+                                        ),
+                                        Gaps.h14,
+                                        FaIcon(
+                                          FontAwesomeIcons.faceSmile,
+                                          color: isDark
+                                              ? Colors.grey.shade500
+                                              : Colors.grey.shade900,
+                                        ),
+                                        Gaps.h14,
+                                        if (_isWriting)
+                                          GestureDetector(
+                                            onTap: _stopWriting,
+                                            child: FaIcon(
+                                              FontAwesomeIcons.circleArrowUp,
+                                              color: Theme.of(context)
+                                                  .primaryColor,
+                                            ),
+                                          ),
+                                      ],
+                                    ),
+                                  )),
                             ),
                           ),
-                        ),
+                        )
                       ],
                     ),
                   ),
                 ),
-              ),
+              )
             ],
           ),
         ),
