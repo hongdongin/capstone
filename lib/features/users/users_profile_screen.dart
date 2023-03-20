@@ -32,7 +32,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
               SliverAppBar(
                 elevation: 1,
                 title: const Padding(
-                  padding: EdgeInsets.only(left: Sizes.size56 * 3),
+                  padding: EdgeInsets.only(left: Sizes.size56 * 2),
                   child: Text('정훈'),
                 ),
                 actions: [

@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
+import 'package:tiktok_clone/features/inbox/activity_screen.dart';
 import 'package:tiktok_clone/features/inbox/chats_screen.dart';
-import 'activity_screen.dart';
 
-class InboxScreen extends StatelessWidget {
+class InboxScreen extends StatefulWidget {
+  static String routeName = "/email";
+
   const InboxScreen({super.key});
 
-  void _onDmPressed(BuildContext context) {
+  @override
+  State<InboxScreen> createState() => _InboxScreenState();
+}
+
+class _InboxScreenState extends State<InboxScreen> {
+  void _onDmPressed() {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => const ChatsScreen(),
@@ -15,7 +22,7 @@ class InboxScreen extends StatelessWidget {
     );
   }
 
-  void _onActivityTap(BuildContext context) {
+  void _onActivityTap() {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => const ActivityScreen(),
@@ -27,24 +34,27 @@ class InboxScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 1,
-        title: const Text("Inbox"),
+        elevation: 10,
+        title: const Text('Inbox'),
         actions: [
           IconButton(
-            onPressed: () => _onDmPressed(context),
-            icon: const FaIcon(FontAwesomeIcons.paperPlane),
-          ),
+            onPressed: _onDmPressed,
+            icon: const FaIcon(
+              FontAwesomeIcons.paperPlane,
+              size: Sizes.size20,
+            ),
+          )
         ],
       ),
       body: ListView(
         children: [
           ListTile(
-            onTap: () => _onActivityTap(context),
+            onTap: _onActivityTap,
             title: const Text(
               'Activity',
               style: TextStyle(
+                fontWeight: FontWeight.w600,
                 fontSize: Sizes.size16,
-                fontWeight: FontWeight.bold,
               ),
             ),
             trailing: const FaIcon(
@@ -74,12 +84,12 @@ class InboxScreen extends StatelessWidget {
             title: const Text(
               'New followers',
               style: TextStyle(
+                fontWeight: FontWeight.w600,
                 fontSize: Sizes.size16,
-                fontWeight: FontWeight.bold,
               ),
             ),
             subtitle: const Text(
-              'Messages from followers will appear here',
+              'Messages from followers will appear here.',
               style: TextStyle(
                 fontSize: Sizes.size14,
               ),
@@ -89,7 +99,7 @@ class InboxScreen extends StatelessWidget {
               size: Sizes.size14,
               color: Colors.black,
             ),
-          ),
+          )
         ],
       ),
     );
