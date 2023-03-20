@@ -5,8 +5,6 @@ import 'package:tiktok_clone/features/inbox/activity_screen.dart';
 import 'package:tiktok_clone/features/inbox/chats_screen.dart';
 
 class InboxScreen extends StatefulWidget {
-  static String routeName = "/email";
-
   const InboxScreen({super.key});
 
   @override

@@ -133,7 +133,7 @@ class _VideoPostState extends State<VideoPost>
   void _onVolumeTap() {
     setState(
       () {
-        if (_volumeCheck) {
+        if (_videoPlayerController.setVolume(0) == true) {
           _videoPlayerController.setVolume(1);
         } else {
           _videoPlayerController.setVolume(0);

@@ -79,7 +79,7 @@ class _VideoCommentsState extends State<VideoComments> {
                       CircleAvatar(
                         radius: 18,
                         backgroundColor: isDark ? Colors.grey.shade500 : null,
-                        child: const Text("니꼬"),
+                        child: const Text("navi"),
                       ),
                       Gaps.h10,
                       Expanded(
@@ -87,7 +87,7 @@ class _VideoCommentsState extends State<VideoComments> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '니꼬',
+                              'navi',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: Sizes.size14,
@@ -138,7 +138,7 @@ class _VideoCommentsState extends State<VideoComments> {
                           radius: 18,
                           backgroundColor: Colors.grey.shade500,
                           foregroundColor: Colors.white,
-                          child: const Text("니꼬"),
+                          child: const Text("navi"),
                         ),
                         Gaps.h10,
                         Expanded(
