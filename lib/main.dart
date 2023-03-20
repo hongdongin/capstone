@@ -29,7 +29,7 @@ class TikTokApp extends StatelessWidget {
     // S.load(const Locale("en"));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'TikTok Clone',
+      title: 'P.M',
       localizationsDelegates: const [
         S.delegate,
         GlobalWidgetsLocalizations.delegate,
