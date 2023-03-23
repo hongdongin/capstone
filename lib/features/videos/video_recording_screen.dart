@@ -13,39 +13,56 @@ class VideoRecordingScreen extends StatefulWidget {
 
 class _VideoRecordingScreenState extends State<VideoRecordingScreen> {
   bool _hasPermission = false;
+  bool _alertPermission = false;
+  bool _isSelfimode = true;
 
-  late final CameraController _cameraController;
+  late CameraController _cameraController;
 
   Future<void> initCamera() async {
     final cameras = await availableCameras();
-
     if (cameras.isEmpty) {
       return;
     }
-
     _cameraController = CameraController(
-      cameras[0],
+      cameras[_isSelfimode ? 1 : 0],
       ResolutionPreset.ultraHigh,
     );
-
     await _cameraController.initialize();
   }
 
   Future<void> initPermissions() async {
+    _hasPermission = false;
+    _alertPermission = false;
+
     final cameraPermission = await Permission.camera.request();
     final micPermission = await Permission.microphone.request();
 
+    final cameraPermanentlyDenied = cameraPermission.isPermanentlyDenied;
+    final micPermanentlyDenied = micPermission.isPermanentlyDenied;
+
     final cameraDenied =
         cameraPermission.isDenied || cameraPermission.isPermanentlyDenied;
-
     final micDenied =
         micPermission.isDenied || micPermission.isPermanentlyDenied;
 
-    if (!cameraDenied && !micDenied) {
-      _hasPermission = true;
-      await initCamera();
-      setState(() {});
+    if (cameraPermanentlyDenied || micPermanentlyDenied) {
+      openAppSettings();
+    } else {
+      if (!cameraDenied && !micDenied) {
+        _hasPermission = true;
+        await initCamera();
+        setState(() {});
+      } else {
+        _alertPermission = true;
+        setState(() {});
+      }
     }
+  }
+
+  Future<void> _toggleSelfiMode() async {
+    _isSelfimode = !_isSelfimode;
+    await initCamera();
+    setState(() {});
   }
 
   @override
@@ -59,22 +76,96 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: SizedBox(
+        height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: !_hasPermission || !_cameraController.value.isInitialized
-            ? Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text(
-                    "Initializing...",
-                    style:
-                        TextStyle(color: Colors.white, fontSize: Sizes.size20),
-                  ),
-                  Gaps.v20,
-                  CircularProgressIndicator.adaptive()
+            ? _alertPermission
+                ? AlertDialog(
+                    title: const Text("카메라와 마이크 권한을 확인해 주세요."),
+                    content: const Text("권한을 다시 설정해 주세요."),
+                    actions: [
+                      TextButton(
+                        onPressed: () => initPermissions(),
+                        child: const Text("again"),
+                      )
+                    ],
+                  )
+                : Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: const [
+                      Text(
+                        "Initializing...",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: Sizes.size20,
+                        ),
+                      ),
+                      Gaps.v20,
+                      CircularProgressIndicator.adaptive(),
+                    ],
+                  )
+            : Stack(
+                alignment: Alignment.center,
+                children: [
+                  CameraPreview(_cameraController),
+                  Positioned(
+                    top: Sizes.size20,
+                    right: Sizes.size20,
+                    child: Column(
+                      children: [
+                        IconButton(
+                          color: Colors.white,
+                          onPressed: _toggleSelfieMode,
+                          icon: const Icon(
+                            Icons.cameraswitch,
+                          ),
+                        ),
+                        Gaps.v10,
+                        IconButton(
+                          color: _flashMode == FlashMode.off
+                              ? Colors.amber.shade200
+                              : Colors.white,
+                          onPressed: () => _setFlashMode(FlashMode.off),
+                          icon: const Icon(
+                            Icons.flash_off_rounded,
+                          ),
+                        ),
+                        Gaps.v10,
+                        IconButton(
+                          color: _flashMode == FlashMode.always
+                              ? Colors.amber.shade200
+                              : Colors.white,
+                          onPressed: () => _setFlashMode(FlashMode.always),
+                          icon: const Icon(
+                            Icons.flash_on_rounded,
+                          ),
+                        ),
+                        Gaps.v10,
+                        IconButton(
+                          color: _flashMode == FlashMode.auto
+                              ? Colors.amber.shade200
+                              : Colors.white,
+                          onPressed: () => _setFlashMode(FlashMode.auto),
+                          icon: const Icon(
+                            Icons.flash_auto_rounded,
+                          ),
+                        ),
+                        Gaps.v10,
+                        IconButton(
+                          color: _flashMode == FlashMode.torch
+                              ? Colors.amber.shade200
+                              : Colors.white,
+                          onPressed: () => _setFlashMode(FlashMode.torch),
+                          icon: const Icon(
+                            Icons.flashlight_on_rounded,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
                 ],
-              )
-            : CameraPreview(_cameraController),
+              ),
       ),
     );
   }
