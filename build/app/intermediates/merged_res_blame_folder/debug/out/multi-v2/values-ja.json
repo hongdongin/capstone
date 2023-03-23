@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/gimjeonghun/Documents/GitHub/capstone/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ja/values-ja.xml",
+            "outputFile": "C:\\Users\\hdj19\\Documents\\GitHub\\capstone\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ja\\values-ja.xml",
             "map": [
                 {
-                    "source": "/Users/gimjeonghun/.gradle/caches/transforms-3/4d2cb1e3dec5bab8870573ecf93b59a3/transformed/core-1.7.0/res/values-ja/values-ja.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "12",
-                        "startColumns": "4",
-                        "startOffsets": "784",
-                        "endColumns": "100",
-                        "endOffsets": "880"
-                    }
-                },
-                {
-                    "source": "/Users/gimjeonghun/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/res/values-ja/values.xml",
+                    "source": "C:\\Users\\hdj19\\.gradle\\caches\\transforms-3\\83770efba2c122ac4d7bf3f6e3fc9396\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-ja\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "/Users/gimjeonghun/.gradle/caches/transforms-3/9c884789b57b2f5bd1933622f1e2d15c/transformed/jetified-exoplayer-core-2.18.1/res/values-ja/values-ja.xml",
+                    "source": "C:\\Users\\hdj19\\.gradle\\caches\\transforms-3\\4d2cb1e3dec5bab8870573ecf93b59a3\\transformed\\core-1.7.0\\res\\values-ja\\values-ja.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "12",
+                        "startColumns": "4",
+                        "startOffsets": "784",
+                        "endColumns": "100",
+                        "endOffsets": "880"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\hdj19\\.gradle\\caches\\transforms-3\\9c884789b57b2f5bd1933622f1e2d15c\\transformed\\jetified-exoplayer-core-2.18.1\\res\\values-ja\\values-ja.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

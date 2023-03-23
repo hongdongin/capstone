@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/gimjeonghun/Documents/GitHub/capstone/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "C:\\Users\\hdj19\\Documents\\GitHub\\capstone\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
             "map": [
                 {
-                    "source": "/Users/gimjeonghun/.gradle/caches/transforms-3/9c884789b57b2f5bd1933622f1e2d15c/transformed/jetified-exoplayer-core-2.18.1/res/values-en-rAU/values-en-rAU.xml",
+                    "source": "C:\\Users\\hdj19\\.gradle\\caches\\transforms-3\\9c884789b57b2f5bd1933622f1e2d15c\\transformed\\jetified-exoplayer-core-2.18.1\\res\\values-en-rAU\\values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/gimjeonghun/.gradle/caches/transforms-3/4d2cb1e3dec5bab8870573ecf93b59a3/transformed/core-1.7.0/res/values-en-rAU/values-en-rAU.xml",
+                    "source": "C:\\Users\\hdj19\\.gradle\\caches\\transforms-3\\4d2cb1e3dec5bab8870573ecf93b59a3\\transformed\\core-1.7.0\\res\\values-en-rAU\\values-en-rAU.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
