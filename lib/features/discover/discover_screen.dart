@@ -7,13 +7,15 @@ import 'package:tiktok_clone/constants/sizes.dart';
 import 'package:tiktok_clone/utils.dart';
 
 final tabs = [
-  "Top",
-  "Users",
-  "Videos",
-  "Sounds",
-  "LIVE",
-  "Shopping",
-  "Brands",
+  "Entertainment",
+  "Beauty & Style",
+  "Drama",
+  "Learning",
+  "Sports",
+  "Arts & Crafts",
+  "Dance",
+  "Animals",
+  "Food",
 ];
 
 class DiscoverScreen extends StatefulWidget {
@@ -114,14 +116,16 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                       ),
                     ),
                     Gaps.v10,
-                    const Text(
-                      "This is a very long caption for my tiktok that im upload just now currently.",
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      style: TextStyle(
-                        fontSize: Sizes.size16 + Sizes.size2,
-                        fontWeight: FontWeight.bold,
-                        height: 1.1,
+                    const Expanded(
+                      child: Text(
+                        "This is a very long caption for my tiktok that im upload just now currently.",
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 2,
+                        style: TextStyle(
+                          fontSize: Sizes.size16 + Sizes.size2,
+                          fontWeight: FontWeight.bold,
+                          height: 1.1,
+                        ),
                       ),
                     ),
                     Gaps.v8,

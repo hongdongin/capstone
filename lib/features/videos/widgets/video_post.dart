@@ -33,7 +33,7 @@ class _VideoPostState extends State<VideoPost>
 
   bool _isPaused = false;
   bool _lengthCheck = false;
-  bool _volumeCheck = true;
+  bool _volumeCheck = false;
 
   final String _inputText = "This is the flight to Gimpo.";
 
@@ -133,7 +133,7 @@ class _VideoPostState extends State<VideoPost>
   void _onVolumeTap() {
     setState(
       () {
-        if (_videoPlayerController.setVolume(0) == true) {
+        if (_volumeCheck) {
           _videoPlayerController.setVolume(1);
         } else {
           _videoPlayerController.setVolume(0);

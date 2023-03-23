@@ -26,6 +26,9 @@ INJECTED from /Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/
 INJECTED from /Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/AndroidManifest.xml:1:1-34:12
 MERGED from /Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/AndroidManifest.xml:1:1-34:12
 MERGED from [:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
+MERGED from [:permission_handler_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/permission_handler_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-12:12
+MERGED from [:flutter_plugin_android_lifecycle] /Users/gimjeonghun/Documents/GitHub/capstone/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:path_provider_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:video_player_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/video_player_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.multidex:multidex:2.0.1] /Users/gimjeonghun/.gradle/caches/transforms-3/2a2bab6dfddf4d0fc63f631a95388563/transformed/multidex-2.0.1/AndroidManifest.xml:17:1-22:12
@@ -82,6 +85,12 @@ INJECTED from /Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/
 INJECTED from /Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/AndroidManifest.xml
 MERGED from [:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:permission_handler_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/permission_handler_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:permission_handler_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/permission_handler_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] /Users/gimjeonghun/Documents/GitHub/capstone/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] /Users/gimjeonghun/Documents/GitHub/capstone/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:path_provider_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:path_provider_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:video_player_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/video_player_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -178,6 +187,14 @@ ADDED from [:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/f
 		ADDED from [:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 	android:name
 		ADDED from [:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+uses-permission#android.permission.CAMERA
+ADDED from [:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-65
+	android:name
+		ADDED from [:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from [:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-71
+	android:name
+		ADDED from [:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-68
 uses-library#androidx.window.extensions
 ADDED from [androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
 	android:required
