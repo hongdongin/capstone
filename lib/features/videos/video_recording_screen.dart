@@ -14,7 +14,9 @@ class VideoRecordingScreen extends StatefulWidget {
 class _VideoRecordingScreenState extends State<VideoRecordingScreen> {
   bool _hasPermission = false;
   bool _alertPermission = false;
-  bool _isSelfimode = true;
+  bool _isSelfiemode = true;
+
+  late FlashMode _flashMode;
 
   late CameraController _cameraController;
 
@@ -24,10 +26,13 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen> {
       return;
     }
     _cameraController = CameraController(
-      cameras[_isSelfimode ? 1 : 0],
+      cameras[_isSelfiemode ? 1 : 0],
       ResolutionPreset.ultraHigh,
     );
+
     await _cameraController.initialize();
+
+    _flashMode = _cameraController.value.flashMode;
   }
 
   Future<void> initPermissions() async {
@@ -59,9 +64,15 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen> {
     }
   }
 
-  Future<void> _toggleSelfiMode() async {
-    _isSelfimode = !_isSelfimode;
+  Future<void> _toggleSelfieMode() async {
+    _isSelfiemode = !_isSelfiemode;
     await initCamera();
+    setState(() {});
+  }
+
+  Future<void> _setFlashMode(FlashMode newFlashMode) async {
+    await _cameraController.setFlashMode(newFlashMode);
+    _flashMode = newFlashMode;
     setState(() {});
   }
 
