@@ -112,6 +112,8 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
     await _cameraController.prepareForVideoRecording();
 
     _flashMode = _cameraController.value.flashMode;
+
+    setState(() {});
   }
 
   Future<void> initPermissions() async {
