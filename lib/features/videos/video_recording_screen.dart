@@ -1,6 +1,5 @@
-// ignore_for_file: use_build_context_synchronously
-
 import 'package:camera/camera.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:image_picker/image_picker.dart';
@@ -157,9 +156,10 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
     setState(() {});
   }
 
-  Future<void> _startRecording(TapDownDetails _) async {
+  Future<void> _startRecording(LongPressDownDetails _) async {
     if (_cameraController.value.isRecordingVideo) return;
 
+    await _cameraController.initialize();
     await _cameraController.startVideoRecording();
     _buttonAnimationController.forward();
     _progressAnimationController.forward();
@@ -172,6 +172,7 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
     _progressAnimationController.reset();
 
     final video = await _cameraController.stopVideoRecording();
+    await _cameraController.initialize();
 
     if (!mounted) return;
 
@@ -277,7 +278,7 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
                       children: [
                         const Spacer(),
                         GestureDetector(
-                          onTapDown: _startRecording,
+                          onLongPressDown: _startRecording,
                           onTapUp: (details) => _stopRecording(),
                           child: ScaleTransition(
                             scale: _buttonAnimation,
