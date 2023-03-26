@@ -15,104 +15,135 @@
 15    <uses-permission android:name="android.permission.INTERNET" />
 15-->/Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/debug/AndroidManifest.xml:7:5-66
 15-->/Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/debug/AndroidManifest.xml:7:22-64
-16    <uses-permission android:name="android.permission.CAMERA" />
-16-->[:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-65
-16-->[:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-62
-17    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-17-->[:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-71
-17-->[:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-68
-18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-18-->[com.google.android.exoplayer:exoplayer-core:2.18.1] /Users/gimjeonghun/.gradle/caches/transforms-3/9c884789b57b2f5bd1933622f1e2d15c/transformed/jetified-exoplayer-core-2.18.1/AndroidManifest.xml:24:5-79
-18-->[com.google.android.exoplayer:exoplayer-core:2.18.1] /Users/gimjeonghun/.gradle/caches/transforms-3/9c884789b57b2f5bd1933622f1e2d15c/transformed/jetified-exoplayer-core-2.18.1/AndroidManifest.xml:24:22-76
-19
-20    <application
-21        android:name="io.flutter.app.FlutterMultiDexApplication"
-22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-22-->[androidx.core:core:1.7.0] /Users/gimjeonghun/.gradle/caches/transforms-3/4d2cb1e3dec5bab8870573ecf93b59a3/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
-23        android:debuggable="true"
-24        android:icon="@mipmap/ic_launcher"
-25        android:label="tiktok_clone" >
-26        <activity
-27            android:name="com.example.tiktok_clone.MainActivity"
-28            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-29            android:exported="true"
-30            android:hardwareAccelerated="true"
-31            android:launchMode="singleTop"
-32            android:theme="@style/LaunchTheme"
-33            android:windowSoftInputMode="adjustResize" >
-34
-35            <!--
-36                 Specifies an Android theme to apply to this Activity as soon as
-37                 the Android process has started. This theme is visible to the user
-38                 while the Flutter UI initializes. After that, this theme continues
-39                 to determine the Window background behind the Flutter UI.
-40            -->
-41            <meta-data
-42                android:name="io.flutter.embedding.android.NormalTheme"
-43                android:resource="@style/NormalTheme" />
-44
-45            <intent-filter>
-46                <action android:name="android.intent.action.MAIN" />
-47
-48                <category android:name="android.intent.category.LAUNCHER" />
-49            </intent-filter>
-50        </activity>
-51        <!--
-52             Don't delete the meta-data below.
-53             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-54        -->
-55        <meta-data
-56            android:name="flutterEmbedding"
-57            android:value="2" />
-58
-59        <service
-59-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
-60            android:name="com.google.firebase.components.ComponentDiscoveryService"
-60-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
-61            android:directBootAware="true"
-61-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:34:13-43
-62            android:exported="false" >
-62-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:35:13-37
-63            <meta-data
-63-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
-64                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-64-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
-65                android:value="com.google.firebase.components.ComponentRegistrar" />
-65-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
-66        </service>
-67
-68        <uses-library
-68-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
-69            android:name="androidx.window.extensions"
-69-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
-70            android:required="false" />
-70-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
-71        <uses-library
-71-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
-72            android:name="androidx.window.sidecar"
-72-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
-73            android:required="false" />
-73-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->/Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/AndroidManifest.xml:3:5-80
+16-->/Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/AndroidManifest.xml:3:22-78
+17    <uses-permission android:name="android.permission.CAMERA" />
+17-->[:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-65
+17-->[:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-62
+18    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+18-->[:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-71
+18-->[:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-68
+19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+19-->[com.google.android.exoplayer:exoplayer-core:2.18.1] /Users/gimjeonghun/.gradle/caches/transforms-3/9c884789b57b2f5bd1933622f1e2d15c/transformed/jetified-exoplayer-core-2.18.1/AndroidManifest.xml:24:5-79
+19-->[com.google.android.exoplayer:exoplayer-core:2.18.1] /Users/gimjeonghun/.gradle/caches/transforms-3/9c884789b57b2f5bd1933622f1e2d15c/transformed/jetified-exoplayer-core-2.18.1/AndroidManifest.xml:24:22-76
+20
+21    <permission
+21-->[androidx.core:core:1.9.0] /Users/gimjeonghun/.gradle/caches/transforms-3/82546ab4767d1df2b6d62dc3a615a8f7/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+22        android:name="com.example.tiktok_clone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+22-->[androidx.core:core:1.9.0] /Users/gimjeonghun/.gradle/caches/transforms-3/82546ab4767d1df2b6d62dc3a615a8f7/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+23        android:protectionLevel="signature" />
+23-->[androidx.core:core:1.9.0] /Users/gimjeonghun/.gradle/caches/transforms-3/82546ab4767d1df2b6d62dc3a615a8f7/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+24
+25    <uses-permission android:name="com.example.tiktok_clone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+25-->[androidx.core:core:1.9.0] /Users/gimjeonghun/.gradle/caches/transforms-3/82546ab4767d1df2b6d62dc3a615a8f7/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+25-->[androidx.core:core:1.9.0] /Users/gimjeonghun/.gradle/caches/transforms-3/82546ab4767d1df2b6d62dc3a615a8f7/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+26
+27    <application
+28        android:name="io.flutter.app.FlutterMultiDexApplication"
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.9.0] /Users/gimjeonghun/.gradle/caches/transforms-3/82546ab4767d1df2b6d62dc3a615a8f7/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+30        android:debuggable="true"
+31        android:icon="@mipmap/ic_launcher"
+32        android:label="tiktok_clone" >
+33        <activity
+34            android:name="com.example.tiktok_clone.MainActivity"
+35            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+36            android:exported="true"
+37            android:hardwareAccelerated="true"
+38            android:launchMode="singleTop"
+39            android:theme="@style/LaunchTheme"
+40            android:windowSoftInputMode="adjustResize" >
+41
+42            <!--
+43                 Specifies an Android theme to apply to this Activity as soon as
+44                 the Android process has started. This theme is visible to the user
+45                 while the Flutter UI initializes. After that, this theme continues
+46                 to determine the Window background behind the Flutter UI.
+47            -->
+48            <meta-data
+49                android:name="io.flutter.embedding.android.NormalTheme"
+50                android:resource="@style/NormalTheme" />
+51
+52            <intent-filter>
+53                <action android:name="android.intent.action.MAIN" />
+54
+55                <category android:name="android.intent.category.LAUNCHER" />
+56            </intent-filter>
+57        </activity>
+58        <!--
+59             Don't delete the meta-data below.
+60             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+61        -->
+62        <meta-data
+63            android:name="flutterEmbedding"
+64            android:value="2" />
+65
+66        <service
+66-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+67            android:name="com.google.firebase.components.ComponentDiscoveryService"
+67-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
+68            android:directBootAware="true"
+68-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:34:13-43
+69            android:exported="false" >
+69-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:35:13-37
+70            <meta-data
+70-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+71                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+71-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+72                android:value="com.google.firebase.components.ComponentRegistrar" />
+72-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+73        </service>
 74
 75        <provider
-75-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:25:9-30:39
-76            android:name="com.google.firebase.provider.FirebaseInitProvider"
-76-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:26:13-77
-77            android:authorities="com.example.tiktok_clone.firebaseinitprovider"
-77-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:27:13-72
-78            android:directBootAware="true"
-78-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:28:13-43
-79            android:exported="false"
-79-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:29:13-37
-80            android:initOrder="100" />
-80-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:30:13-36
-81
-82        <meta-data
-82-->[com.google.android.gms:play-services-basement:18.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
-83            android:name="com.google.android.gms.version"
-83-->[com.google.android.gms:play-services-basement:18.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
-84            android:value="@integer/google_play_services_version" />
-84-->[com.google.android.gms:play-services-basement:18.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
-85    </application>
-86
-87</manifest>
+75-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+76            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+76-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
+77            android:authorities="com.example.tiktok_clone.flutter.image_provider"
+77-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
+78            android:exported="false"
+78-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+79            android:grantUriPermissions="true" >
+79-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+80            <meta-data
+80-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:75
+81                android:name="android.support.FILE_PROVIDER_PATHS"
+81-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+82                android:resource="@xml/flutter_image_picker_file_paths" />
+82-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
+83        </provider>
+84        <provider
+84-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:25:9-30:39
+85            android:name="com.google.firebase.provider.FirebaseInitProvider"
+85-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:26:13-77
+86            android:authorities="com.example.tiktok_clone.firebaseinitprovider"
+86-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:27:13-72
+87            android:directBootAware="true"
+87-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:28:13-43
+88            android:exported="false"
+88-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:29:13-37
+89            android:initOrder="100" />
+89-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:30:13-36
+90
+91        <meta-data
+91-->[com.google.android.gms:play-services-basement:18.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+92            android:name="com.google.android.gms.version"
+92-->[com.google.android.gms:play-services-basement:18.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+93            android:value="@integer/google_play_services_version" />
+93-->[com.google.android.gms:play-services-basement:18.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+94
+95        <uses-library
+95-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+96            android:name="androidx.window.extensions"
+96-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+97            android:required="false" />
+97-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+98        <uses-library
+98-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+99            android:name="androidx.window.sidecar"
+99-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+100            android:required="false" />
+100-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+101    </application>
+102
+103</manifest>
