@@ -1,5 +1,4 @@
 import 'package:camera/camera.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:image_picker/image_picker.dart';
@@ -40,6 +39,10 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
   bool _hasPermission = false;
   bool _alertPermission = false;
   bool _isSelfiemode = true;
+
+  late double _currentZoom;
+  late double _maxZoom;
+  late double _minZoom;
 
   late final AnimationController _buttonAnimationController =
       AnimationController(
@@ -84,6 +87,19 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
     super.dispose();
   }
 
+  void _changeCameraZoom(DragUpdateDetails details) async {
+    if (details.localPosition.dy >= 0) {
+      if (_currentZoom + (-details.localPosition.dy * 0.05) < _minZoom) return;
+      _cameraController
+          .setZoomLevel(_currentZoom + (-details.localPosition.dy * 0.05));
+    }
+    if (details.localPosition.dy < 0) {
+      if (_currentZoom + (-details.localPosition.dy * 0.005) > _maxZoom) return;
+      _cameraController
+          .setZoomLevel(_currentZoom + (-details.localPosition.dy * 0.005));
+    }
+  }
+
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (!_hasPermission) return;
@@ -101,7 +117,7 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
       return;
     }
     _cameraController = CameraController(
-      cameras[_isSelfiemode ? 1 : 0],
+      cameras[_isSelfiemode ? 0 : 1],
       ResolutionPreset.ultraHigh,
       enableAudio: false,
     );
@@ -111,6 +127,10 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
     await _cameraController.prepareForVideoRecording();
 
     _flashMode = _cameraController.value.flashMode;
+
+    _maxZoom = await _cameraController.getMaxZoomLevel();
+    _minZoom = await _cameraController.getMinZoomLevel();
+    _currentZoom = (_maxZoom + _minZoom) / 5;
 
     setState(() {});
   }
@@ -156,7 +176,7 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
     setState(() {});
   }
 
-  Future<void> _startRecording(LongPressDownDetails _) async {
+  Future<void> _startRecording(TapDownDetails _) async {
     if (_cameraController.value.isRecordingVideo) return;
 
     await _cameraController.initialize();
@@ -278,7 +298,8 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
                       children: [
                         const Spacer(),
                         GestureDetector(
-                          onLongPressDown: _startRecording,
+                          onPanUpdate: _changeCameraZoom,
+                          onTapDown: _startRecording,
                           onTapUp: (details) => _stopRecording(),
                           child: ScaleTransition(
                             scale: _buttonAnimation,
