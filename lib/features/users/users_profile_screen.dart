@@ -93,10 +93,12 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                                   ),
                                 ),
                                 Gaps.v1,
-                                Text("Following",
-                                    style: TextStyle(
-                                      color: Colors.grey.shade500,
-                                    ))
+                                Expanded(
+                                  child: Text("Following",
+                                      style: TextStyle(
+                                        color: Colors.grey.shade500,
+                                      )),
+                                )
                               ],
                             ),
                             VerticalDivider(
@@ -116,10 +118,12 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                                   ),
                                 ),
                                 Gaps.v1,
-                                Text(
-                                  "Followers",
-                                  style: TextStyle(
-                                    color: Colors.grey.shade500,
+                                Expanded(
+                                  child: Text(
+                                    "Followers",
+                                    style: TextStyle(
+                                      color: Colors.grey.shade500,
+                                    ),
                                   ),
                                 )
                               ],
@@ -141,10 +145,12 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                                   ),
                                 ),
                                 Gaps.v1,
-                                Text(
-                                  "Likes",
-                                  style: TextStyle(
-                                    color: Colors.grey.shade500,
+                                Expanded(
+                                  child: Text(
+                                    "Likes",
+                                    style: TextStyle(
+                                      color: Colors.grey.shade500,
+                                    ),
                                   ),
                                 )
                               ],
