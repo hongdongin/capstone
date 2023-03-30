@@ -7,6 +7,7 @@ import 'package:tiktok_clone/features/inbox/inbox_screen.dart';
 import 'package:tiktok_clone/features/main_navigation/widgets/nav_tab.dart';
 import 'package:tiktok_clone/features/main_navigation/widgets/post_video_button.dart';
 import 'package:tiktok_clone/features/users/users_profile_screen.dart';
+import 'package:tiktok_clone/features/videos/video_recording_screen.dart';
 import 'package:tiktok_clone/features/videos/video_timeline_screen.dart';
 
 import '../../utils.dart';
@@ -31,9 +32,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
   void _onPostVideoButtonTap() {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => Scaffold(
-          appBar: AppBar(title: const Text('Record video')),
-        ),
+        builder: (context) => const VideoRecordingScreen(),
         fullscreenDialog: true,
       ),
     );
@@ -70,9 +69,6 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       ),
       bottomNavigationBar: Container(
         color: _selectedIndex == 0 ? Colors.black : Colors.white,
-        padding: const EdgeInsets.only(
-          bottom: Sizes.size32,
-        ),
         child: Padding(
           padding: const EdgeInsets.all(Sizes.size12),
           child: Row(

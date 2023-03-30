@@ -24,7 +24,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return Localizations.override(
       context: context,
-      locale: const Locale("es"),
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Settings'),
