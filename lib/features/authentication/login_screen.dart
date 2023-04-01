@@ -7,7 +7,8 @@ import 'package:tiktok_clone/features/authentication/widgets/auth_button.dart';
 import 'package:tiktok_clone/utils.dart';
 
 class LoginScreen extends StatelessWidget {
-  static String routeName = "/login";
+  static const String routeUrl = "/login";
+  static const String routeName = "logIn";
   const LoginScreen({super.key});
 
   void _onSignUpTap(BuildContext context) {
@@ -15,7 +16,8 @@ class LoginScreen extends StatelessWidget {
   }
 
   void _onEmailLoginTap(BuildContext context) {
-    Navigator.of(context).push(
+    Navigator.push(
+      context,
       MaterialPageRoute(
         builder: (context) => const LoginFormScreen(),
       ),
@@ -58,11 +60,6 @@ class LoginScreen extends StatelessWidget {
                   icon: FaIcon(FontAwesomeIcons.user),
                   text: "Use email & password",
                 ),
-              ),
-              Gaps.v16,
-              const AuthButton(
-                icon: FaIcon(FontAwesomeIcons.apple),
-                text: "Continue with Apple",
               ),
             ],
           ),
