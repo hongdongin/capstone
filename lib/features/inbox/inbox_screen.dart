@@ -14,17 +14,11 @@ class InboxScreen extends StatefulWidget {
 
 class _InboxScreenState extends State<InboxScreen> {
   void _onDmPressed() {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) => const ChatsScreen(),
-      ),
-    );
+    context.pushNamed(ChatsScreen.routeName);
   }
 
   void _onActivityTap() {
-    context.pushNamed(
-      ActivityScreen.routeName,
-    );
+    context.pushNamed(ActivityScreen.routeName);
   }
 
   @override

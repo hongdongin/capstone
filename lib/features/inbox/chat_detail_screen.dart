@@ -4,8 +4,15 @@ import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 
 class ChatDetailScreen extends StatefulWidget {
-  const ChatDetailScreen({super.key});
+  static const String routeName = "chatDetail";
+  static const String routeUrl = ":chatId";
 
+  final String chatId;
+
+  const ChatDetailScreen({
+    super.key,
+    required this.chatId,
+  });
   @override
   State<ChatDetailScreen> createState() => _ChatDetailScreenState();
 }
@@ -40,9 +47,9 @@ class _ChatDetailScreenState extends State<ChatDetailScreen> {
             ),
             child: Text('정훈'),
           ),
-          title: const Text(
-            '정훈',
-            style: TextStyle(
+          title: Text(
+            '정훈  (${widget.chatId})',
+            style: const TextStyle(
               fontWeight: FontWeight.w600,
             ),
           ),
@@ -136,53 +143,50 @@ class _ChatDetailScreenState extends State<ChatDetailScreen> {
                         textInputAction: TextInputAction.newline,
                         cursorColor: Theme.of(context).primaryColor,
                         decoration: InputDecoration(
-                          hintText: "Write a message...",
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(
-                              Sizes.size12,
+                            hintText: "Add message...",
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(
+                                Sizes.size12,
+                              ),
+                              borderSide: BorderSide.none,
                             ),
-                            borderSide: BorderSide.none,
-                          ),
-                          filled: true,
-                          fillColor: Colors.grey.shade300,
-                          contentPadding: const EdgeInsets.symmetric(
-                            horizontal: Sizes.size12,
-                            vertical: Sizes.size8,
-                          ),
-                          suffixIcon: Padding(
-                            padding: const EdgeInsets.only(
-                              right: Sizes.size14,
+                            filled: true,
+                            fillColor: Colors.grey.shade200,
+                            contentPadding: const EdgeInsets.symmetric(
+                              horizontal: Sizes.size12,
                             ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                FaIcon(
-                                  FontAwesomeIcons.at,
-                                  color: Colors.grey.shade900,
-                                ),
-                                Gaps.h14,
-                                FaIcon(
-                                  FontAwesomeIcons.gift,
-                                  color: Colors.grey.shade900,
-                                ),
-                                Gaps.h14,
-                                FaIcon(
-                                  FontAwesomeIcons.faceSmile,
-                                  color: Colors.grey.shade900,
-                                ),
-                                Gaps.h14,
-                                if (_isWriting)
-                                  GestureDetector(
-                                    onTap: _stopWriting,
-                                    child: FaIcon(
-                                      FontAwesomeIcons.paperPlane,
-                                      color: Colors.blue.shade700,
-                                    ),
+                            suffixIcon: Padding(
+                              padding:
+                                  const EdgeInsets.only(right: Sizes.size14),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  FaIcon(
+                                    FontAwesomeIcons.at,
+                                    color: Colors.grey.shade900,
                                   ),
-                              ],
-                            ),
-                          ),
-                        ),
+                                  Gaps.h14,
+                                  FaIcon(
+                                    FontAwesomeIcons.gift,
+                                    color: Colors.grey.shade900,
+                                  ),
+                                  Gaps.h14,
+                                  FaIcon(
+                                    FontAwesomeIcons.faceSmile,
+                                    color: Colors.grey.shade900,
+                                  ),
+                                  Gaps.h14,
+                                  if (_isWriting)
+                                    GestureDetector(
+                                      onTap: _stopWriting,
+                                      child: FaIcon(
+                                        FontAwesomeIcons.circleArrowUp,
+                                        color: Theme.of(context).primaryColor,
+                                      ),
+                                    ),
+                                ],
+                              ),
+                            )),
                       ),
                     ),
                   ),
