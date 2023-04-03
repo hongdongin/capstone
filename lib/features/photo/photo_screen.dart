@@ -45,6 +45,10 @@ class _PhotoScreenState extends State<PhotoScreen>
   bool _alertPermission = false;
   bool _isSelfiemode = true;
 
+  late double _currentZoom;
+  late double _maxZoom;
+  late double _minZoom;
+
   final bool _noCamera = kDebugMode && Platform.isIOS;
 
   late FlashMode _flashMode;
@@ -69,6 +73,19 @@ class _PhotoScreenState extends State<PhotoScreen>
       _cameraController.dispose();
     }
     super.dispose();
+  }
+
+  void _changeCameraZoom(DragUpdateDetails details) async {
+    if (details.localPosition.dy >= 0) {
+      if (_currentZoom + (-details.localPosition.dy * 0.05) < _minZoom) return;
+      _cameraController
+          .setZoomLevel(_currentZoom + (-details.localPosition.dy * 0.05));
+    }
+    if (details.localPosition.dy < 0) {
+      if (_currentZoom + (-details.localPosition.dy * 0.005) > _maxZoom) return;
+      _cameraController
+          .setZoomLevel(_currentZoom + (-details.localPosition.dy * 0.005));
+    }
   }
 
   @override
@@ -97,6 +114,10 @@ class _PhotoScreenState extends State<PhotoScreen>
     await _cameraController.initialize();
 
     _flashMode = _cameraController.value.flashMode;
+
+    _maxZoom = await _cameraController.getMaxZoomLevel();
+    _minZoom = await _cameraController.getMinZoomLevel();
+    _currentZoom = (_maxZoom + _minZoom) / 5;
 
     setState(() {});
   }
@@ -164,7 +185,8 @@ class _PhotoScreenState extends State<PhotoScreen>
       await _cameraController.initialize();
     }
 
-    // ignore: use_build_context_synchronously
+    if (!mounted) return;
+
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -257,6 +279,7 @@ class _PhotoScreenState extends State<PhotoScreen>
                       children: [
                         const Spacer(),
                         GestureDetector(
+                          onPanUpdate: _changeCameraZoom,
                           onTap: _pickImage,
                           child: Stack(
                             alignment: Alignment.center,
