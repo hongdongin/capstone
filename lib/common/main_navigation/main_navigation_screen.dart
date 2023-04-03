@@ -80,7 +80,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       bottomNavigationBar: Container(
         color: _selectedIndex == 0 ? Colors.black : Colors.white,
         child: Padding(
-          padding: const EdgeInsets.all(Sizes.size12),
+          padding: const EdgeInsets.symmetric(vertical: Sizes.size32),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

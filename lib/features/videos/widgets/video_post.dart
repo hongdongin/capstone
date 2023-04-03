@@ -8,6 +8,8 @@ import 'package:tiktok_clone/features/videos/widgets/video_comments.dart';
 import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
+import '../../../common/main_navigation/widgets/video_config.dart';
+
 class VideoPost extends StatefulWidget {
   final Function onVideoFinished;
 
@@ -33,7 +35,7 @@ class _VideoPostState extends State<VideoPost>
 
   bool _isPaused = false;
   bool _lengthCheck = false;
-  bool _volumeCheck = false;
+  bool _autoMute = videoConfig.autoMute;
 
   final String _inputText = "This is the flight to Gimpo.";
 
@@ -68,6 +70,12 @@ class _VideoPostState extends State<VideoPost>
       value: 1.5,
       duration: _animationDuration,
     );
+
+    videoConfig.addListener(() {
+      setState(() {
+        _autoMute = videoConfig.autoMute;
+      });
+    });
   }
 
   @override
@@ -130,19 +138,6 @@ class _VideoPostState extends State<VideoPost>
     _onTogglePause();
   }
 
-  void _onVolumeTap() {
-    setState(
-      () {
-        if (_volumeCheck) {
-          _videoPlayerController.setVolume(1);
-        } else {
-          _videoPlayerController.setVolume(0);
-        }
-        _volumeCheck = !_volumeCheck;
-      },
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return VisibilityDetector(
@@ -184,6 +179,19 @@ class _VideoPostState extends State<VideoPost>
                   ),
                 ),
               ),
+            ),
+          ),
+          Positioned(
+            left: 20,
+            top: 40,
+            child: IconButton(
+              icon: FaIcon(
+                _autoMute
+                    ? FontAwesomeIcons.volumeOff
+                    : FontAwesomeIcons.volumeHigh,
+                color: Colors.white,
+              ),
+              onPressed: videoConfig.toggleAutoMute,
             ),
           ),
           Positioned(
@@ -230,17 +238,6 @@ class _VideoPostState extends State<VideoPost>
             right: 20,
             child: Column(
               children: [
-                Gaps.v24,
-                GestureDetector(
-                  onTap: _onVolumeTap,
-                  child: FaIcon(
-                    _volumeCheck
-                        ? FontAwesomeIcons.volumeOff
-                        : FontAwesomeIcons.volumeHigh,
-                    color: Colors.white,
-                    size: Sizes.size32,
-                  ),
-                ),
                 Gaps.v24,
                 const CircleAvatar(
                   radius: 25,
