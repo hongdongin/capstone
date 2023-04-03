@@ -8,6 +8,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
+import 'package:tiktok_clone/features/photo/photo_screen.dart';
 import 'package:tiktok_clone/features/videos/video_preview_screen.dart';
 import 'package:tiktok_clone/features/videos/widgets/flash_button.dart';
 
@@ -246,6 +247,15 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
     );
   }
 
+  Future<void> _onPhotoPressed() async {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const PhotoScreen(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -290,6 +300,18 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
                     left: Sizes.size20,
                     child: CloseButton(
                       color: Colors.white,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      child: IconButton(
+                        onPressed: _onPhotoPressed,
+                        icon: const FaIcon(
+                          FontAwesomeIcons.phoneFlip,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ),
                   if (!_noCamera)
