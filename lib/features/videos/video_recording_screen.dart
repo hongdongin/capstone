@@ -52,6 +52,9 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
 
   final bool _noCamera = kDebugMode && Platform.isIOS;
 
+  late FlashMode _flashMode;
+  late CameraController _cameraController;
+
   late final AnimationController _buttonAnimationController =
       AnimationController(
     vsync: this,
@@ -68,9 +71,6 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
     lowerBound: 0.0,
     upperBound: 1.0,
   );
-
-  late FlashMode _flashMode;
-  late CameraController _cameraController;
 
   @override
   void initState() {
@@ -247,7 +247,7 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
     );
   }
 
-  Future<void> _onPhotoPressed() async {
+  Future<void> _onCameraPressed() async {
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -302,18 +302,6 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
                       color: Colors.white,
                     ),
                   ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      child: IconButton(
-                        onPressed: _onPhotoPressed,
-                        icon: const FaIcon(
-                          FontAwesomeIcons.phoneFlip,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
                   if (!_noCamera)
                     Positioned(
                       top: Sizes.size40,
@@ -347,7 +335,18 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
                     width: MediaQuery.of(context).size.width,
                     child: Row(
                       children: [
-                        const Spacer(),
+                        Expanded(
+                          child: Container(
+                            alignment: Alignment.center,
+                            child: IconButton(
+                              onPressed: _onCameraPressed,
+                              icon: const FaIcon(
+                                FontAwesomeIcons.camera,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
                         GestureDetector(
                           onPanUpdate: _changeCameraZoom,
                           onTapDown: _startRecording,
