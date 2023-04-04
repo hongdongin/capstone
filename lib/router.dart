@@ -4,6 +4,7 @@ import 'package:tiktok_clone/features/authentication/login_screen.dart';
 import 'package:tiktok_clone/features/authentication/sign_up_screen.dart';
 import 'package:tiktok_clone/features/inbox/activity_screen.dart';
 import 'package:tiktok_clone/features/onboarding/interests_screen.dart';
+import 'package:tiktok_clone/features/photo/image_screen.dart';
 
 import 'common/main_navigation/main_navigation_screen.dart';
 import 'features/inbox/chat_detail_screen.dart';
@@ -64,18 +65,24 @@ final router = GoRouter(
       path: VideoRecordingScreen.routeUrl,
       name: VideoRecordingScreen.routeName,
       pageBuilder: (context, state) => CustomTransitionPage(
-          transitionDuration: const Duration(milliseconds: 200),
-          child: const VideoRecordingScreen(),
-          transitionsBuilder: (context, animation, secondaryAnimation, child) {
-            final position = Tween(
-              begin: const Offset(0, 1),
-              end: Offset.zero,
-            ).animate(animation);
-            return SlideTransition(
-              position: position,
-              child: child,
-            );
-          }),
+        transitionDuration: const Duration(milliseconds: 200),
+        child: const VideoRecordingScreen(),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          final position = Tween(
+            begin: const Offset(0, 1),
+            end: Offset.zero,
+          ).animate(animation);
+          return SlideTransition(
+            position: position,
+            child: child,
+          );
+        },
+      ),
+    ),
+    GoRoute(
+      name: ImageScreen.routeName,
+      path: ImageScreen.routeUrl,
+      builder: (context, state) => const ImageScreen(),
     ),
   ],
 );

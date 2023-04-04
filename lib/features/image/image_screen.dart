@@ -8,7 +8,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/photo/photo_preview_screen.dart';
+import 'package:tiktok_clone/features/image/image_preview_screen.dart';
 import 'package:tiktok_clone/features/videos/widgets/flash_button.dart';
 
 final List<dynamic> flashButtons = [
@@ -30,16 +30,16 @@ final List<dynamic> flashButtons = [
   },
 ];
 
-class PhotoScreen extends StatefulWidget {
-  static const String routeName = 'postPhoto';
-  static const String routeUrl = '/upload/photo';
-  const PhotoScreen({super.key});
+class ImageScreen extends StatefulWidget {
+  static const String routeName = 'postImage';
+  static const String routeUrl = '/upload/image';
+  const ImageScreen({super.key});
 
   @override
-  State<PhotoScreen> createState() => _PhotoScreenState();
+  State<ImageScreen> createState() => _ImageScreenState();
 }
 
-class _PhotoScreenState extends State<PhotoScreen>
+class _ImageScreenState extends State<ImageScreen>
     with TickerProviderStateMixin, WidgetsBindingObserver {
   bool _hasPermission = false;
   bool _alertPermission = false;
@@ -170,7 +170,7 @@ class _PhotoScreenState extends State<PhotoScreen>
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => PhotoPreviewScreen(
+        builder: (context) => ImagePreviewScreen(
           image: image,
           isPicked: true,
         ),
@@ -190,7 +190,7 @@ class _PhotoScreenState extends State<PhotoScreen>
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => PhotoPreviewScreen(
+        builder: (context) => ImagePreviewScreen(
           image: image,
           isPicked: false,
         ),
