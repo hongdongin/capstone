@@ -13,36 +13,36 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->C:\Users\1817-05\Documents\GitHub\capstone\android\app\src\debug\AndroidManifest.xml:7:5-66
-15-->C:\Users\1817-05\Documents\GitHub\capstone\android\app\src\debug\AndroidManifest.xml:7:22-64
+15-->/Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/debug/AndroidManifest.xml:7:5-66
+15-->/Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/debug/AndroidManifest.xml:7:22-64
 16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-16-->C:\Users\1817-05\Documents\GitHub\capstone\android\app\src\main\AndroidManifest.xml:3:5-80
-16-->C:\Users\1817-05\Documents\GitHub\capstone\android\app\src\main\AndroidManifest.xml:3:22-78
+16-->/Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/AndroidManifest.xml:3:5-80
+16-->/Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/AndroidManifest.xml:3:22-78
 17    <uses-permission android:name="android.permission.CAMERA" />
-17-->[:camera_android] C:\Users\1817-05\Documents\GitHub\capstone\build\camera_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-65
-17-->[:camera_android] C:\Users\1817-05\Documents\GitHub\capstone\build\camera_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-62
+17-->[:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-65
+17-->[:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-62
 18    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-18-->[:camera_android] C:\Users\1817-05\Documents\GitHub\capstone\build\camera_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-71
-18-->[:camera_android] C:\Users\1817-05\Documents\GitHub\capstone\build\camera_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-68
+18-->[:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-71
+18-->[:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-68
 19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-19-->[com.google.android.exoplayer:exoplayer-core:2.18.1] C:\Users\1817-05\.gradle\caches\transforms-3\9c884789b57b2f5bd1933622f1e2d15c\transformed\jetified-exoplayer-core-2.18.1\AndroidManifest.xml:24:5-79
-19-->[com.google.android.exoplayer:exoplayer-core:2.18.1] C:\Users\1817-05\.gradle\caches\transforms-3\9c884789b57b2f5bd1933622f1e2d15c\transformed\jetified-exoplayer-core-2.18.1\AndroidManifest.xml:24:22-76
+19-->[com.google.android.exoplayer:exoplayer-core:2.18.1] /Users/gimjeonghun/.gradle/caches/transforms-3/9c884789b57b2f5bd1933622f1e2d15c/transformed/jetified-exoplayer-core-2.18.1/AndroidManifest.xml:24:5-79
+19-->[com.google.android.exoplayer:exoplayer-core:2.18.1] /Users/gimjeonghun/.gradle/caches/transforms-3/9c884789b57b2f5bd1933622f1e2d15c/transformed/jetified-exoplayer-core-2.18.1/AndroidManifest.xml:24:22-76
 20
 21    <permission
-21-->[androidx.core:core:1.9.0] C:\Users\1817-05\.gradle\caches\transforms-3\82546ab4767d1df2b6d62dc3a615a8f7\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+21-->[androidx.core:core:1.9.0] /Users/gimjeonghun/.gradle/caches/transforms-3/82546ab4767d1df2b6d62dc3a615a8f7/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
 22        android:name="com.example.tiktok_clone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-22-->[androidx.core:core:1.9.0] C:\Users\1817-05\.gradle\caches\transforms-3\82546ab4767d1df2b6d62dc3a615a8f7\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+22-->[androidx.core:core:1.9.0] /Users/gimjeonghun/.gradle/caches/transforms-3/82546ab4767d1df2b6d62dc3a615a8f7/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
 23        android:protectionLevel="signature" />
-23-->[androidx.core:core:1.9.0] C:\Users\1817-05\.gradle\caches\transforms-3\82546ab4767d1df2b6d62dc3a615a8f7\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+23-->[androidx.core:core:1.9.0] /Users/gimjeonghun/.gradle/caches/transforms-3/82546ab4767d1df2b6d62dc3a615a8f7/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
 24
 25    <uses-permission android:name="com.example.tiktok_clone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-25-->[androidx.core:core:1.9.0] C:\Users\1817-05\.gradle\caches\transforms-3\82546ab4767d1df2b6d62dc3a615a8f7\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-25-->[androidx.core:core:1.9.0] C:\Users\1817-05\.gradle\caches\transforms-3\82546ab4767d1df2b6d62dc3a615a8f7\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+25-->[androidx.core:core:1.9.0] /Users/gimjeonghun/.gradle/caches/transforms-3/82546ab4767d1df2b6d62dc3a615a8f7/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+25-->[androidx.core:core:1.9.0] /Users/gimjeonghun/.gradle/caches/transforms-3/82546ab4767d1df2b6d62dc3a615a8f7/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
 26
 27    <application
 28        android:name="io.flutter.app.FlutterMultiDexApplication"
 29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-29-->[androidx.core:core:1.9.0] C:\Users\1817-05\.gradle\caches\transforms-3\82546ab4767d1df2b6d62dc3a615a8f7\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+29-->[androidx.core:core:1.9.0] /Users/gimjeonghun/.gradle/caches/transforms-3/82546ab4767d1df2b6d62dc3a615a8f7/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 30        android:debuggable="true"
 31        android:icon="@mipmap/ic_launcher"
 32        android:label="tiktok_clone" >
@@ -80,70 +80,70 @@
 64            android:value="2" />
 65
 66        <service
-66-->[:firebase_core] C:\Users\1817-05\Documents\GitHub\capstone\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+66-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
 67            android:name="com.google.firebase.components.ComponentDiscoveryService"
-67-->[:firebase_core] C:\Users\1817-05\Documents\GitHub\capstone\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
+67-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
 68            android:directBootAware="true"
-68-->[com.google.firebase:firebase-common:20.3.0] C:\Users\1817-05\.gradle\caches\transforms-3\b24238b145583e9bb28ada432bde27f7\transformed\jetified-firebase-common-20.3.0\AndroidManifest.xml:34:13-43
+68-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:34:13-43
 69            android:exported="false" >
-69-->[com.google.firebase:firebase-common:20.3.0] C:\Users\1817-05\.gradle\caches\transforms-3\b24238b145583e9bb28ada432bde27f7\transformed\jetified-firebase-common-20.3.0\AndroidManifest.xml:35:13-37
+69-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:35:13-37
 70            <meta-data
-70-->[:firebase_core] C:\Users\1817-05\Documents\GitHub\capstone\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+70-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 71                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-71-->[:firebase_core] C:\Users\1817-05\Documents\GitHub\capstone\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+71-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
 72                android:value="com.google.firebase.components.ComponentRegistrar" />
-72-->[:firebase_core] C:\Users\1817-05\Documents\GitHub\capstone\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+72-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 73        </service>
 74
 75        <provider
-75-->[:image_picker_android] C:\Users\1817-05\Documents\GitHub\capstone\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+75-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
 76            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-76-->[:image_picker_android] C:\Users\1817-05\Documents\GitHub\capstone\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
+76-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
 77            android:authorities="com.example.tiktok_clone.flutter.image_provider"
-77-->[:image_picker_android] C:\Users\1817-05\Documents\GitHub\capstone\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
+77-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
 78            android:exported="false"
-78-->[:image_picker_android] C:\Users\1817-05\Documents\GitHub\capstone\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+78-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
 79            android:grantUriPermissions="true" >
-79-->[:image_picker_android] C:\Users\1817-05\Documents\GitHub\capstone\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+79-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
 80            <meta-data
-80-->[:image_picker_android] C:\Users\1817-05\Documents\GitHub\capstone\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:75
+80-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:75
 81                android:name="android.support.FILE_PROVIDER_PATHS"
-81-->[:image_picker_android] C:\Users\1817-05\Documents\GitHub\capstone\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+81-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
 82                android:resource="@xml/flutter_image_picker_file_paths" />
-82-->[:image_picker_android] C:\Users\1817-05\Documents\GitHub\capstone\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
+82-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
 83        </provider>
 84        <provider
-84-->[com.google.firebase:firebase-common:20.3.0] C:\Users\1817-05\.gradle\caches\transforms-3\b24238b145583e9bb28ada432bde27f7\transformed\jetified-firebase-common-20.3.0\AndroidManifest.xml:25:9-30:39
+84-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:25:9-30:39
 85            android:name="com.google.firebase.provider.FirebaseInitProvider"
-85-->[com.google.firebase:firebase-common:20.3.0] C:\Users\1817-05\.gradle\caches\transforms-3\b24238b145583e9bb28ada432bde27f7\transformed\jetified-firebase-common-20.3.0\AndroidManifest.xml:26:13-77
+85-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:26:13-77
 86            android:authorities="com.example.tiktok_clone.firebaseinitprovider"
-86-->[com.google.firebase:firebase-common:20.3.0] C:\Users\1817-05\.gradle\caches\transforms-3\b24238b145583e9bb28ada432bde27f7\transformed\jetified-firebase-common-20.3.0\AndroidManifest.xml:27:13-72
+86-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:27:13-72
 87            android:directBootAware="true"
-87-->[com.google.firebase:firebase-common:20.3.0] C:\Users\1817-05\.gradle\caches\transforms-3\b24238b145583e9bb28ada432bde27f7\transformed\jetified-firebase-common-20.3.0\AndroidManifest.xml:28:13-43
+87-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:28:13-43
 88            android:exported="false"
-88-->[com.google.firebase:firebase-common:20.3.0] C:\Users\1817-05\.gradle\caches\transforms-3\b24238b145583e9bb28ada432bde27f7\transformed\jetified-firebase-common-20.3.0\AndroidManifest.xml:29:13-37
+88-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:29:13-37
 89            android:initOrder="100" />
-89-->[com.google.firebase:firebase-common:20.3.0] C:\Users\1817-05\.gradle\caches\transforms-3\b24238b145583e9bb28ada432bde27f7\transformed\jetified-firebase-common-20.3.0\AndroidManifest.xml:30:13-36
+89-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:30:13-36
 90
 91        <meta-data
-91-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\1817-05\.gradle\caches\transforms-3\83770efba2c122ac4d7bf3f6e3fc9396\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+91-->[com.google.android.gms:play-services-basement:18.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
 92            android:name="com.google.android.gms.version"
-92-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\1817-05\.gradle\caches\transforms-3\83770efba2c122ac4d7bf3f6e3fc9396\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+92-->[com.google.android.gms:play-services-basement:18.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
 93            android:value="@integer/google_play_services_version" />
-93-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\1817-05\.gradle\caches\transforms-3\83770efba2c122ac4d7bf3f6e3fc9396\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+93-->[com.google.android.gms:play-services-basement:18.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
 94
 95        <uses-library
-95-->[androidx.window:window:1.0.0-beta04] C:\Users\1817-05\.gradle\caches\transforms-3\e1f53c96aa78f7b42431169b7cd59214\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+95-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
 96            android:name="androidx.window.extensions"
-96-->[androidx.window:window:1.0.0-beta04] C:\Users\1817-05\.gradle\caches\transforms-3\e1f53c96aa78f7b42431169b7cd59214\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+96-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
 97            android:required="false" />
-97-->[androidx.window:window:1.0.0-beta04] C:\Users\1817-05\.gradle\caches\transforms-3\e1f53c96aa78f7b42431169b7cd59214\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+97-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
 98        <uses-library
-98-->[androidx.window:window:1.0.0-beta04] C:\Users\1817-05\.gradle\caches\transforms-3\e1f53c96aa78f7b42431169b7cd59214\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+98-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
 99            android:name="androidx.window.sidecar"
-99-->[androidx.window:window:1.0.0-beta04] C:\Users\1817-05\.gradle\caches\transforms-3\e1f53c96aa78f7b42431169b7cd59214\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+99-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
 100            android:required="false" />
-100-->[androidx.window:window:1.0.0-beta04] C:\Users\1817-05\.gradle\caches\transforms-3\e1f53c96aa78f7b42431169b7cd59214\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+100-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
 101    </application>
 102
 103</manifest>
