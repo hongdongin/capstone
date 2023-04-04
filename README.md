@@ -1,6 +1,6 @@
-# tiktok_clone
+# capstone 프로젝트용 코드입니다.
 
-A new Flutter project.
+작은 일상
 
 ## Getting Started
 
