@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "fa4c69237a415fa3a400f258d649f0f8959cb36f2ac411c44e1b9a9334d64b3b"
+build_start_time: [1679290854, 237215995]
+build_end_time: [1679290854, 352311134]
+inputs:
+  "/Users/gimjeonghun/Documents/GitHub/capstone/macos/Flutter/GeneratedPluginRegistrant.swift": !private [1679290798, 891450405]
+  "/Users/gimjeonghun/Documents/GitHub/capstone/macos/Runner/AppDelegate.swift": !private [1679271028, 785031080]
+  "/Users/gimjeonghun/Documents/GitHub/capstone/macos/Runner/MainFlutterWindow.swift": !private [1679271028, 788753986]
