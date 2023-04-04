@@ -1,27 +1,27 @@
 version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
 options: "eace4e1315a46a4ff3c17c72400918cf52d8ed5a497a7cba4d55399c1e2d7dcd"
-build_start_time: [1680354018, 34779071]
-build_end_time: [1680354024, 625785827]
+build_start_time: [1680613576, 14191150]
+build_end_time: [1680613579, 456105947]
 inputs:
   ? "/Users/gimjeonghun/Documents/GitHub/capstone/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/Heartbeat.swift"
-  : [1680354000, 395965814]
+  : [1680613552, 488834857]
   ? "/Users/gimjeonghun/Documents/GitHub/capstone/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatController.swift"
-  : [1680354000, 396507501]
+  : [1680613552, 489956140]
   ? "/Users/gimjeonghun/Documents/GitHub/capstone/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatStorage.swift"
-  : [1680354000, 396847248]
+  : [1680613552, 490737676]
   ? "/Users/gimjeonghun/Documents/GitHub/capstone/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsBundle.swift"
-  : [1680354000, 397029638]
+  : [1680613552, 491065740]
   ? "/Users/gimjeonghun/Documents/GitHub/capstone/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsPayload.swift"
-  : [1680354000, 397367477]
+  : [1680613552, 491749525]
   ? "/Users/gimjeonghun/Documents/GitHub/capstone/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/RingBuffer.swift"
-  : [1680354000, 396167755]
+  : [1680613552, 489178419]
   ? "/Users/gimjeonghun/Documents/GitHub/capstone/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/Storage.swift"
-  : [1680354000, 395709037]
+  : [1680613552, 488340854]
   ? "/Users/gimjeonghun/Documents/GitHub/capstone/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/StorageFactory.swift"
-  : [1680354000, 397562026]
+  : [1680613552, 492162704]
   ? "/Users/gimjeonghun/Documents/GitHub/capstone/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/WeakContainer.swift"
-  : [1680354000, 397186517]
+  : [1680613552, 491386413]
   ? "/Users/gimjeonghun/Documents/GitHub/capstone/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/_ObjC_HeartbeatController.swift"
-  : [1680354000, 396342754]
+  : [1680613552, 489580631]
   ? "/Users/gimjeonghun/Documents/GitHub/capstone/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/_ObjC_HeartbeatsPayload.swift"
-  : [1680354000, 396682262]
+  : [1680613552, 490303516]
