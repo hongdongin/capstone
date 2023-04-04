@@ -5,21 +5,21 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gallery_saver/gallery_saver.dart';
 
-class PhotoPreviewScreen extends StatefulWidget {
+class ImagePreviewScreen extends StatefulWidget {
   final XFile image;
   final bool isPicked;
 
-  const PhotoPreviewScreen({
+  const ImagePreviewScreen({
     super.key,
     required this.image,
     required this.isPicked,
   });
 
   @override
-  State<PhotoPreviewScreen> createState() => _PhotoPreviewScreenState();
+  State<ImagePreviewScreen> createState() => _ImagePreviewScreenState();
 }
 
-class _PhotoPreviewScreenState extends State<PhotoPreviewScreen> {
+class _ImagePreviewScreenState extends State<ImagePreviewScreen> {
   late final Image _image;
 
   bool _savePhoto = false;

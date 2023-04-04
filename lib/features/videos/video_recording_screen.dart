@@ -8,7 +8,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/photo/photo_screen.dart';
+import 'package:tiktok_clone/features/image/image_screen.dart';
 import 'package:tiktok_clone/features/videos/video_preview_screen.dart';
 import 'package:tiktok_clone/features/videos/widgets/flash_button.dart';
 
@@ -251,7 +251,7 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => const PhotoScreen(),
+        builder: (context) => const ImageScreen(),
       ),
     );
   }
