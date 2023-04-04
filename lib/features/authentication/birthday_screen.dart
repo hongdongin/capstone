@@ -56,7 +56,7 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
           children: [
             Gaps.v40,
             const Text(
-              "When's your birthday?",
+              "당신의 생일은 언제입니까?",
               style: TextStyle(
                 fontSize: Sizes.size24,
                 fontWeight: FontWeight.w700,
@@ -64,7 +64,7 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
             ),
             Gaps.v8,
             const Text(
-              "Your birthday won't be shown publicly.",
+              "당신의 생일은 공개되지 않을 것입니다.",
               style: TextStyle(
                 fontSize: Sizes.size16,
                 color: Colors.black54,

@@ -7,15 +7,15 @@ import 'package:tiktok_clone/constants/sizes.dart';
 import 'package:tiktok_clone/utils.dart';
 
 final tabs = [
-  "Entertainment",
-  "Beauty & Style",
-  "Drama",
-  "Learning",
-  "Sports",
-  "Arts & Crafts",
-  "Dance",
-  "Animals",
-  "Food",
+  "오락",
+  "뷰티 & 미용",
+  "드라마",
+  "학문",
+  "스포츠",
+  "미술 & 공예",
+  "댄스",
+  "반려동물",
+  "음식",
 ];
 
 class DiscoverScreen extends StatefulWidget {
