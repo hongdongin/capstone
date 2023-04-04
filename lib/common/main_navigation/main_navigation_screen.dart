@@ -85,7 +85,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               NavTab(
-                text: "Home",
+                text: "홈",
                 isSelected: _selectedIndex == 0,
                 icon: FontAwesomeIcons.house,
                 selectedIcon: FontAwesomeIcons.house,
@@ -93,7 +93,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                 selectedIndex: _selectedIndex,
               ),
               NavTab(
-                text: "Discover",
+                text: "일상",
                 isSelected: _selectedIndex == 1,
                 icon: FontAwesomeIcons.compass,
                 selectedIcon: FontAwesomeIcons.solidCompass,
@@ -107,7 +107,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
               ),
               Gaps.h24,
               NavTab(
-                text: "Inbox",
+                text: "채팅",
                 isSelected: _selectedIndex == 3,
                 icon: FontAwesomeIcons.message,
                 selectedIcon: FontAwesomeIcons.solidMessage,
@@ -115,7 +115,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                 selectedIndex: _selectedIndex,
               ),
               NavTab(
-                text: "Profile",
+                text: "프로필",
                 isSelected: _selectedIndex == 4,
                 icon: FontAwesomeIcons.user,
                 selectedIcon: FontAwesomeIcons.solidUser,

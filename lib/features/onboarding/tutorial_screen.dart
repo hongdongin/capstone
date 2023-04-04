@@ -63,7 +63,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
                   children: const [
                     Gaps.v80,
                     Text(
-                      "Watch cool videos!",
+                      "작은 일상에 오신것을 환영합니다!!",
                       style: TextStyle(
                         fontSize: Sizes.size40,
                         fontWeight: FontWeight.bold,
@@ -71,7 +71,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
                     ),
                     Gaps.v16,
                     Text(
-                      "Videos are personalized for you based on what you watch, like, and share.",
+                      "이 앱은 모임을 통해서 사진과 영상을 통해서 작은 일상을 공유하는 앱입니다",
                       style: TextStyle(
                         fontSize: Sizes.size20,
                       ),
@@ -82,7 +82,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
                   children: const [
                     Gaps.v80,
                     Text(
-                      "Follow the rules",
+                      "어플을 사용하기 위한 규칙",
                       style: TextStyle(
                         fontSize: Sizes.size40,
                         fontWeight: FontWeight.bold,
@@ -90,7 +90,14 @@ class _TutorialScreenState extends State<TutorialScreen> {
                     ),
                     Gaps.v16,
                     Text(
-                      "Videos are personalized for you based on what you watch, like, and share.",
+                      "모임을 생성을 하기위해서는 생성할 모임을 태그로 분류하셔야 합니다.",
+                      style: TextStyle(
+                        fontSize: Sizes.size20,
+                      ),
+                    ),
+                    Gaps.v16,
+                    Text(
+                      "모임을 가입하기 위해서는 모임장의 권한이 필요합니다.",
                       style: TextStyle(
                         fontSize: Sizes.size20,
                       ),
@@ -118,7 +125,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
                 child: CupertinoButton(
                   onPressed: _onEnterAppTap,
                   color: Theme.of(context).primaryColor,
-                  child: const Text('Enter the app!'),
+                  child: const Text('앱 시작하기!!'),
                 ),
               )),
         ),

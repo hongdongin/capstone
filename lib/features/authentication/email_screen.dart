@@ -99,7 +99,7 @@ class _EmailScreenState extends State<EmailScreen> {
                 onEditingComplete: _onSubmit,
                 autocorrect: false,
                 decoration: InputDecoration(
-                  hintText: "Email",
+                  hintText: "이메일",
                   errorText: _isEmailValid(),
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(
