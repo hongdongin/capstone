@@ -8,7 +8,7 @@ import 'package:tiktok_clone/features/videos/widgets/video_comments.dart';
 import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
-import '../../../common/main_navigation/widgets/video_config.dart';
+import '../../../common/video_config/video_config.dart';
 
 class VideoPost extends StatefulWidget {
   final Function onVideoFinished;
@@ -74,6 +74,9 @@ class _VideoPostState extends State<VideoPost>
     videoConfig.addListener(() {
       setState(() {
         _autoMute = videoConfig.autoMute;
+        _autoMute
+            ? _videoPlayerController.setVolume(0)
+            : _videoPlayerController.setVolume(1);
       });
     });
   }
@@ -86,6 +89,7 @@ class _VideoPostState extends State<VideoPost>
   }
 
   void _onVisibilityChanged(VisibilityInfo info) {
+    if (!mounted) return;
     if (info.visibleFraction == 1 &&
         !_isPaused &&
         !_videoPlayerController.value.isPlaying) {

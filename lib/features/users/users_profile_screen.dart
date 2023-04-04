@@ -218,35 +218,39 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                 ),
               ];
             },
-            body: TabBarView(
-              children: [
-                GridView.builder(
-                  itemCount: 20,
-                  padding: EdgeInsets.zero,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
-                    crossAxisSpacing: Sizes.size2,
-                    mainAxisSpacing: Sizes.size2,
-                    childAspectRatio: 9 / 14,
-                  ),
-                  itemBuilder: (context, index) => Column(
-                    children: [
-                      AspectRatio(
-                        aspectRatio: 9 / 14,
-                        child: FadeInImage.assetNetwork(
-                          fit: BoxFit.cover,
-                          placeholder: "assets/images/placeholder.jpg",
-                          image:
-                              "https://images.unsplash.com/photo-1554486840-db3a33d9318e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+            body: Container(
+              color: isDark ? Colors.black : Colors.white,
+              child: TabBarView(
+                children: [
+                  GridView.builder(
+                    itemCount: 20,
+                    padding: EdgeInsets.zero,
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,
+                      crossAxisSpacing: Sizes.size2,
+                      mainAxisSpacing: Sizes.size2,
+                      childAspectRatio: 9 / 14,
+                    ),
+                    itemBuilder: (context, index) => Column(
+                      children: [
+                        AspectRatio(
+                          aspectRatio: 9 / 14,
+                          child: FadeInImage.assetNetwork(
+                            fit: BoxFit.cover,
+                            placeholder: "assets/images/placeholder.jpg",
+                            image:
+                                "https://images.unsplash.com/photo-1554486840-db3a33d9318e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-                const Center(
-                  child: Text('Page two'),
-                ),
-              ],
+                  const Center(
+                    child: Text('Page two'),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
