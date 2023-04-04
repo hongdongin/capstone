@@ -5,15 +5,15 @@ import 'package:tiktok_clone/features/onboarding/tutorial_screen.dart';
 import 'package:tiktok_clone/features/onboarding/widgets/interest_button.dart';
 
 const interests = [
-  "Entertainment",
-  "Beauty & Style",
-  "Drama",
-  "Learning",
-  "Sports",
-  "Arts & Crafts",
-  "Dance",
-  "Animals",
-  "Food",
+  "오락",
+  "뷰티 & 미용",
+  "드라마",
+  "학문",
+  "스포츠",
+  "미술 & 공예",
+  "댄스",
+  "반려동물",
+  "음식",
 ];
 
 class InterestsScreen extends StatefulWidget {
@@ -72,7 +72,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
         title: AnimatedOpacity(
           opacity: _showTitle ? 1 : 0,
           duration: const Duration(milliseconds: 300),
-          child: const Text("Choose your interests"),
+          child: const Text("당신이 원하는 취미를 선택하세요"),
         ),
       ),
       body: Scrollbar(
@@ -90,7 +90,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
               children: [
                 Gaps.v32,
                 const Text(
-                  "Choose your interests",
+                  "당신이 원하는 취미를 선택하세요",
                   style: TextStyle(
                     fontSize: Sizes.size40,
                     fontWeight: FontWeight.bold,
@@ -98,7 +98,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
                 ),
                 Gaps.v20,
                 const Text(
-                  "Get better video recommendations",
+                  "재미있는 활동을 응원합니다!!",
                   style: TextStyle(
                     fontSize: Sizes.size20,
                   ),
@@ -134,7 +134,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
               color: Theme.of(context).primaryColor,
             ),
             child: const Text(
-              'Next',
+              '다음',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,

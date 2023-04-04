@@ -30,7 +30,7 @@ class _LoginFormScreenState extends State<LoginFormScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Log in'),
+        title: const Text('로그인'),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(
@@ -43,7 +43,7 @@ class _LoginFormScreenState extends State<LoginFormScreen> {
               Gaps.v28,
               TextFormField(
                 decoration: InputDecoration(
-                  hintText: 'Email',
+                  hintText: '이메일',
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colors.grey.shade400,
@@ -71,7 +71,7 @@ class _LoginFormScreenState extends State<LoginFormScreen> {
               TextFormField(
                 obscureText: true,
                 decoration: InputDecoration(
-                  hintText: 'Password',
+                  hintText: '패스워드',
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colors.grey.shade400,

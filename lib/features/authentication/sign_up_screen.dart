@@ -39,7 +39,7 @@ class SignUpScreen extends StatelessWidget {
             children: [
               Gaps.v80,
               const Text(
-                '파퓰러 미팅',
+                '작은 일상',
                 style: TextStyle(
                   fontSize: Sizes.size24,
                   fontWeight: FontWeight.w700,
@@ -49,7 +49,7 @@ class SignUpScreen extends StatelessWidget {
               const Opacity(
                 opacity: 0.7,
                 child: Text(
-                  '파퓰러 미팅에 가입하세요!!',
+                  '작은 일상에 가입하세요!!',
                   style: TextStyle(
                     fontSize: Sizes.size16,
                   ),
@@ -61,7 +61,7 @@ class SignUpScreen extends StatelessWidget {
                 onTap: () => _onEmailTap(context),
                 child: const AuthButton(
                   icon: FaIcon(FontAwesomeIcons.user),
-                  text: 'Use email & password',
+                  text: '이메일과 비밀번호를 입력하세요',
                 ),
               ),
             ],
@@ -81,7 +81,7 @@ class SignUpScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
-                'Already have an account?',
+                '이미 계정을 가지고 있으신가요?',
                 style: TextStyle(
                   fontSize: Sizes.size16,
                 ),
@@ -90,7 +90,7 @@ class SignUpScreen extends StatelessWidget {
               GestureDetector(
                 onTap: () => _onLoginTap(context),
                 child: Text(
-                  'Log In',
+                  '로그인',
                   style: TextStyle(
                     fontSize: Sizes.size16,
                     fontWeight: FontWeight.w600,
