@@ -94,7 +94,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                                 ),
                                 Gaps.v1,
                                 Expanded(
-                                  child: Text("Following",
+                                  child: Text("팔로잉",
                                       style: TextStyle(
                                         color: Colors.grey.shade500,
                                       )),
@@ -120,7 +120,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                                 Gaps.v1,
                                 Expanded(
                                   child: Text(
-                                    "Followers",
+                                    "팔로워",
                                     style: TextStyle(
                                       color: Colors.grey.shade500,
                                     ),
@@ -147,7 +147,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                                 Gaps.v1,
                                 Expanded(
                                   child: Text(
-                                    "Likes",
+                                    "좋아요",
                                     style: TextStyle(
                                       color: Colors.grey.shade500,
                                     ),
@@ -172,7 +172,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                             ),
                           ),
                           child: const Text(
-                            'Follow',
+                            '팔로우',
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w600,
@@ -187,7 +187,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                           horizontal: Sizes.size32,
                         ),
                         child: Text(
-                          "All highlights and where to watch live matches on FIFA+ I wonder how it would loook",
+                          "나는 생각한다 고로 존재한다...",
                           textAlign: TextAlign.center,
                         ),
                       ),

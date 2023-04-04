@@ -69,7 +69,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text(
-            "Sign up",
+            "등록하기",
           ),
         ),
         body: Padding(
@@ -81,7 +81,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
             children: [
               Gaps.v40,
               const Text(
-                "Password",
+                "패스워드",
                 style: TextStyle(
                   fontSize: Sizes.size24,
                   fontWeight: FontWeight.w700,
@@ -118,7 +118,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                       ),
                     ],
                   ),
-                  hintText: "Make it strong!",
+                  hintText: "비밀번호 작성해주세요.",
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colors.grey.shade400,
@@ -134,7 +134,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
               ),
               Gaps.v10,
               const Text(
-                'Your password must have:',
+                '비밀번호에 반드시 추가해야 합니다:',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
@@ -150,7 +150,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                         : Colors.grey.shade400,
                   ),
                   Gaps.h5,
-                  const Text("8 to 20 characters")
+                  const Text("8자리에서 20자리까지 비밀번호를 작성해주세요.")
                 ],
               ),
               Gaps.v28,

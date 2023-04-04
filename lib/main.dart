@@ -23,7 +23,7 @@ class TikTokApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: router,
       debugShowCheckedModeBanner: false,
-      title: 'TikTok Clone',
+      title: '작은 일상',
       themeMode: ThemeMode.system,
       theme: ThemeData(
         useMaterial3: true,
