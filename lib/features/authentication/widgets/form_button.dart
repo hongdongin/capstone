@@ -35,7 +35,7 @@ class FormButton extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
           child: const Text(
-            'Next',
+            '다음',
             textAlign: TextAlign.center,
           ),
         ),

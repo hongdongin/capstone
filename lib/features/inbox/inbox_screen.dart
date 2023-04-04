@@ -25,7 +25,7 @@ class _InboxScreenState extends State<InboxScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 10,
+        elevation: 1,
         title: const Text('Inbox'),
         actions: [
           IconButton(

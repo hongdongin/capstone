@@ -46,7 +46,7 @@ class LoginScreen extends StatelessWidget {
               const Opacity(
                 opacity: 0.7,
                 child: Text(
-                  "Manage your account, check notifications, comment on videos, and more.",
+                  "작은 일상에 로그인 하세요.",
                   style: TextStyle(
                     fontSize: Sizes.size16,
                   ),
