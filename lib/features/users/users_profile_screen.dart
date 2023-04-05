@@ -31,7 +31,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
 
     return Scaffold(
       backgroundColor:
-          modeConfig.autoMode || isDark ? null : Colors.grey.shade50,
+          modeConfig.autoMode || isDark ? Colors.black : Colors.white10,
       body: SafeArea(
         child: DefaultTabController(
           length: 2,
