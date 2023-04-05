@@ -46,8 +46,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
             animation: modeConfig,
             builder: (context, child) => SwitchListTile.adaptive(
               value: modeConfig.autoMode,
-              onChanged: (value) {},
-              title: const Text("Dark mode"),
+              onChanged: (value) {
+                modeConfig.toggleAutoMute();
+              },
+              title: const Text("dark mode"),
               subtitle: const Text("Videos will be muted by default."),
             ),
           ),

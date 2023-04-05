@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:tiktok_clone/common/main_navigation/widgets/main_navigation/widgets/nav_tab.dart';
 import 'package:tiktok_clone/common/main_navigation/widgets/main_navigation/widgets/post_video_button.dart';
+import 'package:tiktok_clone/common/mode_config/mode_config.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 import 'package:tiktok_clone/features/discover/discover_screen.dart';
@@ -10,8 +11,7 @@ import 'package:tiktok_clone/features/inbox/inbox_screen.dart';
 import 'package:tiktok_clone/features/users/users_profile_screen.dart';
 import 'package:tiktok_clone/features/videos/video_recording_screen.dart';
 import 'package:tiktok_clone/features/videos/video_timeline_screen.dart';
-
-import '../../../../../utils.dart';
+import 'package:tiktok_clone/utils.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   static String routeName = "/mainNavigation";
@@ -53,8 +53,9 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     final isDark = isDarkMode(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor:
-          _selectedIndex == 0 || isDark ? Colors.black : Colors.white,
+      backgroundColor: _selectedIndex == 0 || modeConfig.autoMode || isDark
+          ? Colors.black
+          : Colors.white,
       body: Stack(
         children: [
           Offstage(
@@ -78,8 +79,9 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         ],
       ),
       bottomNavigationBar: Container(
-        color:
-            _selectedIndex == 0 || isDark ? Colors.grey.shade800 : Colors.white,
+        color: _selectedIndex == 0 || modeConfig.autoMode || isDark
+            ? Colors.grey.shade800
+            : Colors.white,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: Sizes.size14),
           child: Row(

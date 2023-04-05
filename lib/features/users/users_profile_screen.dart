@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tiktok_clone/common/mode_config/mode_config.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 import 'package:tiktok_clone/features/setting/settings_screen.dart';
 import 'package:tiktok_clone/features/users/widgets/persistent_tab_bar.dart';
-
-import '../../utils.dart';
+import 'package:tiktok_clone/utils.dart';
 
 class UserProfileScreen extends StatefulWidget {
   final String username;
@@ -28,8 +28,10 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
   @override
   Widget build(BuildContext context) {
     final isDark = isDarkMode(context);
+
     return Scaffold(
-      backgroundColor: isDark ? null : Colors.grey.shade50,
+      backgroundColor:
+          modeConfig.autoMode || isDark ? null : Colors.grey.shade50,
       body: SafeArea(
         child: DefaultTabController(
           length: 2,
@@ -219,7 +221,8 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
               ];
             },
             body: Container(
-              color: isDark ? Colors.black : Colors.white,
+              color:
+                  modeConfig.autoMode || isDark ? Colors.black : Colors.white,
               child: TabBarView(
                 children: [
                   GridView.builder(
