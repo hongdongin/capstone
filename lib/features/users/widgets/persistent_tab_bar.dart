@@ -1,40 +1,54 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tiktok_clone/common/mode_config/mode_config.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
+import 'package:tiktok_clone/utils.dart';
 
 class PersistentTabBar extends SliverPersistentHeaderDelegate {
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
+    final isDark = isDarkMode(context);
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color:
+            modeConfig.autoMode || isDark ? Colors.grey.shade800 : Colors.white,
         border: Border.symmetric(
           horizontal: BorderSide(
-            color: Colors.grey.shade200,
+            color: modeConfig.autoMode || isDark ? Colors.white : Colors.black,
             width: 0.5,
           ),
         ),
       ),
-      child: const TabBar(
+      child: TabBar(
         indicatorSize: TabBarIndicatorSize.label,
-        indicatorColor: Colors.black,
-        labelPadding: EdgeInsets.symmetric(
+        indicatorColor:
+            modeConfig.autoMode || isDark ? Colors.white : Colors.black,
+        labelPadding: const EdgeInsets.symmetric(
           vertical: Sizes.size10,
         ),
-        labelColor: Colors.black,
+        labelColor:
+            modeConfig.autoMode || !isDark ? Colors.black : Colors.white,
         tabs: [
           Padding(
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               horizontal: Sizes.size20,
             ),
-            child: Icon(Icons.grid_4x4_rounded),
+            child: Icon(
+              Icons.grid_4x4_rounded,
+              color:
+                  !modeConfig.autoMode || isDark ? Colors.black : Colors.white,
+            ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               horizontal: Sizes.size20,
             ),
-            child: FaIcon(FontAwesomeIcons.heart),
+            child: FaIcon(
+              FontAwesomeIcons.heart,
+              color:
+                  !modeConfig.autoMode || isDark ? Colors.black : Colors.white,
+            ),
           ),
         ],
       ),
