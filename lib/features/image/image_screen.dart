@@ -92,9 +92,8 @@ class _ImageScreenState extends State<ImageScreen>
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (_noCamera) return;
     if (!_hasPermission) return;
-    if (!_cameraController.value.isInitialized) return;
-    if (state == AppLifecycleState.inactive) {
-      _cameraController.dispose();
+    if (!_cameraController.value.isInitialized) {
+      return;
     } else if (state == AppLifecycleState.resumed) {
       initCamera();
     }

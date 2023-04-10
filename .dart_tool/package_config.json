@@ -272,6 +272,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "nested",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/nested-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path",
       "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/path-1.8.2",
       "packageUri": "lib/",
@@ -360,6 +366,12 @@
       "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/process-4.2.4",
       "packageUri": "lib/",
       "languageVersion": "2.14"
+    },
+    {
+      "name": "provider",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/provider-6.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "quiver",
@@ -482,7 +494,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-04-04T14:10:16.387396Z",
+  "generated": "2023-04-06T11:52:31.994521Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }
