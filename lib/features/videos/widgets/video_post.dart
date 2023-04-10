@@ -35,7 +35,7 @@ class _VideoPostState extends State<VideoPost>
 
   bool _isPaused = false;
   bool _lengthCheck = false;
-  bool _autoMute = videoConfig.autoMute;
+  bool _autoMute = videoConfig.isAutoMuted;
 
   final String _inputText = "This is the flight to Gimpo.";
 
@@ -73,7 +73,7 @@ class _VideoPostState extends State<VideoPost>
 
     videoConfig.addListener(() {
       setState(() {
-        _autoMute = videoConfig.autoMute;
+        _autoMute = videoConfig.isAutoMuted;
         _autoMute
             ? _videoPlayerController.setVolume(0)
             : _videoPlayerController.setVolume(1);

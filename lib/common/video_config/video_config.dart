@@ -1,10 +1,10 @@
 import 'package:flutter/widgets.dart';
 
 class VideoConfig extends ChangeNotifier {
-  bool autoMute = false;
-
+  bool isAutoMuted = false;
+  bool isAutoPlay = false;
   void toggleAutoMute() {
-    autoMute = !autoMute;
+    isAutoMuted = !isAutoMuted;
 
     notifyListeners();
   }
