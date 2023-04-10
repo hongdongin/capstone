@@ -34,7 +34,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           AnimatedBuilder(
             animation: videoConfig,
             builder: (context, child) => SwitchListTile.adaptive(
-              value: videoConfig.autoMute,
+              value: videoConfig.isAutoMuted,
               onChanged: (value) {
                 videoConfig.toggleAutoMute();
               },
