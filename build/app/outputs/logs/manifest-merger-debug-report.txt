@@ -27,6 +27,7 @@ INJECTED from /Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/
 INJECTED from /Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/AndroidManifest.xml:1:1-35:12
 INJECTED from /Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/AndroidManifest.xml:1:1-35:12
 MERGED from /Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/AndroidManifest.xml:1:1-35:12
+MERGED from [:shared_preferences_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:permission_handler_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/permission_handler_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-12:12
@@ -108,6 +109,8 @@ uses-sdk
 INJECTED from /Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/gimjeonghun/Documents/GitHub/capstone/android/app/src/main/AndroidManifest.xml
+MERGED from [:shared_preferences_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:permission_handler_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/permission_handler_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
