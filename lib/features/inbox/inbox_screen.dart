@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
+import 'package:tiktok_clone/common/mode_config/mode_config.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 import 'package:tiktok_clone/features/inbox/activity_screen.dart';
 import 'package:tiktok_clone/features/inbox/chats_screen.dart';
@@ -26,6 +27,7 @@ class _InboxScreenState extends State<InboxScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 1,
+        shadowColor: modeConfig.autoMode ? Colors.white : Colors.black,
         title: const Text('Inbox'),
         actions: [
           IconButton(

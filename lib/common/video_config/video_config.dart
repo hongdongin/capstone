@@ -5,7 +5,6 @@ class VideoConfig extends ChangeNotifier {
   bool isAutoPlay = false;
   void toggleAutoMute() {
     isAutoMuted = !isAutoMuted;
-
     notifyListeners();
   }
 }
