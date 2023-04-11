@@ -25,8 +25,8 @@
 18-->[:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-71
 18-->[:camera_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-68
 19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-19-->[com.google.android.exoplayer:exoplayer-core:2.18.1] /Users/gimjeonghun/.gradle/caches/transforms-3/9c884789b57b2f5bd1933622f1e2d15c/transformed/jetified-exoplayer-core-2.18.1/AndroidManifest.xml:24:5-79
-19-->[com.google.android.exoplayer:exoplayer-core:2.18.1] /Users/gimjeonghun/.gradle/caches/transforms-3/9c884789b57b2f5bd1933622f1e2d15c/transformed/jetified-exoplayer-core-2.18.1/AndroidManifest.xml:24:22-76
+19-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:26:5-79
+19-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:26:22-76
 20
 21    <permission
 21-->[androidx.core:core:1.9.0] /Users/gimjeonghun/.gradle/caches/transforms-3/82546ab4767d1df2b6d62dc3a615a8f7/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
@@ -80,70 +80,187 @@
 64            android:value="2" />
 65
 66        <service
-66-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+66-->[:cloud_firestore] /Users/gimjeonghun/Documents/GitHub/capstone/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
 67            android:name="com.google.firebase.components.ComponentDiscoveryService"
-67-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
+67-->[:cloud_firestore] /Users/gimjeonghun/Documents/GitHub/capstone/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
 68            android:directBootAware="true"
-68-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:34:13-43
+68-->[com.google.firebase:firebase-common:20.3.2] /Users/gimjeonghun/.gradle/caches/transforms-3/63e4d01c6677359be2b622aefdf56d9d/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:34:13-43
 69            android:exported="false" >
-69-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:35:13-37
+69-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:68:13-37
 70            <meta-data
-70-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
-71                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-71-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+70-->[:cloud_firestore] /Users/gimjeonghun/Documents/GitHub/capstone/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+71                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+71-->[:cloud_firestore] /Users/gimjeonghun/Documents/GitHub/capstone/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-134
 72                android:value="com.google.firebase.components.ComponentRegistrar" />
-72-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
-73        </service>
-74
-75        <provider
-75-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
-76            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-76-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
-77            android:authorities="com.example.tiktok_clone.flutter.image_provider"
-77-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
-78            android:exported="false"
-78-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
-79            android:grantUriPermissions="true" >
-79-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
-80            <meta-data
-80-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:75
-81                android:name="android.support.FILE_PROVIDER_PATHS"
-81-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
-82                android:resource="@xml/flutter_image_picker_file_paths" />
-82-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
-83        </provider>
-84        <provider
-84-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:25:9-30:39
-85            android:name="com.google.firebase.provider.FirebaseInitProvider"
-85-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:26:13-77
-86            android:authorities="com.example.tiktok_clone.firebaseinitprovider"
-86-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:27:13-72
-87            android:directBootAware="true"
-87-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:28:13-43
-88            android:exported="false"
-88-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:29:13-37
-89            android:initOrder="100" />
-89-->[com.google.firebase:firebase-common:20.3.0] /Users/gimjeonghun/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:30:13-36
-90
-91        <meta-data
-91-->[com.google.android.gms:play-services-basement:18.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
-92            android:name="com.google.android.gms.version"
-92-->[com.google.android.gms:play-services-basement:18.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
-93            android:value="@integer/google_play_services_version" />
-93-->[com.google.android.gms:play-services-basement:18.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
-94
-95        <uses-library
-95-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
-96            android:name="androidx.window.extensions"
-96-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
-97            android:required="false" />
-97-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
-98        <uses-library
-98-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
-99            android:name="androidx.window.sidecar"
-99-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
-100            android:required="false" />
-100-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
-101    </application>
+72-->[:cloud_firestore] /Users/gimjeonghun/Documents/GitHub/capstone/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+73            <meta-data
+73-->[:firebase_auth] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+74                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+74-->[:firebase_auth] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+75                android:value="com.google.firebase.components.ComponentRegistrar" />
+75-->[:firebase_auth] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+76            <meta-data
+76-->[:firebase_storage] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+77                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
+77-->[:firebase_storage] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-126
+78                android:value="com.google.firebase.components.ComponentRegistrar" />
+78-->[:firebase_storage] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+79            <meta-data
+79-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+80                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+80-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+81                android:value="com.google.firebase.components.ComponentRegistrar" />
+81-->[:firebase_core] /Users/gimjeonghun/Documents/GitHub/capstone/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+82            <meta-data
+82-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:69:13-71:85
+83                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+83-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:70:17-109
+84                android:value="com.google.firebase.components.ComponentRegistrar" />
+84-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:71:17-82
+85            <meta-data
+85-->[com.google.firebase:firebase-firestore:24.4.5] /Users/gimjeonghun/.gradle/caches/transforms-3/3372a0c60d4b4b6cac0e3b0a4c8738f1/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:19:13-21:85
+86                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+86-->[com.google.firebase:firebase-firestore:24.4.5] /Users/gimjeonghun/.gradle/caches/transforms-3/3372a0c60d4b4b6cac0e3b0a4c8738f1/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:20:17-111
+87                android:value="com.google.firebase.components.ComponentRegistrar" />
+87-->[com.google.firebase:firebase-firestore:24.4.5] /Users/gimjeonghun/.gradle/caches/transforms-3/3372a0c60d4b4b6cac0e3b0a4c8738f1/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:21:17-82
+88            <meta-data
+88-->[com.google.firebase:firebase-storage:20.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/81f342884a46218f5b2387a54f27b82e/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:32:13-34:85
+89                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+89-->[com.google.firebase:firebase-storage:20.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/81f342884a46218f5b2387a54f27b82e/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:33:17-107
+90                android:value="com.google.firebase.components.ComponentRegistrar" />
+90-->[com.google.firebase:firebase-storage:20.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/81f342884a46218f5b2387a54f27b82e/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:34:17-82
+91        </service>
+92
+93        <provider
+93-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+94            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+94-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
+95            android:authorities="com.example.tiktok_clone.flutter.image_provider"
+95-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
+96            android:exported="false"
+96-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+97            android:grantUriPermissions="true" >
+97-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+98            <meta-data
+98-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:75
+99                android:name="android.support.FILE_PROVIDER_PATHS"
+99-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+100                android:resource="@xml/flutter_image_picker_file_paths" />
+100-->[:image_picker_android] /Users/gimjeonghun/Documents/GitHub/capstone/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
+101        </provider>
 102
-103</manifest>
+103        <activity
+103-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:29:9-46:20
+104            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+104-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:30:13-80
+105            android:excludeFromRecents="true"
+105-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:31:13-46
+106            android:exported="true"
+106-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:32:13-36
+107            android:launchMode="singleTask"
+107-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:33:13-44
+108            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+108-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:34:13-72
+109            <intent-filter>
+109-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:35:13-45:29
+110                <action android:name="android.intent.action.VIEW" />
+110-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:36:17-69
+110-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:36:25-66
+111
+112                <category android:name="android.intent.category.DEFAULT" />
+112-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:38:17-76
+112-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:38:27-73
+113                <category android:name="android.intent.category.BROWSABLE" />
+113-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:39:17-78
+113-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:39:27-75
+114
+115                <data
+115-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:41:17-44:51
+116                    android:host="firebase.auth"
+116-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:42:21-49
+117                    android:path="/"
+117-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:43:21-37
+118                    android:scheme="genericidp" />
+118-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:44:21-48
+119            </intent-filter>
+120        </activity>
+121        <activity
+121-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:47:9-64:20
+122            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+122-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:48:13-79
+123            android:excludeFromRecents="true"
+123-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:49:13-46
+124            android:exported="true"
+124-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:50:13-36
+125            android:launchMode="singleTask"
+125-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:51:13-44
+126            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+126-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:52:13-72
+127            <intent-filter>
+127-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:53:13-63:29
+128                <action android:name="android.intent.action.VIEW" />
+128-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:36:17-69
+128-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:36:25-66
+129
+130                <category android:name="android.intent.category.DEFAULT" />
+130-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:38:17-76
+130-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:38:27-73
+131                <category android:name="android.intent.category.BROWSABLE" />
+131-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:39:17-78
+131-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:39:27-75
+132
+133                <data
+133-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:41:17-44:51
+134                    android:host="firebase.auth"
+134-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:42:21-49
+135                    android:path="/"
+135-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:43:21-37
+136                    android:scheme="recaptcha" />
+136-->[com.google.firebase:firebase-auth:21.2.0] /Users/gimjeonghun/.gradle/caches/transforms-3/70f2b30c6132ed1e4f955ae42650aa4a/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:44:21-48
+137            </intent-filter>
+138        </activity>
+139
+140        <provider
+140-->[com.google.firebase:firebase-common:20.3.2] /Users/gimjeonghun/.gradle/caches/transforms-3/63e4d01c6677359be2b622aefdf56d9d/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:25:9-30:39
+141            android:name="com.google.firebase.provider.FirebaseInitProvider"
+141-->[com.google.firebase:firebase-common:20.3.2] /Users/gimjeonghun/.gradle/caches/transforms-3/63e4d01c6677359be2b622aefdf56d9d/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:26:13-77
+142            android:authorities="com.example.tiktok_clone.firebaseinitprovider"
+142-->[com.google.firebase:firebase-common:20.3.2] /Users/gimjeonghun/.gradle/caches/transforms-3/63e4d01c6677359be2b622aefdf56d9d/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:27:13-72
+143            android:directBootAware="true"
+143-->[com.google.firebase:firebase-common:20.3.2] /Users/gimjeonghun/.gradle/caches/transforms-3/63e4d01c6677359be2b622aefdf56d9d/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:28:13-43
+144            android:exported="false"
+144-->[com.google.firebase:firebase-common:20.3.2] /Users/gimjeonghun/.gradle/caches/transforms-3/63e4d01c6677359be2b622aefdf56d9d/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:29:13-37
+145            android:initOrder="100" />
+145-->[com.google.firebase:firebase-common:20.3.2] /Users/gimjeonghun/.gradle/caches/transforms-3/63e4d01c6677359be2b622aefdf56d9d/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:30:13-36
+146
+147        <activity
+147-->[com.google.android.gms:play-services-base:18.0.1] /Users/gimjeonghun/.gradle/caches/transforms-3/1a2cb69c9228e95e429c828957f3a3b6/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+148            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+148-->[com.google.android.gms:play-services-base:18.0.1] /Users/gimjeonghun/.gradle/caches/transforms-3/1a2cb69c9228e95e429c828957f3a3b6/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+149            android:exported="false"
+149-->[com.google.android.gms:play-services-base:18.0.1] /Users/gimjeonghun/.gradle/caches/transforms-3/1a2cb69c9228e95e429c828957f3a3b6/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+150            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+150-->[com.google.android.gms:play-services-base:18.0.1] /Users/gimjeonghun/.gradle/caches/transforms-3/1a2cb69c9228e95e429c828957f3a3b6/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+151
+152        <meta-data
+152-->[com.google.android.gms:play-services-basement:18.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+153            android:name="com.google.android.gms.version"
+153-->[com.google.android.gms:play-services-basement:18.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+154            android:value="@integer/google_play_services_version" />
+154-->[com.google.android.gms:play-services-basement:18.1.0] /Users/gimjeonghun/.gradle/caches/transforms-3/83770efba2c122ac4d7bf3f6e3fc9396/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+155
+156        <uses-library
+156-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+157            android:name="androidx.window.extensions"
+157-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+158            android:required="false" />
+158-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+159        <uses-library
+159-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+160            android:name="androidx.window.sidecar"
+160-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+161            android:required="false" />
+161-->[androidx.window:window:1.0.0-beta04] /Users/gimjeonghun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+162    </application>
+163
+164</manifest>

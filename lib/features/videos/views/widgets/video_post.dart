@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
+import 'package:tiktok_clone/features/videos/view_models/playback_config_vm.dart';
 import 'package:tiktok_clone/features/videos/views/widgets/video_comments.dart';
 import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
@@ -34,7 +35,6 @@ class VideoPostState extends ConsumerState<VideoPost>
 
   bool _isPaused = false;
   bool _lengthCheck = false;
-  bool _isMuted = false;
 
   final String _inputText = "This is the flight to Gimpo.";
 
@@ -81,10 +81,14 @@ class VideoPostState extends ConsumerState<VideoPost>
 
   void _onPlaybackConfigChanged() {
     if (!mounted) return;
-    _isMuted = !_isMuted;
-    _isMuted ? !_isMuted : _isMuted;
-    _videoPlayerController.setVolume(_isMuted ? 0 : 1);
-    setState(() {});
+
+    final muted = ref.watch(playbackConfigProvider).muted;
+    ref.read(playbackConfigProvider.notifier).setMuted(!muted);
+    if (muted) {
+      _videoPlayerController.setVolume(1);
+    } else {
+      _videoPlayerController.setVolume(0);
+    }
   }
 
   void _onVisibilityChanged(VisibilityInfo info) {
@@ -92,8 +96,7 @@ class VideoPostState extends ConsumerState<VideoPost>
     if (info.visibleFraction == 1 &&
         !_isPaused &&
         !_videoPlayerController.value.isPlaying) {
-      const autoplay = true;
-      if (autoplay) {
+      if (ref.read(playbackConfigProvider).autoplay) {
         _videoPlayerController.play();
       }
     }
@@ -192,7 +195,7 @@ class VideoPostState extends ConsumerState<VideoPost>
             top: 40,
             child: IconButton(
               icon: FaIcon(
-                _isMuted
+                ref.watch(playbackConfigProvider).muted
                     ? FontAwesomeIcons.volumeOff
                     : FontAwesomeIcons.volumeHigh,
                 color: Colors.white,

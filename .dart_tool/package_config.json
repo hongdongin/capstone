@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "_flutterfire_internals",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/_flutterfire_internals-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "async",
       "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/async-2.10.0",
       "packageUri": "lib/",
@@ -56,6 +62,24 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "cloud_firestore",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/cloud_firestore-4.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "cloud_firestore_platform_interface",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/cloud_firestore_platform_interface-5.12.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "cloud_firestore_web",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/cloud_firestore_web-3.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "collection",
       "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/collection-1.17.0",
       "packageUri": "lib/",
@@ -104,22 +128,58 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "firebase_core",
-      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/firebase_core-2.7.1",
+      "name": "firebase_auth",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/firebase_auth-4.4.0",
       "packageUri": "lib/",
-      "languageVersion": "2.16"
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_auth_platform_interface",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/firebase_auth_platform_interface-6.13.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_auth_web",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/firebase_auth_web-5.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_core",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/firebase_core-2.9.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
     },
     {
       "name": "firebase_core_platform_interface",
-      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/firebase_core_platform_interface-4.5.3",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/firebase_core_platform_interface-4.6.0",
       "packageUri": "lib/",
-      "languageVersion": "2.16"
+      "languageVersion": "2.18"
     },
     {
       "name": "firebase_core_web",
-      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/firebase_core_web-2.2.2",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/firebase_core_web-2.3.0",
       "packageUri": "lib/",
-      "languageVersion": "2.16"
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_storage",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/firebase_storage-11.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_storage_platform_interface",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/firebase_storage_platform_interface-4.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_storage_web",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/firebase_storage_web-3.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
     },
     {
       "name": "flutter",
@@ -554,7 +614,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-04-10T13:18:06.426166Z",
+  "generated": "2023-04-11T01:58:11.318228Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }

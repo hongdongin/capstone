@@ -7,7 +7,7 @@ class PlaybackConfigViewModel extends Notifier<PlaybackConfigModel> {
 
   PlaybackConfigViewModel(this._repository);
 
-  void setMuted(bool value) {
+  Future<void> setMuted(bool value) async {
     _repository.setMuted(value);
     state = PlaybackConfigModel(
       muted: value,
@@ -15,7 +15,7 @@ class PlaybackConfigViewModel extends Notifier<PlaybackConfigModel> {
     );
   }
 
-  void setAutoplay(bool value) {
+  Future<void> setAutoplay(bool value) async {
     _repository.setAutoplay(value);
     state = PlaybackConfigModel(
       muted: state.muted,

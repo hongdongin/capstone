@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -8,9 +9,14 @@ import 'package:tiktok_clone/router.dart';
 import 'common/mode_config/mode_config.dart';
 import 'features/videos/repos/video_playback_config_repo.dart';
 import 'features/videos/view_models/playback_config_vm.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   await SystemChrome.setPreferredOrientations(
     [
@@ -31,20 +37,15 @@ void main() async {
   );
 }
 
-class TikTokApp extends StatefulWidget {
+class TikTokApp extends ConsumerWidget {
   const TikTokApp({super.key});
 
   @override
-  State<TikTokApp> createState() => _TikTokAppState();
-}
-
-class _TikTokAppState extends State<TikTokApp> {
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return AnimatedBuilder(
       animation: modeConfig,
       builder: (context, child) => MaterialApp.router(
-        routerConfig: router,
+        routerConfig: ref.watch(routerProvider),
         debugShowCheckedModeBanner: false,
         title: '작은 일상',
         themeMode: modeConfig.autoMode ? ThemeMode.dark : ThemeMode.system,
