@@ -29,6 +29,13 @@
             {
               "client_id": "11142186328-g5c2belvjoi8ovmqnm73joqfg75tgtmt.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "11142186328-2nkuih5tt4e67ekf5eual6h8fkm6shjv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tiktokClone"
+              }
             }
           ]
         }
