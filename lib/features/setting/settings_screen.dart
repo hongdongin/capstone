@@ -2,9 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:tiktok_clone/common/mode_config/mode_config.dart';
 import 'package:tiktok_clone/features/videos/view_models/playback_config_vm.dart';
+
+import '../authentication/repos/authentication_repo.dart';
 
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
@@ -97,54 +99,6 @@ class SettingsScreen extends ConsumerWidget {
             subtitle: const Text("I need to know!"),
           ),
           ListTile(
-            title: const Text("Log out (iOS)"),
-            textColor: Colors.red,
-            onTap: () {
-              showCupertinoDialog(
-                context: context,
-                builder: (context) => CupertinoAlertDialog(
-                  title: const Text("Are you sure?"),
-                  content: const Text("Plx dont go"),
-                  actions: [
-                    CupertinoDialogAction(
-                      onPressed: () => Navigator.of(context).pop(),
-                      child: const Text("No"),
-                    ),
-                    CupertinoDialogAction(
-                      onPressed: () => Navigator.of(context).pop(),
-                      isDestructiveAction: true,
-                      child: const Text("Yes"),
-                    ),
-                  ],
-                ),
-              );
-            },
-          ),
-          ListTile(
-            title: const Text("Log out (Android)"),
-            textColor: Colors.red,
-            onTap: () {
-              showDialog(
-                context: context,
-                builder: (context) => AlertDialog(
-                  icon: const FaIcon(FontAwesomeIcons.skull),
-                  title: const Text("Are you sure?"),
-                  content: const Text("Plx dont go"),
-                  actions: [
-                    IconButton(
-                      onPressed: () => Navigator.of(context).pop(),
-                      icon: const FaIcon(FontAwesomeIcons.car),
-                    ),
-                    TextButton(
-                      onPressed: () => Navigator.of(context).pop(),
-                      child: const Text("Yes"),
-                    ),
-                  ],
-                ),
-              );
-            },
-          ),
-          ListTile(
             title: const Text("Log out (iOS / Bottom)"),
             textColor: Colors.red,
             onTap: () {
@@ -156,7 +110,10 @@ class SettingsScreen extends ConsumerWidget {
                   actions: [
                     CupertinoActionSheetAction(
                       isDefaultAction: true,
-                      onPressed: () => Navigator.of(context).pop(),
+                      onPressed: () {
+                        ref.read(authRepo).signOut();
+                        context.go("/");
+                      },
                       child: const Text("Not log out"),
                     ),
                     CupertinoActionSheetAction(
