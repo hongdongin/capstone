@@ -12,12 +12,15 @@ import 'features/videos/view_models/playback_config_vm.dart';
 import 'firebase_options.dart';
 
 void main() async {
+  //WidgetFlutterBinding는 Flutter Engine과의 상호작용을 위해 사용된다.
+  //ensureInitialized()를 호출하여 플랫폼 채널의 위젯 바인딩을 보장해야한다.
   WidgetsFlutterBinding.ensureInitialized();
-
+  //파이어베이스 초기화를 위해 사용한다.
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
+  //플러터에서 화면을 고정하기 위해 사용한다.
   await SystemChrome.setPreferredOrientations(
     [
       DeviceOrientation.portraitUp,
@@ -42,9 +45,12 @@ class TikTokApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    //위젯이 많은 복잡한 화면에서 세세한 에니메이션을 구현할 수 있어 사용함.
     return AnimatedBuilder(
       animation: modeConfig,
+      //gorouter를 이용하여 페이지 이동을 구현.
       builder: (context, child) => MaterialApp.router(
+        //riverpod을 이용한 위젯을 구성하는 편리한 번들.
         routerConfig: ref.watch(routerProvider),
         debugShowCheckedModeBanner: false,
         title: '작은 일상',
