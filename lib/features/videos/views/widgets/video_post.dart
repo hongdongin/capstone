@@ -96,7 +96,7 @@ class VideoPostState extends ConsumerState<VideoPost>
     if (info.visibleFraction == 1 &&
         !_isPaused &&
         !_videoPlayerController.value.isPlaying) {
-      if (ref.read(playbackConfigProvider).autoplay) {
+      if (!ref.read(playbackConfigProvider).autoplay) {
         _videoPlayerController.play();
       }
     }
