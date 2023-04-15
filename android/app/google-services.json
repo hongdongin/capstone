@@ -1,37 +1,37 @@
 {
   "project_info": {
-    "project_number": "11142186328",
-    "project_id": "capstone-37874",
-    "storage_bucket": "capstone-37874.appspot.com"
+    "project_number": "79626302877",
+    "project_id": "capstone-bf0b4",
+    "storage_bucket": "capstone-bf0b4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:11142186328:android:3cda7761245d0dade7112d",
+        "mobilesdk_app_id": "1:79626302877:android:c46e0638b8ed2db5eaab74",
         "android_client_info": {
           "package_name": "com.example.tiktok_clone"
         }
       },
       "oauth_client": [
         {
-          "client_id": "11142186328-g5c2belvjoi8ovmqnm73joqfg75tgtmt.apps.googleusercontent.com",
+          "client_id": "79626302877-lc7b66fhtmhts0ikkqengjpu8cdebua6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCXLdTr34AKqhXT2OLXdwhT2KvQ0qm5Jao"
+          "current_key": "AIzaSyBeM85Of3FmxLCdUOMjj87MeJVtcmTaEYE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "11142186328-g5c2belvjoi8ovmqnm73joqfg75tgtmt.apps.googleusercontent.com",
+              "client_id": "79626302877-lc7b66fhtmhts0ikkqengjpu8cdebua6.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "11142186328-2nkuih5tt4e67ekf5eual6h8fkm6shjv.apps.googleusercontent.com",
+              "client_id": "79626302877-8sd86t857ignrclng060vh0jvih6hdds.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.example.tiktokClone"
