@@ -5,8 +5,10 @@ class UserProfileModel {
   final String bio;
   final String link;
   final String birthday;
+  final String hasAvatar;
 
   UserProfileModel({
+    required this.hasAvatar,
     required this.uid,
     required this.email,
     required this.name,
@@ -16,15 +18,17 @@ class UserProfileModel {
   });
 
   UserProfileModel.empty()
-      : uid = '',
-        email = '',
-        name = '',
-        bio = '',
-        link = '',
-        birthday = '';
+      : hasAvatar = 'empty',
+        uid = 'empty uid',
+        email = 'empty email',
+        name = 'empty name',
+        bio = 'empty bio',
+        link = 'empty link',
+        birthday = 'empty birthday';
 
   UserProfileModel.fromJson(Map<String, dynamic> json)
-      : uid = json['uid'],
+      : hasAvatar = json['hasAvatar'],
+        uid = json['uid'],
         email = json['email'],
         name = json['name'],
         bio = json['bio'],
