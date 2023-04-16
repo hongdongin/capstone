@@ -47,6 +47,7 @@ class _LoginFormScreenState extends ConsumerState<LoginFormScreen> {
             children: [
               Gaps.v28,
               TextFormField(
+                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   hintText: '이메일',
                   enabledBorder: UnderlineInputBorder(

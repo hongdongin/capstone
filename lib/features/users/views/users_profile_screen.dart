@@ -8,6 +8,7 @@ import 'package:tiktok_clone/features/setting/settings_screen.dart';
 import 'package:tiktok_clone/features/users/view_models/users_view_model.dart';
 import 'package:tiktok_clone/features/users/views/widgets/avatar.dart';
 import 'package:tiktok_clone/features/users/views/widgets/persistent_tab_bar.dart';
+import 'package:tiktok_clone/features/users/views/widgets/update_profile.dart';
 import 'package:tiktok_clone/utils.dart';
 
 class UserProfileScreen extends ConsumerStatefulWidget {
@@ -27,6 +28,14 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
       ),
     );
   }
+
+  void _onEditPressed({required String bio, required String link}) =>
+      Navigator.of(context).push(
+        UpdateProfile.route(
+          bio: bio,
+          link: link,
+        ),
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -48,22 +57,37 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                   headerSliverBuilder: (context, innerBoxIsScrolled) {
                     return [
                       SliverAppBar(
-                        elevation: 1,
-                        title: Text(data.name),
+                        centerTitle: true,
+                        title: Text(
+                          data.name.toString(),
+                        ),
                         actions: [
                           IconButton(
-                            onPressed: _onGearPressed,
-                            icon: const FaIcon(
-                              FontAwesomeIcons.gear,
-                              size: Sizes.size20,
+                            onPressed: () => _onEditPressed(
+                              bio: data.bio,
+                              link: data.link,
                             ),
-                          )
+                            icon: const Icon(
+                              Icons.edit_note,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: _onGearPressed,
+                            icon: const Icon(
+                              Icons.settings,
+                            ),
+                          ),
                         ],
                       ),
                       SliverToBoxAdapter(
                         child: Column(
                           children: [
-                            Avatar(name: data.name),
+                            Gaps.v20,
+                            Avatar(
+                              uid: data.uid,
+                              name: data.name,
+                              hasAvatar: data.hasAvatar,
+                            ),
                             Gaps.v20,
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -190,27 +214,27 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                               ),
                             ),
                             Gaps.v14,
-                            const Padding(
-                              padding: EdgeInsets.symmetric(
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
                                 horizontal: Sizes.size32,
                               ),
                               child: Text(
-                                "나는 생각한다 고로 존재한다...",
+                                data.bio,
                                 textAlign: TextAlign.center,
                               ),
                             ),
                             Gaps.v14,
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
-                                FaIcon(
+                              children: [
+                                const FaIcon(
                                   FontAwesomeIcons.link,
                                   size: Sizes.size12,
                                 ),
                                 Gaps.h4,
                                 Text(
-                                  "https://nomadcoders.co",
-                                  style: TextStyle(
+                                  data.link,
+                                  style: const TextStyle(
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
