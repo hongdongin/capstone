@@ -4,23 +4,6 @@
             "outputFile": "/Users/gimjeonghun/Documents/GitHub/capstone/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-sw/values-sw.xml",
             "map": [
                 {
-                    "source": "/Users/gimjeonghun/.gradle/caches/transforms-3/9c884789b57b2f5bd1933622f1e2d15c/transformed/jetified-exoplayer-core-2.18.1/res/values-sw/values-sw.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,118,177,239,306,384,465,552,634",
-                        "endColumns": "62,58,61,66,77,80,86,81,69",
-                        "endOffsets": "113,172,234,301,379,460,547,629,699"
-                    },
-                    "to": {
-                        "startLines": "21,22,23,24,25,26,27,28,29",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2430,2493,2552,2614,2681,2759,2840,2927,3009",
-                        "endColumns": "62,58,61,66,77,80,86,81,69",
-                        "endOffsets": "2488,2547,2609,2676,2754,2835,2922,3004,3074"
-                    }
-                },
-                {
                     "source": "/Users/gimjeonghun/.gradle/caches/transforms-3/82546ab4767d1df2b6d62dc3a615a8f7/transformed/core-1.9.0/res/values-sw/values-sw.xml",
                     "from": {
                         "startLines": "2",
@@ -35,6 +18,23 @@
                         "startOffsets": "3400",
                         "endColumns": "100",
                         "endOffsets": "3496"
+                    }
+                },
+                {
+                    "source": "/Users/gimjeonghun/.gradle/caches/transforms-3/4951836d933528c690666baab804f684/transformed/jetified-exoplayer-core-2.18.5/res/values-sw/values-sw.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,118,177,239,306,384,465,552,634",
+                        "endColumns": "62,58,61,66,77,80,86,81,69",
+                        "endOffsets": "113,172,234,301,379,460,547,629,699"
+                    },
+                    "to": {
+                        "startLines": "21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2430,2493,2552,2614,2681,2759,2840,2927,3009",
+                        "endColumns": "62,58,61,66,77,80,86,81,69",
+                        "endOffsets": "2488,2547,2609,2676,2754,2835,2922,3004,3074"
                     }
                 },
                 {

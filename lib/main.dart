@@ -19,7 +19,6 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-
   //플러터에서 화면을 고정하기 위해 사용한다.
   await SystemChrome.setPreferredOrientations(
     [

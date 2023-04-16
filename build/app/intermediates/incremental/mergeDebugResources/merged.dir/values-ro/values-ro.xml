@@ -20,7 +20,7 @@
     <string name="common_signin_button_text_long">Conectați-vă cu Google</string>
     <string msgid="3260749812566568062" name="copy_toast_msg">"Linkul a fost copiat în clipboard"</string>
     <string name="exo_download_completed">Descărcarea a fost finalizată</string>
-    <string name="exo_download_description">Descărcați</string>
+    <string name="exo_download_description">Descarcă</string>
     <string name="exo_download_downloading">Se descarcă</string>
     <string name="exo_download_failed">Descărcarea nu a reușit</string>
     <string name="exo_download_notification_channel_name">Descărcări</string>
