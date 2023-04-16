@@ -6,11 +6,15 @@ import 'package:image_picker/image_picker.dart';
 import 'package:tiktok_clone/features/users/view_models/avatar_view_model.dart';
 
 class Avatar extends ConsumerWidget {
+  final bool hasAvatar;
   final String name;
+  final String uid;
 
   const Avatar({
     super.key,
+    required this.uid,
     required this.name,
+    required this.hasAvatar,
   });
 
   Future<void> _onAvatarTap(WidgetRef ref) async {
@@ -43,8 +47,10 @@ class Avatar extends ConsumerWidget {
             )
           : CircleAvatar(
               radius: 50,
-              foregroundImage: const NetworkImage(
-                  "https://p.kakaocdn.net/th/talkp/wl4bsCBor2/896IHydowqOQbAUgmxFOX0/josobb_110x110_c.jpg"),
+              foregroundImage: hasAvatar
+                  ? NetworkImage(
+                      "https://firebasestorage.googleapis.com/v0/b/capstone-bf0b4.appspot.com/o/avatars%2F$uid?alt=media&haha=${DateTime.now().toString()}")
+                  : null,
               child: Text(name),
             ),
     );
