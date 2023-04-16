@@ -31,6 +31,7 @@ class UserViewModel extends AsyncNotifier<UserProfileModel> {
     String email = "",
     String name = "",
     String birthday = "",
+    String creator = "",
   }) async {
     if (credential.user == null) {
       throw Exception("가입이 필요합니다.");
@@ -38,12 +39,13 @@ class UserViewModel extends AsyncNotifier<UserProfileModel> {
     state = const AsyncValue.loading();
     final profile = UserProfileModel(
       hasAvatar: false,
-      bio: "없음",
-      link: "없음",
+      bio: "update impormation",
+      link: "update link",
       email: credential.user!.email ?? email,
       uid: credential.user!.uid,
       name: credential.user!.displayName ?? name,
       birthday: birthday,
+      creator: creator,
     );
     await _userRepository.createProfile(profile);
     state = AsyncValue.data(profile);
