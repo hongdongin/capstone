@@ -7,7 +7,7 @@ import 'package:tiktok_clone/common/mode_config/mode_config.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 import 'package:tiktok_clone/features/discover/discover_screen.dart';
-import 'package:tiktok_clone/features/inbox/inbox_screen.dart';
+import 'package:tiktok_clone/features/inbox/views/inbox_screen.dart';
 import 'package:tiktok_clone/features/users/views/users_profile_screen.dart';
 import 'package:tiktok_clone/features/videos/views/video_recording_screen.dart';
 import 'package:tiktok_clone/features/videos/views/video_timeline_screen.dart';
@@ -83,7 +83,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
             ? Colors.grey.shade800
             : Colors.white,
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: Sizes.size14),
+          padding: EdgeInsets.only(
+              bottom: MediaQuery.of(context).padding.bottom + Sizes.size12),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

@@ -4,13 +4,13 @@ import 'package:go_router/go_router.dart';
 import 'package:tiktok_clone/features/authentication/login_screen.dart';
 import 'package:tiktok_clone/features/authentication/sign_up_screen.dart';
 import 'package:tiktok_clone/features/image/image_screen.dart';
-import 'package:tiktok_clone/features/inbox/activity_screen.dart';
+import 'package:tiktok_clone/features/inbox/views/activity_screen.dart';
+import 'package:tiktok_clone/features/inbox/views/chat_detail_screen.dart';
+import 'package:tiktok_clone/features/inbox/views/chats_screen.dart';
 import 'package:tiktok_clone/features/onboarding/interests_screen.dart';
 
 import 'common/main_navigation/widgets/main_navigation/main_navigation_screen.dart';
 import 'features/authentication/repos/authentication_repo.dart';
-import 'features/inbox/chat_detail_screen.dart';
-import 'features/inbox/chats_screen.dart';
 import 'features/videos/views/video_recording_screen.dart';
 
 final routerProvider = Provider((ref) {
