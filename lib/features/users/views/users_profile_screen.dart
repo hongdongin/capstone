@@ -84,7 +84,7 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                           children: [
                             Gaps.v20,
                             Avatar(
-                              uid: data.uid,
+                              uid: data.uid.toString(),
                               name: data.name,
                               hasAvatar: data.hasAvatar,
                             ),
