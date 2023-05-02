@@ -4,22 +4,19 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/videos/models/video_model.dart';
 import 'package:tiktok_clone/features/videos/view_models/playback_config_vm.dart';
-import 'package:tiktok_clone/features/videos/views/widgets/event_button.dart';
 import 'package:tiktok_clone/features/videos/views/widgets/video_comments.dart';
 import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
+import 'event_button.dart';
 
 class VideoPost extends ConsumerStatefulWidget {
   final Function onVideoFinished;
-  final VideoModel videoData;
 
   final int index;
 
   const VideoPost({
     super.key,
-    required this.videoData,
     required this.onVideoFinished,
     required this.index,
   });
@@ -30,14 +27,16 @@ class VideoPost extends ConsumerStatefulWidget {
 
 class VideoPostState extends ConsumerState<VideoPost>
     with SingleTickerProviderStateMixin {
-  late final VideoPlayerController _videoPlayerController;
-
+  final VideoPlayerController _videoPlayerController =
+      VideoPlayerController.asset("assets/videos/video.mp4");
   final Duration _animationDuration = const Duration(milliseconds: 200);
 
   late final AnimationController _animationController;
 
   bool _isPaused = false;
-  final bool _isMuted = false;
+  bool _lengthCheck = false;
+
+  final String _inputText = "This is the flight to Gimpo.";
 
   void _onVideoChange() {
     if (_videoPlayerController.value.isInitialized) {
@@ -49,14 +48,13 @@ class VideoPostState extends ConsumerState<VideoPost>
   }
 
   void _initVideoPlayer() async {
-    _videoPlayerController =
-        VideoPlayerController.asset("assets/videos/video.mp4");
     await _videoPlayerController.initialize();
     await _videoPlayerController.setLooping(true);
     if (kIsWeb) {
       await _videoPlayerController.setVolume(0);
     }
     _videoPlayerController.addListener(_onVideoChange);
+    _onPlaybackConfigChanged();
     setState(() {});
   }
 
@@ -83,12 +81,13 @@ class VideoPostState extends ConsumerState<VideoPost>
 
   void _onPlaybackConfigChanged() {
     if (!mounted) return;
-    final muted = ref.read(playbackConfigProvider).muted;
+
+    final muted = ref.watch(playbackConfigProvider).muted;
     ref.read(playbackConfigProvider.notifier).setMuted(!muted);
     if (muted) {
-      _videoPlayerController.setVolume(0);
-    } else {
       _videoPlayerController.setVolume(1);
+    } else {
+      _videoPlayerController.setVolume(0);
     }
   }
 
@@ -97,7 +96,7 @@ class VideoPostState extends ConsumerState<VideoPost>
     if (info.visibleFraction == 1 &&
         !_isPaused &&
         !_videoPlayerController.value.isPlaying) {
-      if (ref.read(playbackConfigProvider).autoplay) {
+      if (!ref.read(playbackConfigProvider).autoplay) {
         _videoPlayerController.play();
       }
     }
@@ -108,6 +107,7 @@ class VideoPostState extends ConsumerState<VideoPost>
 
   void _onTogglePause() {
     if (_videoPlayerController.value.isPlaying) {
+      if (!mounted) return;
       _videoPlayerController.pause();
       _animationController.reverse();
     } else {
@@ -119,6 +119,18 @@ class VideoPostState extends ConsumerState<VideoPost>
     });
   }
 
+  void _onTapMore() {
+    setState(() {
+      _lengthCheck = !_lengthCheck;
+    });
+  }
+
+  String _checkLength() {
+    return _inputText.length > 25
+        ? "${_inputText.substring(0, 25)} ..."
+        : _inputText;
+  }
+
   void _onCommentsTap(BuildContext context) async {
     if (_videoPlayerController.value.isPlaying) {
       _onTogglePause();
@@ -127,6 +139,9 @@ class VideoPostState extends ConsumerState<VideoPost>
       context: context,
       isScrollControlled: true,
       backgroundColor: Colors.transparent,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(Sizes.size18),
+      ),
       builder: (context) => const VideoComments(),
     );
     _onTogglePause();
@@ -142,9 +157,8 @@ class VideoPostState extends ConsumerState<VideoPost>
           Positioned.fill(
             child: _videoPlayerController.value.isInitialized
                 ? VideoPlayer(_videoPlayerController)
-                : Image.network(
-                    widget.videoData.thumbnailUrl,
-                    fit: BoxFit.cover,
+                : Container(
+                    color: Colors.black,
                   ),
           ),
           Positioned.fill(
@@ -169,7 +183,7 @@ class VideoPostState extends ConsumerState<VideoPost>
                     child: const FaIcon(
                       FontAwesomeIcons.play,
                       color: Colors.white,
-                      size: Sizes.size52,
+                      size: Sizes.size64,
                     ),
                   ),
                 ),
@@ -186,69 +200,86 @@ class VideoPostState extends ConsumerState<VideoPost>
                     : FontAwesomeIcons.volumeHigh,
                 color: Colors.white,
               ),
-              onPressed: _onPlaybackConfigChanged,
+              onPressed: () {
+                _onPlaybackConfigChanged();
+              },
             ),
           ),
           Positioned(
-            bottom: 20,
-            left: 10,
+            bottom: 25,
+            left: 15,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "@${widget.videoData.creator}",
-                  style: const TextStyle(
-                    fontSize: Sizes.size20,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
+                const Text(
+                  "정훈",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: Sizes.size20),
                 ),
                 Gaps.v10,
-                Text(
-                  widget.videoData.description,
-                  style: const TextStyle(
-                    fontSize: Sizes.size16,
-                    color: Colors.white,
-                  ),
+                Row(
+                  children: [
+                    Text(
+                      _lengthCheck ? _inputText : _checkLength(),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: Sizes.size16,
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: _onTapMore,
+                      child: Text(
+                        _lengthCheck ? "Close" : "more",
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: Sizes.size18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
                 )
               ],
             ),
           ),
           Positioned(
             bottom: 20,
-            right: 10,
+            right: 20,
             child: Column(
               children: [
-                CircleAvatar(
+                Gaps.v24,
+                const CircleAvatar(
                   radius: 25,
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,
                   foregroundImage: NetworkImage(
-                    "https://firebasestorage.googleapis.com/v0/b/tiktok-abc-xyz.appspot.com/o/avatars%2F${widget.videoData.creatorUid}?alt=media",
+                    "https://p.kakaocdn.net/th/talkp/wl4bsCBor2/896IHydowqOQbAUgmxFOX0/josobb_110x110_c.jpg",
                   ),
-                  child: Text(widget.videoData.creator),
+                  child: Text("test"),
                 ),
                 Gaps.v24,
                 const EventButton(
                   icon: FontAwesomeIcons.solidHeart,
-                  text: 'test',
+                  text: "2.9M",
                 ),
                 Gaps.v24,
                 GestureDetector(
                   onTap: () => _onCommentsTap(context),
                   child: const EventButton(
                     icon: FontAwesomeIcons.solidComment,
-                    text: "test",
+                    text: "3.3K",
                   ),
                 ),
                 Gaps.v24,
                 const EventButton(
                   icon: FontAwesomeIcons.share,
-                  text: "Share",
-                )
+                  text: "share",
+                ),
               ],
             ),
-          ),
+          )
         ],
       ),
     );

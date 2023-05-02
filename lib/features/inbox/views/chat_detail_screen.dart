@@ -8,7 +8,7 @@ import 'package:tiktok_clone/features/inbox/view_models/message_view_model.dart'
 
 class ChatDetailScreen extends ConsumerStatefulWidget {
   static const String routeName = "chatDetail";
-  static const String routeUrl = ":chatId";
+  static const String routeUrl = "chatDetail";
 
   final String chatId;
 
