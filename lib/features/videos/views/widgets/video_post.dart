@@ -157,8 +157,9 @@ class VideoPostState extends ConsumerState<VideoPost>
           Positioned.fill(
             child: _videoPlayerController.value.isInitialized
                 ? VideoPlayer(_videoPlayerController)
-                : Container(
-                    color: Colors.black,
+                : Image.network(
+                    "https://images.unsplash.com/photo-1554486840-db3a33d9318e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+                    fit: BoxFit.cover,
                   ),
           ),
           Positioned.fill(
@@ -212,7 +213,7 @@ class VideoPostState extends ConsumerState<VideoPost>
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  "@nara",
+                  "정훈",
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -255,7 +256,8 @@ class VideoPostState extends ConsumerState<VideoPost>
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,
                   foregroundImage: NetworkImage(
-                      "https://p.kakaocdn.net/th/talkp/wl4bsCBor2/896IHydowqOQbAUgmxFOX0/josobb_110x110_c.jpg"),
+                    "https://p.kakaocdn.net/th/talkp/wl4bsCBor2/896IHydowqOQbAUgmxFOX0/josobb_110x110_c.jpg",
+                  ),
                   child: Text("nara"),
                 ),
                 Gaps.v24,
