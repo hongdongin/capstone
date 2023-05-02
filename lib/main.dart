@@ -103,7 +103,7 @@ class TikTokApp extends ConsumerWidget {
             foregroundColor: Colors.white,
             titleTextStyle: const TextStyle(
               color: Colors.white,
-              fontSize: Sizes.size16 + Sizes.size2,
+              fontSize: Sizes.size18,
               fontWeight: FontWeight.w600,
             ),
             actionsIconTheme: IconThemeData(

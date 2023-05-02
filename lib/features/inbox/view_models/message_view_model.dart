@@ -3,20 +3,18 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tiktok_clone/features/authentication/repos/authentication_repo.dart';
-import 'package:tiktok_clone/features/inbox/models/message_model.dart';
+import 'package:tiktok_clone/features/inbox/models/message.dart';
 import 'package:tiktok_clone/features/inbox/repos/message_repo.dart';
 
-class MessagesViewModel extends FamilyAsyncNotifier<void, String> {
+class MessagesViewModel extends AsyncNotifier<void> {
   late final MessagesRepo _repo;
-  late final String _chatRoomId;
 
   @override
-  FutureOr<void> build(String chatRoomId) {
-    _chatRoomId = chatRoomId;
+  FutureOr<void> build() {
     _repo = ref.read(messagesRepo);
   }
 
-  Future<void> sendMessage(String text, String yourUid) async {
+  Future<void> sendMessage(String text) async {
     final user = ref.read(authRepo).user;
     state = const AsyncValue.loading();
     state = await AsyncValue.guard(() async {
@@ -25,34 +23,31 @@ class MessagesViewModel extends FamilyAsyncNotifier<void, String> {
         userId: user!.uid,
         createdAt: DateTime.now().millisecondsSinceEpoch,
       );
-      _repo.sendMessage(
-        message: message,
-        chatRoomId: _chatRoomId,
-        personA: user.uid,
-        personB: yourUid,
-      );
+      await _repo.sendMessage(message);
     });
   }
 }
 
-final messagesProvider =
-    AsyncNotifierProvider.family<MessagesViewModel, void, String>(
+final messagesProvider = AsyncNotifierProvider<MessagesViewModel, void>(
   () => MessagesViewModel(),
 );
 
-final chatProvider = StreamProvider.family
-    .autoDispose<List<MessageModel>, String>((ref, _chatRoomId) {
+final chatProvider = StreamProvider<List<MessageModel>>((ref) {
   final db = FirebaseFirestore.instance;
 
   return db
       .collection("chat_rooms")
-      .doc(_chatRoomId)
+      .doc("5wIEF4qSGhFMKms4Pjuu")
       .collection("texts")
       .orderBy("createdAt")
       .snapshots()
       .map((event) => event.docs
           .map(
-            (doc) => MessageModel.fromJson(doc.data()),
+            (doc) => MessageModel.fromJson(
+              doc.data(),
+            ),
           )
+          .toList()
+          .reversed
           .toList());
 });
