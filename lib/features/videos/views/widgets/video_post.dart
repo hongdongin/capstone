@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
+import 'package:tiktok_clone/features/videos/models/video_model.dart';
 import 'package:tiktok_clone/features/videos/view_models/playback_config_vm.dart';
 import 'package:tiktok_clone/features/videos/views/widgets/video_comments.dart';
 import 'package:video_player/video_player.dart';
@@ -12,11 +13,13 @@ import 'event_button.dart';
 
 class VideoPost extends ConsumerStatefulWidget {
   final Function onVideoFinished;
+  final VideoModel videoData;
 
   final int index;
 
   const VideoPost({
     super.key,
+    required this.videoData,
     required this.onVideoFinished,
     required this.index,
   });
@@ -157,8 +160,9 @@ class VideoPostState extends ConsumerState<VideoPost>
           Positioned.fill(
             child: _videoPlayerController.value.isInitialized
                 ? VideoPlayer(_videoPlayerController)
-                : Container(
-                    color: Colors.black,
+                : Image.network(
+                    widget.videoData.thumbnailUrl,
+                    fit: BoxFit.cover,
                   ),
           ),
           Positioned.fill(
@@ -211,9 +215,9 @@ class VideoPostState extends ConsumerState<VideoPost>
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "@nara",
-                  style: TextStyle(
+                Text(
+                  "@${widget.videoData.creator}",
+                  style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: Sizes.size20),
@@ -222,7 +226,9 @@ class VideoPostState extends ConsumerState<VideoPost>
                 Row(
                   children: [
                     Text(
-                      _lengthCheck ? _inputText : _checkLength(),
+                      _lengthCheck
+                          ? widget.videoData.description
+                          : _checkLength(),
                       style: const TextStyle(
                         color: Colors.white,
                         fontSize: Sizes.size16,
@@ -255,7 +261,8 @@ class VideoPostState extends ConsumerState<VideoPost>
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,
                   foregroundImage: NetworkImage(
-                      "https://p.kakaocdn.net/th/talkp/wl4bsCBor2/896IHydowqOQbAUgmxFOX0/josobb_110x110_c.jpg"),
+                    "https://p.kakaocdn.net/th/talkp/wl4bsCBor2/896IHydowqOQbAUgmxFOX0/josobb_110x110_c.jpg",
+                  ),
                   child: Text("nara"),
                 ),
                 Gaps.v24,
