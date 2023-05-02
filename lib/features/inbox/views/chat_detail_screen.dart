@@ -12,7 +12,7 @@ import 'package:tiktok_clone/utils.dart';
 
 class ChatDetailScreen extends ConsumerStatefulWidget {
   static const String routeName = "chatDetail";
-  static const String routeUrl = "/chatDetail";
+  static const String routeUrl = "chatDetail";
 
   final String chatRoomId;
   final String yourUid;

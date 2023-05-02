@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/videos/models/video_model.dart';
 import 'package:tiktok_clone/features/videos/view_models/playback_config_vm.dart';
 import 'package:tiktok_clone/features/videos/views/widgets/video_comments.dart';
 import 'package:video_player/video_player.dart';
@@ -13,13 +12,11 @@ import 'event_button.dart';
 
 class VideoPost extends ConsumerStatefulWidget {
   final Function onVideoFinished;
-  final VideoModel videoData;
 
   final int index;
 
   const VideoPost({
     super.key,
-    required this.videoData,
     required this.onVideoFinished,
     required this.index,
   });
@@ -161,7 +158,7 @@ class VideoPostState extends ConsumerState<VideoPost>
             child: _videoPlayerController.value.isInitialized
                 ? VideoPlayer(_videoPlayerController)
                 : Image.network(
-                    widget.videoData.thumbnailUrl,
+                    "https://images.unsplash.com/photo-1554486840-db3a33d9318e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
                     fit: BoxFit.cover,
                   ),
           ),
@@ -215,9 +212,9 @@ class VideoPostState extends ConsumerState<VideoPost>
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "@${widget.videoData.creator}",
-                  style: const TextStyle(
+                const Text(
+                  "정훈",
+                  style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: Sizes.size20),
@@ -226,9 +223,7 @@ class VideoPostState extends ConsumerState<VideoPost>
                 Row(
                   children: [
                     Text(
-                      _lengthCheck
-                          ? widget.videoData.description
-                          : _checkLength(),
+                      _lengthCheck ? _inputText : _checkLength(),
                       style: const TextStyle(
                         color: Colors.white,
                         fontSize: Sizes.size16,

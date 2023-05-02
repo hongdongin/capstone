@@ -68,11 +68,9 @@ class VideoTimelineScreenState extends ConsumerState<VideoTimelineScreen> {
               onPageChanged: _onPageChanged,
               itemCount: _itemCount,
               itemBuilder: (context, index) {
-                final videoData = videos[index];
                 return VideoPost(
                   onVideoFinished: _onVideoFinished,
                   index: index,
-                  videoData: videoData,
                 );
               },
             ),

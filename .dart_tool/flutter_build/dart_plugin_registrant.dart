@@ -61,6 +61,8 @@ class _PluginRegistrant {
 
       try {
         SharedPreferencesAndroid.registerWith();
+      } catch (err) {
+        print(
           '`shared_preferences_android` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
@@ -70,6 +72,7 @@ class _PluginRegistrant {
       try {
         AndroidVideoPlayer.registerWith();
       } catch (err) {
+        print(
           '`video_player_android` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
@@ -109,6 +112,8 @@ class _PluginRegistrant {
 
       try {
         SharedPreferencesFoundation.registerWith();
+      } catch (err) {
+        print(
           '`shared_preferences_foundation` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
@@ -118,6 +123,7 @@ class _PluginRegistrant {
       try {
         AVFoundationVideoPlayer.registerWith();
       } catch (err) {
+        print(
           '`video_player_avfoundation` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );

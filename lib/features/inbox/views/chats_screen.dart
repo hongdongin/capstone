@@ -8,7 +8,6 @@ import 'package:tiktok_clone/constants/sizes.dart';
 import 'package:tiktok_clone/features/authentication/repos/authentication_repo.dart';
 import 'package:tiktok_clone/features/inbox/view_models/chat_room_view_model.dart';
 import 'package:tiktok_clone/features/inbox/views/chat_detail_screen.dart';
-import 'package:tiktok_clone/features/inbox/views/chat_user_list_screen.dart';
 
 class ChatsScreen extends ConsumerStatefulWidget {
   static const String routeName = "chats";
@@ -25,9 +24,7 @@ class _ChatsScreenState extends ConsumerState<ChatsScreen> {
 
   final Duration _duration = const Duration(milliseconds: 500);
 
-  void _addItem() {
-    context.pushNamed(ChatUserListScreen.routeName);
-  }
+  void _addItem() {}
 
   void _deleteItem(int index) {}
 
