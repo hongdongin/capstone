@@ -2,10 +2,12 @@ import 'dart:io';
 
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gallery_saver/gallery_saver.dart';
+import 'package:tiktok_clone/features/image/view_models/upload_image_view_model.dart';
 
-class ImagePreviewScreen extends StatefulWidget {
+class ImagePreviewScreen extends ConsumerStatefulWidget {
   final XFile image;
   final bool isPicked;
 
@@ -16,26 +18,25 @@ class ImagePreviewScreen extends StatefulWidget {
   });
 
   @override
-  State<ImagePreviewScreen> createState() => _ImagePreviewScreenState();
+  ConsumerState<ImagePreviewScreen> createState() => _ImagePreviewScreenState();
 }
 
-class _ImagePreviewScreenState extends State<ImagePreviewScreen> {
+class _ImagePreviewScreenState extends ConsumerState<ImagePreviewScreen> {
   late final Image _image;
 
-  bool _savePhoto = false;
+  bool _saveImage = false;
 
-  Future<void> _initPhoto() async {
+  Future<void> _initImage() async {
     _image = Image.file(
       File(widget.image.path),
     );
-
     setState(() {});
   }
 
   @override
   void initState() {
     super.initState();
-    _initPhoto();
+    _initImage();
   }
 
   @override
@@ -44,16 +45,23 @@ class _ImagePreviewScreenState extends State<ImagePreviewScreen> {
   }
 
   Future<void> _saveToGallery() async {
-    if (_savePhoto) return;
+    if (_saveImage) return;
 
     await GallerySaver.saveImage(
       widget.image.path,
       albumName: "TikTok Clone!",
     );
 
-    _savePhoto = true;
+    _saveImage = true;
 
     setState(() {});
+  }
+
+  void _onUploadPressed() async {
+    ref.read(uploadImageProvider.notifier).uploadImage(
+          File(widget.image.path),
+          context,
+        );
   }
 
   @override
@@ -61,18 +69,26 @@ class _ImagePreviewScreenState extends State<ImagePreviewScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: const Text('Preview Photo'),
+        title: const Text('Preview image'),
         actions: [
           if (!widget.isPicked)
             IconButton(
               onPressed: _saveToGallery,
               icon: FaIcon(
-                _savePhoto ? FontAwesomeIcons.check : FontAwesomeIcons.download,
+                _saveImage ? FontAwesomeIcons.check : FontAwesomeIcons.download,
               ),
-            )
+            ),
+          IconButton(
+            onPressed: ref.watch(uploadImageProvider).isLoading
+                ? () {}
+                : _onUploadPressed,
+            icon: ref.watch(uploadImageProvider).isLoading
+                ? const CircularProgressIndicator()
+                : const FaIcon(FontAwesomeIcons.cloudArrowUp),
+          )
         ],
       ),
-      body: _image,
+      body: Container(child: _image),
     );
   }
 }

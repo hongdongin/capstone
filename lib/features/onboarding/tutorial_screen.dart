@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:tiktok_clone/common/mode_config/mode_config.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 import 'package:tiktok_clone/utils.dart';
@@ -111,7 +112,9 @@ class _TutorialScreenState extends State<TutorialScreen> {
           ),
         ),
         bottomNavigationBar: Container(
-          color: isDarkMode(context) ? Colors.black : Colors.white,
+          color: isDarkMode(context) || modeConfig.autoMode
+              ? Colors.black
+              : Colors.white,
           child: Padding(
               padding: const EdgeInsets.only(
                 top: Sizes.size32,
@@ -122,11 +125,13 @@ class _TutorialScreenState extends State<TutorialScreen> {
               child: AnimatedOpacity(
                 duration: const Duration(milliseconds: 300),
                 opacity: _showingPage == Page.first ? 0 : 1,
-                child: CupertinoButton(
-                  onPressed: _onEnterAppTap,
-                  color: Theme.of(context).primaryColor,
-                  child: const Text('앱 시작하기!!'),
-                ),
+                child: _showingPage == Page.first
+                    ? null
+                    : CupertinoButton(
+                        onPressed: _onEnterAppTap,
+                        color: Theme.of(context).primaryColor,
+                        child: const Text('앱 시작하기!!'),
+                      ),
               )),
         ),
       ),

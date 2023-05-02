@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>11142186328-2nkuih5tt4e67ekf5eual6h8fkm6shjv.apps.googleusercontent.com</string>
+	<string>79626302877-8sd86t857ignrclng060vh0jvih6hdds.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.11142186328-2nkuih5tt4e67ekf5eual6h8fkm6shjv</string>
+	<string>com.googleusercontent.apps.79626302877-8sd86t857ignrclng060vh0jvih6hdds</string>
 	<key>API_KEY</key>
-	<string>AIzaSyB8vWdEDD0wqNvFwuDpE-zpO_IqmXOLFqk</string>
+	<string>AIzaSyBw6ojto941ftIFl2-SQmhxmZVZaVY6UZw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>11142186328</string>
+	<string>79626302877</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.tiktokClone</string>
 	<key>PROJECT_ID</key>
-	<string>capstone-37874</string>
+	<string>capstone-bf0b4</string>
 	<key>STORAGE_BUCKET</key>
-	<string>capstone-37874.appspot.com</string>
+	<string>capstone-bf0b4.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:11142186328:ios:2a3fa1efd6244e6fe7112d</string>
+	<string>1:79626302877:ios:6cabf6062a477549eaab74</string>
 </dict>
 </plist>

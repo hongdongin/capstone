@@ -25,7 +25,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -44,40 +47,30 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDJODBUVuDQPu5LyclMxLfcGY4Os3_FKd4',
-    appId: '1:11142186328:web:fcd65085994c67bbe7112d',
-    messagingSenderId: '11142186328',
-    projectId: 'capstone-37874',
-    authDomain: 'capstone-37874.firebaseapp.com',
-    storageBucket: 'capstone-37874.appspot.com',
-    measurementId: 'G-34EFLZJ8DG',
+    apiKey: 'AIzaSyBt7ceqNdFKIs8c6WdnAoJlwxks0KumJ9Y',
+    appId: '1:79626302877:web:593b992c235f1165eaab74',
+    messagingSenderId: '79626302877',
+    projectId: 'capstone-bf0b4',
+    authDomain: 'capstone-bf0b4.firebaseapp.com',
+    storageBucket: 'capstone-bf0b4.appspot.com',
+    measurementId: 'G-361R7KN2X2',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCXLdTr34AKqhXT2OLXdwhT2KvQ0qm5Jao',
-    appId: '1:11142186328:android:3cda7761245d0dade7112d',
-    messagingSenderId: '11142186328',
-    projectId: 'capstone-37874',
-    storageBucket: 'capstone-37874.appspot.com',
+    apiKey: 'AIzaSyBeM85Of3FmxLCdUOMjj87MeJVtcmTaEYE',
+    appId: '1:79626302877:android:c46e0638b8ed2db5eaab74',
+    messagingSenderId: '79626302877',
+    projectId: 'capstone-bf0b4',
+    storageBucket: 'capstone-bf0b4.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB8vWdEDD0wqNvFwuDpE-zpO_IqmXOLFqk',
-    appId: '1:11142186328:ios:2a3fa1efd6244e6fe7112d',
-    messagingSenderId: '11142186328',
-    projectId: 'capstone-37874',
-    storageBucket: 'capstone-37874.appspot.com',
-    iosClientId: '11142186328-2nkuih5tt4e67ekf5eual6h8fkm6shjv.apps.googleusercontent.com',
-    iosBundleId: 'com.example.tiktokClone',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyB8vWdEDD0wqNvFwuDpE-zpO_IqmXOLFqk',
-    appId: '1:11142186328:ios:2a3fa1efd6244e6fe7112d',
-    messagingSenderId: '11142186328',
-    projectId: 'capstone-37874',
-    storageBucket: 'capstone-37874.appspot.com',
-    iosClientId: '11142186328-2nkuih5tt4e67ekf5eual6h8fkm6shjv.apps.googleusercontent.com',
+    apiKey: 'AIzaSyBw6ojto941ftIFl2-SQmhxmZVZaVY6UZw',
+    appId: '1:79626302877:ios:6cabf6062a477549eaab74',
+    messagingSenderId: '79626302877',
+    projectId: 'capstone-bf0b4',
+    storageBucket: 'capstone-bf0b4.appspot.com',
+    iosClientId: '79626302877-8sd86t857ignrclng060vh0jvih6hdds.apps.googleusercontent.com',
     iosBundleId: 'com.example.tiktokClone',
   );
 }

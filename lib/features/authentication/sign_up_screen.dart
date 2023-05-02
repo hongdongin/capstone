@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
+import 'package:tiktok_clone/common/mode_config/mode_config.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 import 'package:tiktok_clone/features/authentication/login_screen.dart';
@@ -39,7 +40,7 @@ class SignUpScreen extends StatelessWidget {
             children: [
               Gaps.v80,
               const Text(
-                '작은 일상',
+                '작은 일상 가입하기',
                 style: TextStyle(
                   fontSize: Sizes.size24,
                   fontWeight: FontWeight.w700,
@@ -69,7 +70,7 @@ class SignUpScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Container(
-        color: isDarkMode(context)
+        color: isDarkMode(context) || modeConfig.autoMode
             ? Theme.of(context).appBarTheme.backgroundColor
             : Colors.grey.shade50,
         child: Padding(

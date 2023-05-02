@@ -4,12 +4,15 @@ import 'package:camera/camera.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:tiktok_clone/common/main_navigation/widgets/main_navigation/main_navigation_screen.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 import 'package:tiktok_clone/features/image/image_preview_screen.dart';
-import 'package:tiktok_clone/features/videos/widgets/flash_button.dart';
+
+import '../videos/views/widgets/flash_button.dart';
 
 final List<dynamic> flashButtons = [
   {
@@ -92,9 +95,8 @@ class _ImageScreenState extends State<ImageScreen>
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (_noCamera) return;
     if (!_hasPermission) return;
-    if (!_cameraController.value.isInitialized) return;
-    if (state == AppLifecycleState.inactive) {
-      _cameraController.dispose();
+    if (!_cameraController.value.isInitialized) {
+      return;
     } else if (state == AppLifecycleState.resumed) {
       initCamera();
     }
@@ -198,6 +200,14 @@ class _ImageScreenState extends State<ImageScreen>
     );
   }
 
+  Future<void> _popScreen() async {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+          builder: (context) => const MainNavigationScreen(tab: 'inbox')),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -237,11 +247,12 @@ class _ImageScreenState extends State<ImageScreen>
                 children: [
                   if (!_noCamera && _cameraController.value.isInitialized)
                     CameraPreview(_cameraController),
-                  const Positioned(
+                  Positioned(
                     top: Sizes.size40,
                     left: Sizes.size20,
                     child: CloseButton(
                       color: Colors.white,
+                      onPressed: _popScreen,
                     ),
                   ),
                   if (!_noCamera)
