@@ -1,83 +1,88 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
+import 'package:tiktok_clone/constants/breakpoints.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
+import 'package:tiktok_clone/features/authentication/repos/authentication_repo.dart';
+import 'package:tiktok_clone/features/inbox/view_models/chat_room_view_model.dart';
 import 'package:tiktok_clone/features/inbox/views/chat_detail_screen.dart';
+import 'package:tiktok_clone/features/inbox/views/chat_user_list_screen.dart';
 
-class ChatsScreen extends StatefulWidget {
+class ChatsScreen extends ConsumerStatefulWidget {
   static const String routeName = "chats";
   static const String routeUrl = "/chats";
-  const ChatsScreen({super.key});
+
+  const ChatsScreen({Key? key}) : super(key: key);
 
   @override
-  State<ChatsScreen> createState() => _ChatsScreenState();
+  ConsumerState<ChatsScreen> createState() => _ChatsScreenState();
 }
 
-class _ChatsScreenState extends State<ChatsScreen> {
+class _ChatsScreenState extends ConsumerState<ChatsScreen> {
   final GlobalKey<AnimatedListState> _key = GlobalKey<AnimatedListState>();
 
-  final List<int> _items = [];
-  final Duration _duration = const Duration(
-    milliseconds: 300,
-  );
+  final Duration _duration = const Duration(milliseconds: 500);
 
   void _addItem() {
-    if (_key.currentState != null) {
-      _key.currentState!.insertItem(
-        _items.length,
-        duration: _duration,
-      );
-      _items.add(_items.length);
-    }
+    context.pushNamed(ChatUserListScreen.routeName);
   }
 
-  void _deleteItem(int index) {
-    if (_key.currentContext != null) {
-      _key.currentState!.removeItem(
-        index,
-        (context, animation) => SizeTransition(
-          sizeFactor: animation,
-          child: Container(
-            color: Colors.red,
-            child: _makeTile(index),
-          ),
-        ),
-        duration: _duration,
-      );
-      _items.remove(index);
-    }
-  }
+  void _deleteItem(int index) {}
 
-  void _onChatTap(int index) {
+  void _onChatTap(String chatRoomId, String yourUid) {
     context.pushNamed(
+      extra: {
+        'chatRoomId': chatRoomId,
+        'yourUid': yourUid,
+      },
       ChatDetailScreen.routeName,
-      params: {"chatId": "$index"},
     );
   }
 
-  Widget _makeTile(int index) {
+  Widget _makeTile(int index, snapshot) {
+    final String myUid = ref.read(authRepo).user!.uid;
+    final String chatRoomId = snapshot.data![index]['chatRoomId'];
+    String yourUid = "";
+    String yourName = "";
+    final String personA = snapshot.data![index]['personA'];
+    final String personB = snapshot.data![index]['personB'];
+    if (personA == myUid) {
+      yourUid = personB;
+      yourName = snapshot.data![index]['nameOfPersonB'];
+    } else {
+      yourUid = personA;
+      yourName = snapshot.data![index]['nameOfPersonA'];
+    }
+
+    final Timestamp time = snapshot.data![index]['createdAt'];
+    final lastMessageTime = time.toDate().toString().substring(0, 16);
+
     return ListTile(
+      onTap: () => _onChatTap(chatRoomId, yourUid),
       onLongPress: () => _deleteItem(index),
-      onTap: () => _onChatTap(index),
-      leading: const CircleAvatar(
+      leading: CircleAvatar(
         radius: 30,
         foregroundImage: NetworkImage(
-          "https://p.kakaocdn.net/th/talkp/wl4bsCBor2/896IHydowqOQbAUgmxFOX0/josobb_110x110_c.jpg",
+          "https://firebasestorage.googleapis.com/v0/b/tiktok-clone-76fcb.appspot.com/o/avatar%2F$yourUid?alt=media&",
         ),
-        child: Text('정훈'),
+        child: Text(
+          yourName,
+        ),
       ),
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Text(
-            '시나공 ($index)',
+            yourName,
             style: const TextStyle(
               fontWeight: FontWeight.w600,
             ),
           ),
           Text(
-            '19:23 PM',
+            lastMessageTime,
             style: TextStyle(
               color: Colors.grey.shade500,
               fontSize: Sizes.size12,
@@ -85,45 +90,60 @@ class _ChatsScreenState extends State<ChatsScreen> {
           ),
         ],
       ),
-      subtitle: const Text(
-        'dont forget study 정처기 실기',
+      subtitle: Text(
+        snapshot.data![index]['lastMessage'],
       ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
+    final userId = ref.read(authRepo).user!.uid;
+    Future<List<Map<String, dynamic>>> chatRoomList =
+        ref.read(chatRoomProvider.notifier).getChatRoomModelList(userId);
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Direct Messages'),
-        elevation: 1,
+        title: const Text(
+          "Direct messages",
+        ),
         actions: [
           IconButton(
             onPressed: _addItem,
             icon: const FaIcon(
               FontAwesomeIcons.plus,
             ),
-          )
+          ),
         ],
+        centerTitle: true,
+        elevation: 1,
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: Sizes.size10,
-        ),
-        child: AnimatedList(
-          key: _key,
-          itemBuilder:
-              (BuildContext context, int index, Animation<double> animation) {
-            return FadeTransition(
-              key: UniqueKey(),
-              opacity: animation,
-              child: SizeTransition(
-                sizeFactor: animation,
-                child: _makeTile(index),
+      body: FutureBuilder(
+        future: chatRoomList,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            // print(snapshot.data);
+            return Center(
+              child: Container(
+                constraints: const BoxConstraints(
+                  maxWidth: Breakpoints.lg,
+                ),
+                child: ListView.builder(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: Sizes.size10,
+                  ),
+                  itemCount: snapshot.data!.length,
+                  itemBuilder: (context, index) {
+                    return _makeTile(index, snapshot);
+                  },
+                ),
               ),
             );
-          },
-        ),
+          }
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        },
       ),
     );
   }

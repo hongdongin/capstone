@@ -27,6 +27,29 @@ class UserRepository {
   Future<void> updateUser(String uid, Map<String, dynamic> data) async {
     await _db.collection("users").doc(uid).update(data);
   }
+
+  Future<bool> getIsLiked(String uid, String videoId) async {
+    final likes = await _db
+        .collection("users")
+        .doc(uid)
+        .collection("likes")
+        .doc(videoId)
+        .get();
+    return likes.exists;
+  }
+
+  Future<List<Map<String, dynamic>>> getUserList() async {
+    List<Map<String, dynamic>> userList = [];
+    final usersQuery = _db.collection("users").get();
+
+    await usersQuery.then((users) {
+      for (var user in users.docs) {
+        userList.add(user.data());
+      }
+      return userList;
+    });
+    return userList;
+  }
 }
 
 final userRepo = Provider(
