@@ -32,6 +32,10 @@ class VideoTimelineScreenState extends ConsumerState<VideoTimelineScreen> {
 
   void _onVideoFinished() {
     return;
+    /* _pageController.nextPage(
+      duration: _scrollDuration,
+      curve: _scrollCurve,
+    ); */
   }
 
   @override
@@ -62,11 +66,12 @@ class VideoTimelineScreenState extends ConsumerState<VideoTimelineScreen> {
             onRefresh: _onRefresh,
             displacement: 50,
             edgeOffset: 20,
+            color: Theme.of(context).primaryColor,
             child: PageView.builder(
               controller: _pageController,
               scrollDirection: Axis.vertical,
               onPageChanged: _onPageChanged,
-              itemCount: _itemCount,
+              itemCount: videos.length,
               itemBuilder: (context, index) {
                 final videoData = videos[index];
                 return VideoPost(
