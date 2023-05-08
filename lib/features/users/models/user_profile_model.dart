@@ -1,22 +1,22 @@
 class UserProfileModel {
   final String uid;
-  final String email;
   final String name;
   final String bio;
   final String link;
   final String birthday;
-  final String creator;
   final bool hasAvatar;
+  final String creator;
+  final String email;
 
   UserProfileModel({
-    required this.hasAvatar,
-    required this.uid,
+    required this.creator,
+    this.hasAvatar = false,
     required this.email,
+    required this.uid,
     required this.name,
     required this.bio,
     required this.link,
     required this.birthday,
-    required this.creator,
   });
 
   UserProfileModel.empty()
@@ -30,21 +30,21 @@ class UserProfileModel {
         creator = 'update creator';
 
   UserProfileModel.fromJson(Map<String, dynamic> json)
-      : hasAvatar = json['hasAvatar'],
-        uid = json['uid'],
-        email = json['email'],
-        name = json['name'],
-        bio = json['bio'],
-        link = json['link'],
-        birthday = json['birthday'],
-        creator = json['creator'];
+      : uid = json["uid"] ?? '',
+        email = json["email"] ?? '',
+        name = json["name"] ?? '',
+        bio = json["bio"],
+        creator = json["creator"],
+        birthday = json["birthday"],
+        hasAvatar = json["hasAvatar"] ?? false,
+        link = json["link"];
 
   Map<String, String> toJson() {
-    return {
-      "uid ": uid,
-      "email ": email,
-      " name": name,
-      "bio ": bio,
+    return <String, String>{
+      "uid": uid,
+      "email": email,
+      "name": name,
+      "bio": bio,
       "link": link,
       "birthday": birthday,
       "creator": creator,

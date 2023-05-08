@@ -19,6 +19,7 @@ class UserViewModel extends AsyncNotifier<UserProfileModel> {
     if (_authenticationRepository.isLoggedIn) {
       final profile = await _userRepository
           .findProfile(_authenticationRepository.user!.uid);
+      print(profile);
       if (profile != null) {
         return UserProfileModel.fromJson(profile);
       }
@@ -28,6 +29,7 @@ class UserViewModel extends AsyncNotifier<UserProfileModel> {
 
   Future<void> createProfile({
     required UserCredential credential,
+    String uid = "",
     String email = "",
     String name = "",
     String birthday = "",
@@ -41,9 +43,9 @@ class UserViewModel extends AsyncNotifier<UserProfileModel> {
       hasAvatar: false,
       bio: "update impormation",
       link: "update link",
-      email: credential.user!.email ?? email,
+      email: credential.user!.email ?? "signup plz",
+      name: credential.user!.displayName ?? "update name",
       uid: credential.user!.uid,
-      name: credential.user!.displayName ?? name,
       birthday: birthday,
       creator: creator,
     );
