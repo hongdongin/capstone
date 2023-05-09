@@ -111,14 +111,16 @@ class SettingsScreen extends ConsumerWidget {
                     CupertinoActionSheetAction(
                       isDefaultAction: true,
                       onPressed: () {
-                        ref.read(authRepo).signOut();
-                        context.go("/");
+                        Navigator.of(context).pop();
                       },
                       child: const Text("Not log out"),
                     ),
                     CupertinoActionSheetAction(
                       isDestructiveAction: true,
-                      onPressed: () => Navigator.of(context).pop(),
+                      onPressed: () => {
+                        ref.read(authRepo).signOut(),
+                        context.go("/"),
+                      },
                       child: const Text("Yes plz."),
                     )
                   ],

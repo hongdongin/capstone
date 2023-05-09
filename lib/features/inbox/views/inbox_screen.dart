@@ -3,8 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:tiktok_clone/common/mode_config/mode_config.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
+import 'package:tiktok_clone/features/inbox/chat_test_screen.dart';
 import 'package:tiktok_clone/features/inbox/views/activity_screen.dart';
-import 'package:tiktok_clone/features/inbox/views/chats_screen.dart';
 
 class InboxScreen extends StatefulWidget {
   const InboxScreen({super.key});
@@ -15,7 +15,10 @@ class InboxScreen extends StatefulWidget {
 
 class _InboxScreenState extends State<InboxScreen> {
   void _onDmPressed() {
-    context.pushNamed(ChatsScreen.routeName);
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => ChatTestScreen(chatRoomId: 'chatRoomId')));
   }
 
   void _onActivityTap() {
