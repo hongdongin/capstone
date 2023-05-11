@@ -59,7 +59,7 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                       SliverAppBar(
                         centerTitle: true,
                         title: Text(
-                          data.name,
+                          data.bio,
                         ),
                         actions: [
                           IconButton(
@@ -84,7 +84,7 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                           children: [
                             Gaps.v20,
                             Avatar(
-                              uid: 'ZjC7A9KRE0WozhQ8eEmohqipP8c2',
+                              uid: data.uid,
                               name: data.name,
                               hasAvatar: data.hasAvatar,
                             ),
@@ -93,7 +93,7 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "@${data.uid}, ${data.hasAvatar}",
+                                  "@${data.bio}, ${data.hasAvatar}",
                                   style: const TextStyle(
                                     fontWeight: FontWeight.w600,
                                     fontSize: Sizes.size18,
