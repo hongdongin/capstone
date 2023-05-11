@@ -5,8 +5,6 @@ import 'package:tiktok_clone/features/authentication/login_screen.dart';
 import 'package:tiktok_clone/features/authentication/sign_up_screen.dart';
 import 'package:tiktok_clone/features/image/image_screen.dart';
 import 'package:tiktok_clone/features/inbox/views/activity_screen.dart';
-import 'package:tiktok_clone/features/inbox/views/chat_detail_screen.dart';
-import 'package:tiktok_clone/features/inbox/views/chats_screen.dart';
 import 'package:tiktok_clone/features/onboarding/interests_screen.dart';
 
 import 'common/main_navigation/widgets/main_navigation/main_navigation_screen.dart';
@@ -57,23 +55,6 @@ final routerProvider = Provider((ref) {
         name: ActivityScreen.routeName,
         path: ActivityScreen.routeUrl,
         builder: (context, state) => const ActivityScreen(),
-      ),
-      GoRoute(
-        name: ChatsScreen.routeName,
-        path: ChatsScreen.routeUrl,
-        builder: (context, state) => const ChatsScreen(),
-        routes: [
-          GoRoute(
-            name: ChatDetailScreen.routeName,
-            path: ChatDetailScreen.routeUrl,
-            builder: (context, state) {
-              final chatId = state.params["chatId"]!;
-              return ChatDetailScreen(
-                chatId: chatId,
-              );
-            },
-          )
-        ],
       ),
       GoRoute(
         path: VideoRecordingScreen.routeUrl,
