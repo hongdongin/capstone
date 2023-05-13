@@ -604,7 +604,7 @@ PODS:
   - BoringSSL-GRPC/Interface (0.0.24)
   - camera_avfoundation (0.0.1):
     - Flutter
-  - cloud_firestore (4.5.1):
+  - cloud_firestore (4.6.0):
     - Firebase/Firestore (= 10.7.0)
     - firebase_core
     - Flutter
@@ -620,14 +620,14 @@ PODS:
   - Firebase/Storage (10.7.0):
     - Firebase/CoreOnly
     - FirebaseStorage (~> 10.7.0)
-  - firebase_auth (4.4.1):
+  - firebase_auth (4.2.2):
     - Firebase/Auth (= 10.7.0)
     - firebase_core
     - Flutter
-  - firebase_core (2.9.0):
+  - firebase_core (2.11.0):
     - Firebase/CoreOnly (= 10.7.0)
     - Flutter
-  - firebase_storage (11.1.0):
+  - firebase_storage (11.1.2):
     - Firebase/Storage (= 10.7.0)
     - firebase_core
     - Flutter
@@ -770,9 +770,9 @@ DEPENDENCIES:
   - Flutter (from `Flutter`)
   - gallery_saver (from `.symlinks/plugins/gallery_saver/ios`)
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
-  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/ios`)
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
-  - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/ios`)
+  - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
   - video_player_avfoundation (from `.symlinks/plugins/video_player_avfoundation/ios`)
 
 SPEC REPOS:
@@ -815,11 +815,11 @@ EXTERNAL SOURCES:
   image_picker_ios:
     :path: ".symlinks/plugins/image_picker_ios/ios"
   path_provider_foundation:
-    :path: ".symlinks/plugins/path_provider_foundation/ios"
+    :path: ".symlinks/plugins/path_provider_foundation/darwin"
   permission_handler_apple:
     :path: ".symlinks/plugins/permission_handler_apple/ios"
   shared_preferences_foundation:
-    :path: ".symlinks/plugins/shared_preferences_foundation/ios"
+    :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
   video_player_avfoundation:
     :path: ".symlinks/plugins/video_player_avfoundation/ios"
 
@@ -827,11 +827,11 @@ SPEC CHECKSUMS:
   abseil: ebe5b5529fb05d93a8bdb7951607be08b7fa71bc
   BoringSSL-GRPC: 3175b25143e648463a56daeaaa499c6cb86dad33
   camera_avfoundation: 3125e8cd1a4387f6f31c6c63abb8a55892a9eeeb
-  cloud_firestore: 996fbe17886e254538f5bc51c1606ee9fb524997
+  cloud_firestore: 3809dfc121ab99b81bba51eb84ac6ca3f9033325
   Firebase: 0219acf760880eeec8ce479895bd7767466d9f81
-  firebase_auth: 5a84572b7f5315a3aff5b07c62bb0cd5a28cade5
-  firebase_core: d85432877e814811e040e7659f9c82faeab66e04
-  firebase_storage: 3419feab3ca832a07bdff5307477e0b9d20eb5f8
+  firebase_auth: 66041d972b0c93a4f146573e5c6c9a030d92e2e1
+  firebase_core: dee76ded6c693fdb38b8ea39aef7129e32e587a3
+  firebase_storage: f6fb3e54e886182b5ab5cf514da1d9ceb196fa2f
   FirebaseAppCheckInterop: e69dde5cd51b88ee1b4339d6766b691272256f9b
   FirebaseAuth: dd64c01631df724b09f33e584625775c52f7d71f
   FirebaseAuthInterop: e53c08e60a02de17d1ab77c5032db8ae22d3a799

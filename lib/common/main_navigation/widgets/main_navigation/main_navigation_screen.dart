@@ -84,8 +84,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
             : Colors.white,
         child: Padding(
           padding: EdgeInsets.only(
-              top: MediaQuery.of(context).padding.bottom + Sizes.size12,
-              bottom: MediaQuery.of(context).padding.bottom + Sizes.size12),
+              top: MediaQuery.of(context).padding.bottom + Sizes.size10,
+              bottom: MediaQuery.of(context).padding.bottom + Sizes.size10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
