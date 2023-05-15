@@ -1,11 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:go_router/go_router.dart';
 import 'package:tiktok_clone/common/mode_config/mode_config.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 import 'package:tiktok_clone/features/inbox/views/chat_test_screen.dart';
-import 'package:tiktok_clone/features/inbox/views/activity_screen.dart';
 import 'package:tiktok_clone/features/users/view_models/users_view_model.dart';
 
 class InboxScreen extends ConsumerStatefulWidget {
@@ -16,7 +15,9 @@ class InboxScreen extends ConsumerStatefulWidget {
 }
 
 class _InboxScreenState extends ConsumerState<InboxScreen> {
+  final bool isNull = false;
   late final String chatRoomId;
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   void _onDmPressed({required String chatRoomId}) {
     Navigator.push(
@@ -27,10 +28,6 @@ class _InboxScreenState extends ConsumerState<InboxScreen> {
         ),
       ),
     );
-  }
-
-  void _onActivityTap() {
-    context.pushNamed(ActivityScreen.routeName);
   }
 
   @override
@@ -57,61 +54,42 @@ class _InboxScreenState extends ConsumerState<InboxScreen> {
                 )
               ],
             ),
-            body: ListView(
-              children: [
-                ListTile(
-                  onTap: _onActivityTap,
-                  title: const Text(
-                    'Activity',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: Sizes.size16,
-                    ),
-                  ),
-                  trailing: const FaIcon(
-                    FontAwesomeIcons.chevronRight,
-                    size: Sizes.size14,
-                    color: Colors.black,
-                  ),
-                ),
-                Container(
-                  height: Sizes.size1,
-                  color: Colors.grey.shade200,
-                ),
-                ListTile(
-                  leading: Container(
-                    width: Sizes.size52,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.blue,
-                    ),
-                    child: const Center(
-                      child: FaIcon(
-                        FontAwesomeIcons.users,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  title: const Text(
-                    'New followers',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: Sizes.size16,
-                    ),
-                  ),
-                  subtitle: const Text(
-                    'Messages from followers will appear here.',
-                    style: TextStyle(
-                      fontSize: Sizes.size14,
-                    ),
-                  ),
-                  trailing: const FaIcon(
-                    FontAwesomeIcons.chevronRight,
-                    size: Sizes.size14,
-                    color: Colors.black,
-                  ),
-                )
-              ],
+            body: StreamBuilder<QuerySnapshot>(
+              stream: _firestore.collection('users').snapshots(),
+              builder: (BuildContext context,
+                  AsyncSnapshot<QuerySnapshot> snapshot) {
+                if (snapshot.hasError) {
+                  return Text('Error: ${snapshot.error}');
+                }
+
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Text('Loading...');
+                }
+
+                return ListView(
+                  children:
+                      snapshot.data!.docs.map((DocumentSnapshot document) {
+                    Map<String, dynamic> data =
+                        document.data() as Map<String, dynamic>;
+                    return Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 10),
+                          child: GestureDetector(
+                            onTap: () => _onDmPressed(chatRoomId: data['uid']),
+                            child: ListTile(
+                              title: Text(data['email'].toString()),
+                              subtitle: Text(data['bio'].toString()),
+                              tileColor: Colors.blue.shade100,
+                            ),
+                          ),
+                        ),
+                      ],
+                    );
+                  }).toList(),
+                );
+              },
             ),
           ),
         );

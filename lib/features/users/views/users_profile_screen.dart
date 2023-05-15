@@ -100,11 +100,17 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                                   ),
                                 ),
                                 Gaps.h5,
-                                FaIcon(
-                                  FontAwesomeIcons.solidCircleCheck,
-                                  size: Sizes.size16,
-                                  color: Colors.blue.shade500,
-                                )
+                                data.hasAvatar
+                                    ? FaIcon(
+                                        FontAwesomeIcons.solidCircleCheck,
+                                        size: Sizes.size16,
+                                        color: Colors.blue.shade500,
+                                      )
+                                    : FaIcon(
+                                        FontAwesomeIcons.solidCircleCheck,
+                                        size: Sizes.size16,
+                                        color: Colors.red.shade500,
+                                      )
                               ],
                             ),
                             Gaps.v24,
