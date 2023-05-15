@@ -9,7 +9,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/image/image_screen.dart';
+import 'package:tiktok_clone/features/image/views/image_screen.dart';
 import 'package:tiktok_clone/features/videos/views/video_preview_screen.dart';
 import 'package:tiktok_clone/features/videos/views/widgets/flash_button.dart';
 
@@ -271,10 +271,10 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
                       )
                     ],
                   )
-                : Column(
+                : const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const [
+                    children: [
                       Text(
                         "Initializing...",
                         style: TextStyle(
