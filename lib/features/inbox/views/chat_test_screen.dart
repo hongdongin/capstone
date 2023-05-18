@@ -23,8 +23,7 @@ class _ChatTestScreenState extends ConsumerState<ChatTestScreen> {
 
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  Future<void> sendMessage(
-      String chatRoomId, String isMe, String message) async {
+  Future<void> sendMessage(String chatRoomId, bool isMe, String message) async {
     await FirebaseFirestore.instance
         .collection('chat_rooms')
         .doc(chatRoomId)
@@ -72,16 +71,47 @@ class _ChatTestScreenState extends ConsumerState<ChatTestScreen> {
                     Map<String, dynamic> data =
                         document.data() as Map<String, dynamic>;
                     return Column(
+                      crossAxisAlignment: data['isMe'] == true
+                          ? CrossAxisAlignment.end
+                          : CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 10, horizontal: 10),
-                          child: ListTile(
-                            title: Text(data['message']),
-                            subtitle: Text(data['isMe'].toString()),
-                            tileColor: Colors.blue.shade100,
-                          ),
-                        ),
+                        data['isMe'] == true
+                            ? Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 8.0),
+                                child: Container(
+                                  margin: const EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(15),
+                                  decoration: BoxDecoration(
+                                    color: Colors.blue.shade100,
+                                    borderRadius: const BorderRadius.only(
+                                      topLeft: Radius.circular(15),
+                                      bottomLeft: Radius.circular(15),
+                                      topRight: Radius.circular(15),
+                                      bottomRight: Radius.circular(0),
+                                    ),
+                                  ),
+                                  child: Text(data['message']),
+                                ),
+                              )
+                            : Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 8.0),
+                                child: Container(
+                                  margin: const EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(15),
+                                  decoration: BoxDecoration(
+                                    color: Colors.yellow.shade300,
+                                    borderRadius: const BorderRadius.only(
+                                      topLeft: Radius.circular(15),
+                                      bottomLeft: Radius.circular(0),
+                                      topRight: Radius.circular(15),
+                                      bottomRight: Radius.circular(15),
+                                    ),
+                                  ),
+                                  child: Text(data['message']),
+                                ),
+                              ),
                       ],
                     );
                   }).toList(),
@@ -104,8 +134,8 @@ class _ChatTestScreenState extends ConsumerState<ChatTestScreen> {
                   IconButton(
                     icon: const Icon(Icons.send),
                     onPressed: () {
-                      sendMessage(
-                          widget.chatRoomId, data.bio, _chatController.text);
+                      sendMessage(widget.chatRoomId,
+                          data.uid == widget.chatRoomId, _chatController.text);
                       _chatController.clear();
                     },
                   ),

@@ -79,9 +79,8 @@ class _InboxScreenState extends ConsumerState<InboxScreen> {
                           child: GestureDetector(
                             onTap: () => _onDmPressed(chatRoomId: data['uid']),
                             child: ListTile(
-                              title: Text(data['email'].toString()),
-                              subtitle: Text(data['bio'].toString()),
-                              tileColor: Colors.blue.shade100,
+                              title: Text(data['bio'].toString()),
+                              tileColor: Colors.green,
                             ),
                           ),
                         ),
