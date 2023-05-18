@@ -33,7 +33,6 @@ class UploadImageViewModel extends AsyncNotifier<void> {
               title: "From Flutter!",
               description: "Hell yeah!",
               fileUrl: await task.ref.getDownloadURL(),
-              thumbnailUrl: "",
               creatorUid: user.uid,
               likes: 0,
               comments: 0,
