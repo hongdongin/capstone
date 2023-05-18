@@ -24,8 +24,10 @@ class LoginViewModel extends AsyncNotifier<void> {
       () async => await _repository.signIn(email, password),
     );
     if (state.hasError) {
+      // ignore: use_build_context_synchronously
       showFirebaseErrorSnack(context, state.error);
     } else {
+      // ignore: use_build_context_synchronously
       context.go("/home");
     }
   }
