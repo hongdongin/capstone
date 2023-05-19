@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tiktok_clone/common/mode_config/mode_config.dart';
 import 'package:tiktok_clone/constants/breakpoints.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
@@ -71,8 +72,9 @@ class _DiscoverScreenState extends ConsumerState<DiscoverScreen> {
                     onChanged: _onSearchChanged,
                     onSubmitted: _onSearchSubmitted,
                     style: TextStyle(
-                        color:
-                            isDarkMode(context) ? Colors.white : Colors.black),
+                        color: isDarkMode(context) || modeConfig.autoMode
+                            ? Colors.white
+                            : Colors.black),
                   ),
                 ),
                 bottom: TabBar(
@@ -128,20 +130,17 @@ class _DiscoverScreenState extends ConsumerState<DiscoverScreen> {
                             ),
                           ),
                           Gaps.v10,
-                          const Expanded(
-                            child: Text(
-                              "This is a very long caption for my tiktok that im upload just now currently.",
-                              overflow: TextOverflow.ellipsis,
-                              maxLines: 2,
-                              style: TextStyle(
-                                fontSize: Sizes.size16 + Sizes.size2,
-                                fontWeight: FontWeight.bold,
-                                height: 1.1,
-                              ),
+                          const Text(
+                            "This is a very long caption for my tiktok that im upload just now currently.",
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 2,
+                            style: TextStyle(
+                              fontSize: Sizes.size16,
+                              fontWeight: FontWeight.bold,
+                              height: 1.1,
                             ),
                           ),
                           Gaps.v8,
-                          //if (constraints.maxWidth < 200 ||   constraints.maxWidth > 250)
                           DefaultTextStyle(
                             style: TextStyle(
                               color: isDarkMode(context)
@@ -151,11 +150,11 @@ class _DiscoverScreenState extends ConsumerState<DiscoverScreen> {
                             ),
                             child: Row(
                               children: [
-                                const CircleAvatar(
-                                  radius: 12,
-                                  backgroundImage: NetworkImage(
-                                    "https://p.kakaocdn.net/th/talkp/wl4bsCBor2/896IHydowqOQbAUgmxFOX0/josobb_110x110_c.jpg",
-                                  ),
+                                Avatar(
+                                  uid: data.uid,
+                                  name: data.name,
+                                  avatarSize: 12,
+                                  hasAvatar: data.hasAvatar,
                                 ),
                                 Gaps.h4,
                                 const Expanded(
