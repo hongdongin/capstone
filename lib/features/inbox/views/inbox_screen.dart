@@ -1,11 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:go_router/go_router.dart';
 import 'package:tiktok_clone/common/mode_config/mode_config.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/inbox/views/chat_test_screen.dart';
-import 'package:tiktok_clone/features/inbox/views/activity_screen.dart';
+import 'package:tiktok_clone/features/inbox/views/chat_page.dart';
+import 'package:tiktok_clone/features/meeting/create_meeting_page.dart';
 import 'package:tiktok_clone/features/users/view_models/users_view_model.dart';
 
 class InboxScreen extends ConsumerStatefulWidget {
@@ -16,21 +16,25 @@ class InboxScreen extends ConsumerStatefulWidget {
 }
 
 class _InboxScreenState extends ConsumerState<InboxScreen> {
+  final bool isNull = false;
   late final String chatRoomId;
 
   void _onDmPressed({required String chatRoomId}) {
     Navigator.push(
       context,
-      MaterialPageRoute(
-        builder: (context) => ChatTestScreen(
-          chatRoomId: chatRoomId,
-        ),
-      ),
+      MaterialPageRoute(builder: (context) => const CreateMeetingPage()),
     );
   }
 
-  void _onActivityTap() {
-    context.pushNamed(ActivityScreen.routeName);
+  void _onChatTap({required String chatRoomId}) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ChatPage(
+          meetingId: chatRoomId,
+        ),
+      ),
+    );
   }
 
   @override
@@ -46,7 +50,7 @@ class _InboxScreenState extends ConsumerState<InboxScreen> {
             appBar: AppBar(
               elevation: 1,
               shadowColor: modeConfig.autoMode ? Colors.white : Colors.black,
-              title: const Text('Inbox'),
+              title: const Text('모임'),
               actions: [
                 IconButton(
                   onPressed: () => _onDmPressed(chatRoomId: data.uid),
@@ -57,61 +61,36 @@ class _InboxScreenState extends ConsumerState<InboxScreen> {
                 )
               ],
             ),
-            body: ListView(
-              children: [
-                ListTile(
-                  onTap: _onActivityTap,
-                  title: const Text(
-                    'Activity',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: Sizes.size16,
-                    ),
-                  ),
-                  trailing: const FaIcon(
-                    FontAwesomeIcons.chevronRight,
-                    size: Sizes.size14,
-                    color: Colors.black,
-                  ),
-                ),
-                Container(
-                  height: Sizes.size1,
-                  color: Colors.grey.shade200,
-                ),
-                ListTile(
-                  leading: Container(
-                    width: Sizes.size52,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.blue,
-                    ),
-                    child: const Center(
-                      child: FaIcon(
-                        FontAwesomeIcons.users,
-                        color: Colors.white,
+            body: StreamBuilder<QuerySnapshot>(
+              stream:
+                  FirebaseFirestore.instance.collection('meetings').snapshots(),
+              builder: (context, snapshot) {
+                if (!snapshot.hasData) {
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+                return ListView.builder(
+                  itemCount: snapshot.data?.docs.length,
+                  itemBuilder: (context, index) {
+                    DocumentSnapshot document = snapshot.data!.docs[index];
+                    return GestureDetector(
+                      onTap: () => _onChatTap(chatRoomId: data.uid),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ListTile(
+                          title: Text(document['title']),
+                          subtitle: Text(document['description']),
+                          tileColor: Colors.green.shade200,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                  title: const Text(
-                    'New followers',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: Sizes.size16,
-                    ),
-                  ),
-                  subtitle: const Text(
-                    'Messages from followers will appear here.',
-                    style: TextStyle(
-                      fontSize: Sizes.size14,
-                    ),
-                  ),
-                  trailing: const FaIcon(
-                    FontAwesomeIcons.chevronRight,
-                    size: Sizes.size14,
-                    color: Colors.black,
-                  ),
-                )
-              ],
+                    );
+                  },
+                );
+              },
             ),
           ),
         );

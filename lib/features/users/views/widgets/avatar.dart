@@ -9,11 +9,13 @@ class Avatar extends ConsumerWidget {
   final bool hasAvatar;
   final String name;
   final String uid;
+  final double avatarSize;
 
   const Avatar({
     super.key,
     required this.uid,
     required this.name,
+    required this.avatarSize,
     required this.hasAvatar,
   });
 
@@ -37,8 +39,8 @@ class Avatar extends ConsumerWidget {
       onTap: isLoading ? null : () => _onAvatarTap(ref),
       child: isLoading
           ? Container(
-              width: 50,
-              height: 50,
+              width: avatarSize,
+              height: avatarSize,
               alignment: Alignment.center,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
@@ -46,7 +48,7 @@ class Avatar extends ConsumerWidget {
               child: const CircularProgressIndicator(),
             )
           : CircleAvatar(
-              radius: 50,
+              radius: avatarSize,
               foregroundImage: hasAvatar
                   ? NetworkImage(
                       "https://firebasestorage.googleapis.com/v0/b/capstone-bf0b4.appspot.com/o/avatars%2F$uid?alt=media&haha=${DateTime.now().toString()}")

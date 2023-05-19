@@ -99,21 +99,21 @@ class SettingsScreen extends ConsumerWidget {
             subtitle: const Text("I need to know!"),
           ),
           ListTile(
-            title: const Text("Log out (iOS / Bottom)"),
+            title: const Text("Log out  "),
             textColor: Colors.red,
             onTap: () {
               showCupertinoModalPopup(
                 context: context,
                 builder: (context) => CupertinoActionSheet(
-                  title: const Text("Are you sure?"),
-                  message: const Text("Please dooooont gooooo"),
+                  title: const Text("월요일 좋아?"),
+                  message: const Text("월요일 좋아"),
                   actions: [
                     CupertinoActionSheetAction(
                       isDefaultAction: true,
                       onPressed: () {
                         Navigator.of(context).pop();
                       },
-                      child: const Text("Not log out"),
+                      child: const Text("아니"),
                     ),
                     CupertinoActionSheetAction(
                       isDestructiveAction: true,
@@ -121,7 +121,7 @@ class SettingsScreen extends ConsumerWidget {
                         ref.read(authRepo).signOut(),
                         context.go("/"),
                       },
-                      child: const Text("Yes plz."),
+                      child: const Text("좋아"),
                     )
                   ],
                 ),
