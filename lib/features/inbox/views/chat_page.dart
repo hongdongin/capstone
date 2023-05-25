@@ -50,16 +50,16 @@ class ChatPageState extends State<ChatPage> {
             context: context,
             builder: (context) {
               return AlertDialog(
-                title: const Text('Send message'),
+                title: const Text('메시지 보내기'),
                 actions: <Widget>[
                   TextButton(
-                    child: const Text('Cancel'),
+                    child: const Text('취소'),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
                   ),
                   TextButton(
-                    child: const Text('Send'),
+                    child: const Text('보내기'),
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
                         _formKey.currentState?.save();
@@ -83,9 +83,9 @@ class ChatPageState extends State<ChatPage> {
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: TextFormField(
-                        decoration: const InputDecoration(labelText: 'Message'),
+                        decoration: const InputDecoration(labelText: '메시지'),
                         validator: (value) =>
-                            value!.isEmpty ? 'Please enter a message' : null,
+                            value!.isEmpty ? '메시지를 작성해 주세요.' : null,
                         onSaved: (value) => _message = value!,
                       ),
                     ),

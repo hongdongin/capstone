@@ -18,7 +18,7 @@ class CreateMeetingPageState extends ConsumerState<CreateMeetingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Create Meeting'),
+        title: const Text('모임 생성'),
       ),
       body: Form(
         key: _formKey,
@@ -27,21 +27,17 @@ class CreateMeetingPageState extends ConsumerState<CreateMeetingPage> {
           child: Column(
             children: <Widget>[
               TextFormField(
-                decoration: const InputDecoration(labelText: 'Meeting Title'),
-                validator: (value) =>
-                    value!.isEmpty ? 'Please enter a meeting title' : null,
+                decoration: const InputDecoration(labelText: '모임 이름'),
+                validator: (value) => value!.isEmpty ? '모임 이름을 작성해 주세요.' : null,
                 onSaved: (value) => _meetingTitle = value!,
               ),
               TextFormField(
-                decoration:
-                    const InputDecoration(labelText: 'Meeting Description'),
-                validator: (value) => value!.isEmpty
-                    ? 'Please enter a meeting description'
-                    : null,
+                decoration: const InputDecoration(labelText: '모임을 소개해 주세요.'),
+                validator: (value) => value!.isEmpty ? '소개 내용을 작성해 주세요.' : null,
                 onSaved: (value) => _meetingDescription = value!,
               ),
               TextButton(
-                child: const Text('Create Meeting'),
+                child: const Text('모임 생성'),
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();

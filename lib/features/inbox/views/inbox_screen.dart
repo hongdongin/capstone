@@ -75,7 +75,7 @@ class _InboxScreenState extends ConsumerState<InboxScreen> {
                   itemBuilder: (context, index) {
                     DocumentSnapshot document = snapshot.data!.docs[index];
                     return GestureDetector(
-                      onTap: () => _onChatTap(chatRoomId: data.uid),
+                      onTap: () => _onChatTap(chatRoomId: 'chat room'),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: ListTile(
