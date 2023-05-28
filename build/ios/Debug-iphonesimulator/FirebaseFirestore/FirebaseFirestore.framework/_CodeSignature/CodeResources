@@ -54,7 +54,7 @@
 		</data>
 		<key>Headers/FIRFirestoreSettings.h</key>
 		<data>
-		egZ/ZWExbrsnDHLDoB15l5UIYUY=
+		ctuSelq+agJfQoJxrNpx4OOieoQ=
 		</data>
 		<key>Headers/FIRFirestoreSource.h</key>
 		<data>
@@ -71,6 +71,10 @@
 		<key>Headers/FIRLoadBundleTask.h</key>
 		<data>
 		7rUk4RB70DUMdU5LkQ8RIrVm2Rg=
+		</data>
+		<key>Headers/FIRLocalCacheSettings.h</key>
+		<data>
+		utiSN96ikAE/9+hFCXNgi6PjMmM=
 		</data>
 		<key>Headers/FIRQuery.h</key>
 		<data>
@@ -102,15 +106,15 @@
 		</data>
 		<key>Headers/FirebaseFirestore-umbrella.h</key>
 		<data>
-		oF6ywiHLO+qx3Xo1wtzGXVZ/uJw=
+		5wEIEFI76vr54vj2JnWY5ftEmqo=
 		</data>
 		<key>Headers/FirebaseFirestore.h</key>
 		<data>
-		uN5wwQBOs1HpM9szmwdTx2J1BdU=
+		pM8eNV5j8KkATG8C9dORcmSEOkI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YUHryUoMhgGp1fIeJPvEH+Z4DSg=
+		MmaUQGNdveUQ99XC5EdWN4Uanwc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -207,7 +211,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ITb0agnMOR4rds8Kvgpp509p3QrB8xwMoWz1KvDt4bU=
+			Tyx6rgL9sDidkUzXyj/onu4CjG5Dx7sEWycyw9DthK8=
 			</data>
 		</dict>
 		<key>Headers/FIRFirestoreSource.h</key>
@@ -236,6 +240,13 @@
 			<key>hash2</key>
 			<data>
 			YsXzvgtEzrq/fDft8AN7x/xruNzVNlrdrQVlZBi7Cb0=
+			</data>
+		</dict>
+		<key>Headers/FIRLocalCacheSettings.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			t+2IeV8arUYSP5qQHiKIuruBcpLQmTDXKhyySsYqFZM=
 			</data>
 		</dict>
 		<key>Headers/FIRQuery.h</key>
@@ -291,14 +302,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			W0jIQQB3nqx9KHnMcy+PzSb2yzAu4nmiDg794sQViqM=
+			uJ3StYpbiWsB5dHlTc0v0A0diwKwEa5mnDhVN5+LHP8=
 			</data>
 		</dict>
 		<key>Headers/FirebaseFirestore.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RFMX4sT09cOwaYx3T3x4k7VsVIdTyBO9lY6aKNdmo7Q=
+			jEnZte+iRNA/W4vqOtu6xteEUm02xzQSg/SaZQZgVfw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
