@@ -80,6 +80,24 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "cloud_functions",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/cloud_functions-4.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "cloud_functions_platform_interface",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/cloud_functions_platform_interface-5.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "cloud_functions_web",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/cloud_functions_web-4.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "collection",
       "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/collection-1.17.1",
       "packageUri": "lib/",
@@ -614,7 +632,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-05-24T00:10:05.020701Z",
+  "generated": "2023-05-29T11:02:52.700622Z",
   "generator": "pub",
   "generatorVersion": "3.0.1"
 }
