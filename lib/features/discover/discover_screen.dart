@@ -236,13 +236,6 @@ class _DiscoverScreenState extends ConsumerState<DiscoverScreen> {
                             ),
                             child: Row(
                               children: [
-                                Avatar(
-                                  uid: data.uid,
-                                  name: data.name,
-                                  hasAvatar: data.hasAvatar,
-                                  avatarSize: 15,
-                                ),
-                                Gaps.h4,
                                 const Expanded(
                                   child: Text(
                                     "My avatar is going to be very long",
