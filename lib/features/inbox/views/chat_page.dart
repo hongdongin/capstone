@@ -7,8 +7,10 @@ import 'package:tiktok_clone/features/users/views/widgets/avatar.dart';
 
 class ChatPage extends ConsumerStatefulWidget {
   final String meetingId;
-
-  const ChatPage({super.key, required this.meetingId});
+  const ChatPage({
+    super.key,
+    required this.meetingId,
+  });
 
   @override
   ChatPageState createState() => ChatPageState();
@@ -29,7 +31,7 @@ class ChatPageState extends ConsumerState<ChatPage> {
           ),
           data: (data) => Scaffold(
             appBar: AppBar(
-              title: const Text('Chat'),
+              title: const Text('chat'),
             ),
             body: StreamBuilder<QuerySnapshot>(
               stream: FirebaseFirestore.instance
@@ -49,10 +51,11 @@ class ChatPageState extends ConsumerState<ChatPage> {
                     DocumentSnapshot document = snapshot.data!.docs[index];
                     return ListTile(
                       title: Text(document['text']),
+                      subtitle: Text(data.bio.toString()),
                       leading: Avatar(
                         uid: data.uid,
                         name: data.bio,
-                        avatarSize: Sizes.size10,
+                        avatarSize: Sizes.size24,
                         hasAvatar: data.hasAvatar,
                       ),
                     );
