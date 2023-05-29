@@ -35,7 +35,7 @@ class VideoPreviewScreenState extends ConsumerState<VideoPreviewScreen> {
     await _videoPlayerController.initialize();
     await _videoPlayerController.setLooping(true);
     await _videoPlayerController.setVolume(0);
-//     await _videoPlayerController.play();
+    await _videoPlayerController.play();
 
     setState(() {});
   }
@@ -99,7 +99,10 @@ class VideoPreviewScreenState extends ConsumerState<VideoPreviewScreen> {
         ],
       ),
       body: _videoPlayerController.value.isInitialized
-          ? VideoPlayer(_videoPlayerController)
+          ? AspectRatio(
+              aspectRatio: _videoPlayerController.value.aspectRatio,
+              child: VideoPlayer(_videoPlayerController),
+            )
           : null,
     );
   }
