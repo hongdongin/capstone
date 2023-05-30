@@ -31,8 +31,8 @@
         android:name="io.flutter.app.FlutterMultiDexApplication"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="tiktok_clone" >
+        android:icon="@mipmap/launcher_icon"
+        android:label="작은 일상" >
         <activity
             android:name="com.example.tiktok_clone.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
