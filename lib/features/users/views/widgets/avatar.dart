@@ -6,17 +6,17 @@ import 'package:image_picker/image_picker.dart';
 import 'package:tiktok_clone/features/users/view_models/avatar_view_model.dart';
 
 class Avatar extends ConsumerWidget {
-  final bool hasAvatar;
   final String name;
+  final bool hasAvatar;
   final String uid;
   final double avatarSize;
 
   const Avatar({
     super.key,
     required this.uid,
+    required this.hasAvatar,
     required this.name,
     required this.avatarSize,
-    required this.hasAvatar,
   });
 
   Future<void> _onAvatarTap(WidgetRef ref) async {
@@ -39,8 +39,8 @@ class Avatar extends ConsumerWidget {
       onTap: isLoading ? null : () => _onAvatarTap(ref),
       child: isLoading
           ? Container(
-              width: avatarSize,
-              height: avatarSize,
+              width: 50,
+              height: 50,
               alignment: Alignment.center,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
