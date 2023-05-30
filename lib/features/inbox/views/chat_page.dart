@@ -6,6 +6,9 @@ import 'package:tiktok_clone/features/users/view_models/users_view_model.dart';
 import 'package:tiktok_clone/features/users/views/widgets/avatar.dart';
 
 class ChatPage extends ConsumerStatefulWidget {
+  static const String routeName = "chats";
+  static const String routeUrl = "/chats";
+
   final String meetingId;
   const ChatPage({
     super.key,
