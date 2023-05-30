@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:tiktok_clone/features/authentication/login_screen.dart';
 import 'package:tiktok_clone/features/authentication/sign_up_screen.dart';
+import 'package:tiktok_clone/features/image/views/image_screen.dart';
 import 'package:tiktok_clone/features/inbox/views/chat_page.dart';
 import 'package:tiktok_clone/features/notifications/notifications_provider.dart';
 import 'package:tiktok_clone/features/onboarding/interests_screen.dart';
@@ -62,6 +63,11 @@ final routerProvider = Provider((ref) {
               meetingId: 'user',
             ),
             routes: const [],
+          ),
+          GoRoute(
+            name: ImageScreen.routeName,
+            path: ImageScreen.routeUrl,
+            builder: (context, state) => const ImageScreen(),
           ),
           GoRoute(
             path: VideoRecordingScreen.routeUrl,

@@ -11,7 +11,7 @@ class VideoTimelineScreen extends ConsumerStatefulWidget {
 }
 
 class VideoTimelineScreenState extends ConsumerState<VideoTimelineScreen> {
-  int _itemCount = 0;
+  int _itemCount = 3;
 
   final PageController _pageController = PageController();
 
@@ -31,10 +31,6 @@ class VideoTimelineScreenState extends ConsumerState<VideoTimelineScreen> {
 
   void _onVideoFinished() {
     return;
-    /* _pageController.nextPage(
-      duration: _scrollDuration,
-      curve: _scrollCurve,
-    ); */
   }
 
   @override

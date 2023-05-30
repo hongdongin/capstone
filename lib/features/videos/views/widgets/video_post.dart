@@ -52,28 +52,15 @@ class VideoPostState extends ConsumerState<VideoPost>
   void _initVideoPlayer() async {
     _videoPlayerController =
         VideoPlayerController.network(widget.videoData.fileUrl);
-    await _videoPlayerController.initialize(); // Future<void> -> await
-    // 반복 재생 설정 -> 영상 전환 없이 현재 영상에서 테스트할 게 있는 경우 활성화(영상 고정)
-    // await _videoPlayerController.setLooping(true);
-    // 웹 브라우저에서 애플리케이션이 실행된 경우
+    await _videoPlayerController.initialize();
     if (kIsWeb) {
-      // 음소거 부수 효과: 웹에서 영상 자동재생을 차단하려는 기본 설정으로 인해 발생하는 예외를 회피할 수 있다.
-      // _toggleMute(true);
       if (!mounted) return;
       ref.read(playbackConfigProvider.notifier).setMuted(true);
       await _videoPlayerController.setVolume(0); // 음소거 처리
     }
-    // 아래 코드들은 초기 설정에 불과하므로, 비디오 컨트롤러 초기화 여부와 무관하게 동기 처리 가능
-    // 초기화(화면 띄움)과 동시에 동영상 자동 재생
-    // _videoPlayerController.play();
-    // -> 단, 이 방식은 다음 영상으로 완전히 화면이 넘어가기 전에 이미 다음 영상이 재생돼,
-    //    스크롤 도중 이전 영상과 다음 영상이 동시 재생되는 현상 발생
-    //    (시뮬레이터 드래그로 두 영상 위젯 모두 화면에 걸쳐보면 보임)
-    // -> 화면이 완전히 넘어간 이후 재생하려면 VisibilityDetector() => onVisibilityChanged(info) {...}
-    // 동영상 컨트롤러 상황을 주시하는 콜백 실행 설정
     _videoPlayerController.addListener(_onVideoChange);
     _onPlaybackConfigChanged();
-    setState(() {}); // state 저장
+    setState(() {});
   }
 
   @override
@@ -102,9 +89,9 @@ class VideoPostState extends ConsumerState<VideoPost>
     final muted = ref.read(playbackConfigProvider).muted;
     ref.read(playbackConfigProvider.notifier).setMuted(!muted);
     if (muted) {
-      _videoPlayerController.setVolume(0);
-    } else {
       _videoPlayerController.setVolume(1);
+    } else {
+      _videoPlayerController.setVolume(0);
     }
   }
 
@@ -220,7 +207,7 @@ class VideoPostState extends ConsumerState<VideoPost>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "@${widget.videoData.creator}",
+                        "@${widget.videoData.id}",
                         style: const TextStyle(
                           fontSize: Sizes.size20,
                           color: Colors.white,
