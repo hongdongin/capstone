@@ -7,10 +7,12 @@ import '../../../../constants/gaps.dart';
 class EventButton extends StatelessWidget {
   final IconData icon;
   final String text;
+  final Color? color;
   const EventButton({
     super.key,
     required this.icon,
     required this.text,
+    this.color,
   });
 
   @override
