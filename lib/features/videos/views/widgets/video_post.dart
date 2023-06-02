@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -207,7 +208,7 @@ class VideoPostState extends ConsumerState<VideoPost>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "@${widget.videoData.id}",
+                        "@${widget.videoData.creator}",
                         style: const TextStyle(
                           fontSize: Sizes.size20,
                           color: Colors.white,
@@ -225,34 +226,39 @@ class VideoPostState extends ConsumerState<VideoPost>
                     ],
                   ),
                 ),
-                Positioned(
-                  bottom: 20,
-                  right: 10,
-                  child: Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 25,
-                        backgroundColor: Colors.black,
-                        foregroundColor: Colors.white,
-                        child: Text(widget.videoData.creator),
-                      ),
-                      Gaps.v24,
-                      GestureDetector(
-                        onTap: () => _onLikeTap(),
-                        child: EventButton(
-                          icon: FontAwesomeIcons.solidHeart,
-                          text: widget.videoData.likes.toString(),
+                StreamBuilder(
+                  stream: FirebaseFirestore.instance
+                      .collection('videos')
+                      .snapshots(),
+                  builder: (context, snapshot) => Positioned(
+                    bottom: 20,
+                    right: 10,
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 25,
+                          backgroundColor: Colors.black,
+                          foregroundColor: Colors.white,
+                          child: Text(widget.videoData.creator),
                         ),
-                      ),
-                      Gaps.v24,
-                      GestureDetector(
-                        onTap: () => _onCommentsTap(context),
-                        child: EventButton(
-                          icon: FontAwesomeIcons.solidComment,
-                          text: widget.videoData.comments.toString(),
+                        Gaps.v24,
+                        GestureDetector(
+                          onTap: () => _onLikeTap(),
+                          child: EventButton(
+                            icon: FontAwesomeIcons.solidHeart,
+                            text: widget.videoData.likes.toString(),
+                          ),
                         ),
-                      ),
-                    ],
+                        Gaps.v24,
+                        GestureDetector(
+                          onTap: () => _onCommentsTap(context),
+                          child: EventButton(
+                            icon: FontAwesomeIcons.solidComment,
+                            text: widget.videoData.comments.toString(),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
