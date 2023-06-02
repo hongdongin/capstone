@@ -29,10 +29,10 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
     );
   }
 
-  void _onEditPressed({required String bio, required String link}) =>
+  void _onEditPressed({required String creator, required String link}) =>
       Navigator.of(context).push(
         UpdateProfile.route(
-          bio: bio,
+          creator: creator,
           link: link,
         ),
       );
@@ -104,12 +104,12 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                       SliverAppBar(
                         centerTitle: true,
                         title: Text(
-                          data.bio,
+                          data.creator,
                         ),
                         actions: [
                           IconButton(
                             onPressed: () => _onEditPressed(
-                              bio: data.bio,
+                              creator: data.creator,
                               link: data.link,
                             ),
                             icon: const Icon(
@@ -139,7 +139,7 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "@${data.bio}",
+                                  "@${data.creator}",
                                   style: const TextStyle(
                                     fontWeight: FontWeight.w600,
                                     fontSize: Sizes.size18,
@@ -165,7 +165,7 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                                 horizontal: Sizes.size32,
                               ),
                               child: Text(
-                                data.bio,
+                                data.creator,
                                 textAlign: TextAlign.center,
                               ),
                             ),

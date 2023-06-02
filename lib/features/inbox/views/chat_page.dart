@@ -54,10 +54,10 @@ class ChatPageState extends ConsumerState<ChatPage> {
                     DocumentSnapshot document = snapshot.data!.docs[index];
                     return ListTile(
                       title: Text(document['text']),
-                      subtitle: Text(data.bio.toString()),
+                      subtitle: Text(data.creator.toString()),
                       leading: Avatar(
                         uid: data.uid,
-                        name: data.bio,
+                        name: data.creator,
                         avatarSize: Sizes.size24,
                         hasAvatar: data.hasAvatar,
                       ),

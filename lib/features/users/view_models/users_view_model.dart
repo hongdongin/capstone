@@ -41,7 +41,6 @@ class UserViewModel extends AsyncNotifier<UserProfileModel> {
     state = const AsyncValue.loading();
     final profile = UserProfileModel(
       hasAvatar: false,
-      bio: "update impormation",
       link: "update link",
       email: credential.user!.email ?? "signup plz",
       name: credential.user!.displayName ?? "update name",
@@ -60,12 +59,12 @@ class UserViewModel extends AsyncNotifier<UserProfileModel> {
   }
 
   Future<void> updateProfile({
-    required String bio,
+    required String name,
     required String link,
   }) async {
     final uid = _authenticationRepository.user!.uid;
-    state = AsyncValue.data(state.value!.copyWith(bio: bio, link: link));
-    await _userRepository.updateUser(uid, {"bio": bio, "link": link});
+    state = AsyncValue.data(state.value!.copyWith(creator: name, link: link));
+    await _userRepository.updateUser(uid, {"creator": name, "link": link});
   }
 }
 
