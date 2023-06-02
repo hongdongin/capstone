@@ -90,7 +90,7 @@ class EmailScreenState extends ConsumerState<EmailScreen> {
             children: [
               Gaps.v40,
               Text(
-                "당신의 이메일을 작성하세요, ${widget.username}?",
+                "당신의 이메일을 작성하세요. ${widget.username}",
                 style: const TextStyle(
                   fontSize: Sizes.size24,
                   fontWeight: FontWeight.w700,

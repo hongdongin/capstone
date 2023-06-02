@@ -26,36 +26,34 @@ class SettingsScreen extends ConsumerWidget {
               onChanged: (value) {
                 modeConfig.toggleAutoMode();
               },
-              title: const Text("Dark mode"),
-              subtitle: const Text("Videos will be muted by default."),
+              title: const Text("시스템 모드 변경"),
+              subtitle: const Text("화면을 반전 시킵니다."),
             ),
           ),
           SwitchListTile.adaptive(
             value: ref.watch(playbackConfigProvider).muted,
             onChanged: (value) =>
                 ref.read(playbackConfigProvider.notifier).setMuted(value),
-            title: const Text("Mute video"),
-            subtitle: const Text("Video will be muted by default."),
+            title: const Text("동영상 소리 끄기"),
+            subtitle: const Text("동영상 소리는 꺼진 것이 기본 상태입니다."),
           ),
           SwitchListTile.adaptive(
             value: ref.watch(playbackConfigProvider).autoplay,
             onChanged: (value) =>
                 ref.read(playbackConfigProvider.notifier).setAutoplay(value),
-            title: const Text("Autoplay"),
-            subtitle: const Text("Video will start playing automatically."),
+            title: const Text("자동재생"),
+            subtitle: const Text("동영상이 자동으로 실행됩니다."),
           ),
           SwitchListTile.adaptive(
             value: false,
             onChanged: (value) {},
-            title: const Text("Enable notifications"),
-            subtitle: const Text("They will be cute."),
+            title: const Text("알림 설정"),
           ),
           CheckboxListTile(
             activeColor: Colors.black,
             value: false,
             onChanged: (value) {},
-            title: const Text("Marketing emails"),
-            subtitle: const Text("We won't spam you."),
+            title: const Text("마케팅 허용"),
           ),
           ListTile(
             onTap: () async {
@@ -95,25 +93,23 @@ class SettingsScreen extends ConsumerWidget {
                 print(booking);
               }
             },
-            title: const Text("What is your birthday?"),
-            subtitle: const Text("I need to know!"),
+            title: const Text("일정을 추가하세요."),
           ),
           ListTile(
-            title: const Text("Log out  "),
+            title: const Text("로그아웃"),
             textColor: Colors.red,
             onTap: () {
               showCupertinoModalPopup(
                 context: context,
                 builder: (context) => CupertinoActionSheet(
-                  title: const Text("월요일 좋아?"),
-                  message: const Text("월요일 좋아"),
+                  title: const Text("로그아웃 하시겠습니까?"),
                   actions: [
                     CupertinoActionSheetAction(
                       isDefaultAction: true,
                       onPressed: () {
                         Navigator.of(context).pop();
                       },
-                      child: const Text("아니"),
+                      child: const Text("아니오."),
                     ),
                     CupertinoActionSheetAction(
                       isDestructiveAction: true,
@@ -121,7 +117,7 @@ class SettingsScreen extends ConsumerWidget {
                         ref.read(authRepo).signOut(),
                         context.go("/"),
                       },
-                      child: const Text("좋아"),
+                      child: const Text("로그아웃."),
                     )
                   ],
                 ),
@@ -130,7 +126,7 @@ class SettingsScreen extends ConsumerWidget {
           ),
           const AboutListTile(
             applicationVersion: "1.0",
-            applicationLegalese: "Don't copy me.",
+            applicationLegalese: "캡스톤 발표.",
           ),
         ],
       ),

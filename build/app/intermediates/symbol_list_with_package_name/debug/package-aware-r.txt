@@ -265,6 +265,7 @@ layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 mipmap ic_launcher
+mipmap launcher_icon
 raw firebase_common_keep
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
@@ -298,6 +299,7 @@ string exo_download_removing
 string fallback_menu_item_copy_link
 string fallback_menu_item_open_in_browser
 string fallback_menu_item_share_link
+string fcm_fallback_notification_channel_label
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id

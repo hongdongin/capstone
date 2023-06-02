@@ -5,15 +5,15 @@ import 'package:tiktok_clone/features/users/view_models/users_view_model.dart';
 class UpdateProfile extends ConsumerStatefulWidget {
   const UpdateProfile({
     super.key,
-    required this.bio,
+    required this.creator,
     required this.link,
   });
-  final String bio;
+  final String creator;
   final String link;
-  static Route route({required String bio, required String link}) =>
+  static Route route({required String creator, required String link}) =>
       MaterialPageRoute(
         builder: (context) => UpdateProfile(
-          bio: bio,
+          creator: creator,
           link: link,
         ),
       );
@@ -23,7 +23,7 @@ class UpdateProfile extends ConsumerStatefulWidget {
 
 class _UpdateProfileState extends ConsumerState<UpdateProfile> {
   late final TextEditingController _bioController =
-      TextEditingController(text: widget.bio);
+      TextEditingController(text: widget.creator);
   late final TextEditingController _linkController =
       TextEditingController(text: widget.link);
   @override
@@ -35,7 +35,7 @@ class _UpdateProfileState extends ConsumerState<UpdateProfile> {
 
   void _onUpdateProfilePressed() async {
     await ref.read(usersProvider.notifier).updateProfile(
-          bio: _bioController.text,
+          name: _bioController.text,
           link: _linkController.text,
         );
     if (!mounted) return;
@@ -45,7 +45,7 @@ class _UpdateProfileState extends ConsumerState<UpdateProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Update Profile")),
+      appBar: AppBar(title: const Text("프로필 수정")),
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.only(
@@ -66,7 +66,7 @@ class _UpdateProfileState extends ConsumerState<UpdateProfile> {
                 maxLines: null,
                 keyboardType: TextInputType.multiline,
                 decoration: const InputDecoration(
-                  labelText: "Bio",
+                  labelText: "닉네임",
                   floatingLabelBehavior: FloatingLabelBehavior.always,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -85,7 +85,7 @@ class _UpdateProfileState extends ConsumerState<UpdateProfile> {
                 keyboardType: TextInputType.emailAddress,
                 autocorrect: false,
                 decoration: const InputDecoration(
-                  labelText: "Link",
+                  labelText: "연락처",
                   floatingLabelBehavior: FloatingLabelBehavior.always,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -112,7 +112,7 @@ class _UpdateProfileState extends ConsumerState<UpdateProfile> {
                     color: Theme.of(context).primaryColor,
                   ),
                   child: Text(
-                    "Update profile",
+                    "프로필 수정",
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.onPrimary,
                     ),

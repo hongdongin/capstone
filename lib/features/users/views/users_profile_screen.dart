@@ -29,13 +29,58 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
     );
   }
 
-  void _onEditPressed({required String bio, required String link}) =>
+  void _onEditPressed({required String creator, required String link}) =>
       Navigator.of(context).push(
         UpdateProfile.route(
-          bio: bio,
+          creator: creator,
           link: link,
         ),
       );
+
+  final List<Map<String, dynamic>> gridMap = [
+    {
+      "title": "white sneaker with adidas logo",
+      "price": "\$255",
+      "images":
+          "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80",
+    },
+    {
+      "title": "Black Jeans with blue stripes",
+      "price": "\$245",
+      "images":
+          "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    },
+    {
+      "title": "Red shoes with black stripes",
+      "price": "\$155",
+      "images":
+          "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2hvZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    },
+    {
+      "title": "Gamma shoes with beta brand.",
+      "price": "\$275",
+      "images":
+          "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    },
+    {
+      "title": "Alpha t-shirt for alpha testers.",
+      "price": "\$25",
+      "images":
+          "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    },
+    {
+      "title": "Beta jeans for beta testers",
+      "price": "\$27",
+      "images":
+          "https://images.unsplash.com/photo-1602293589930-45aad59ba3ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    },
+    {
+      "title": "V&V  model white t shirts.",
+      "price": "\$55",
+      "images":
+          "https://images.unsplash.com/photo-1554568218-0f1715e72254?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    }
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -59,12 +104,12 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                       SliverAppBar(
                         centerTitle: true,
                         title: Text(
-                          data.bio,
+                          data.creator,
                         ),
                         actions: [
                           IconButton(
                             onPressed: () => _onEditPressed(
-                              bio: data.bio,
+                              creator: data.creator,
                               link: data.link,
                             ),
                             icon: const Icon(
@@ -94,7 +139,7 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "@${data.bio}, ${data.hasAvatar}",
+                                  "@${data.creator}",
                                   style: const TextStyle(
                                     fontWeight: FontWeight.w600,
                                     fontSize: Sizes.size18,
@@ -115,118 +160,12 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                               ],
                             ),
                             Gaps.v24,
-                            SizedBox(
-                              height: Sizes.size48,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Column(
-                                    children: [
-                                      const Text(
-                                        "97",
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: Sizes.size18,
-                                        ),
-                                      ),
-                                      Gaps.v1,
-                                      Expanded(
-                                        child: Text(
-                                          "팔로잉",
-                                          style: TextStyle(
-                                            color: Colors.grey.shade500,
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                  VerticalDivider(
-                                    width: Sizes.size32,
-                                    thickness: Sizes.size1,
-                                    color: Colors.grey.shade400,
-                                    indent: Sizes.size14,
-                                    endIndent: Sizes.size14,
-                                  ),
-                                  Column(
-                                    children: [
-                                      const Text(
-                                        "10M",
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: Sizes.size18,
-                                        ),
-                                      ),
-                                      Gaps.v1,
-                                      Expanded(
-                                        child: Text(
-                                          "팔로워",
-                                          style: TextStyle(
-                                            color: Colors.grey.shade500,
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                  VerticalDivider(
-                                    width: Sizes.size32,
-                                    thickness: Sizes.size1,
-                                    color: Colors.grey.shade400,
-                                    indent: Sizes.size14,
-                                    endIndent: Sizes.size14,
-                                  ),
-                                  Column(
-                                    children: [
-                                      const Text(
-                                        "194.3M",
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: Sizes.size18,
-                                        ),
-                                      ),
-                                      Gaps.v1,
-                                      Expanded(
-                                        child: Text(
-                                          "좋아요",
-                                          style: TextStyle(
-                                            color: Colors.grey.shade500,
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                            Gaps.v14,
-                            FractionallySizedBox(
-                              widthFactor: 0.33,
-                              child: Container(
-                                padding: const EdgeInsets.symmetric(
-                                  vertical: Sizes.size12,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: Theme.of(context).primaryColor,
-                                  borderRadius: const BorderRadius.all(
-                                    Radius.circular(Sizes.size4),
-                                  ),
-                                ),
-                                child: const Text(
-                                  '팔로우',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                            ),
-                            Gaps.v14,
                             Padding(
                               padding: const EdgeInsets.symmetric(
                                 horizontal: Sizes.size32,
                               ),
                               child: Text(
-                                data.bio,
+                                data.creator,
                                 textAlign: TextAlign.center,
                               ),
                             ),
@@ -264,7 +203,7 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                     child: TabBarView(
                       children: [
                         GridView.builder(
-                          itemCount: 20,
+                          itemCount: 7,
                           padding: EdgeInsets.zero,
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
@@ -273,18 +212,13 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                             mainAxisSpacing: Sizes.size2,
                             childAspectRatio: 9 / 14,
                           ),
-                          itemBuilder: (context, index) => Column(
-                            children: [
-                              AspectRatio(
-                                aspectRatio: 9 / 14,
-                                child: FadeInImage.assetNetwork(
-                                  fit: BoxFit.cover,
-                                  placeholder: "assets/images/placeholder.jpg",
-                                  image:
-                                      "https://images.unsplash.com/photo-1554486840-db3a33d9318e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
-                                ),
-                              ),
-                            ],
+                          itemBuilder: (context, index) => AspectRatio(
+                            aspectRatio: 9 / 14,
+                            child: FadeInImage.assetNetwork(
+                              fit: BoxFit.cover,
+                              placeholder: "assets/images/placeholder.jpg",
+                              image: "${gridMap.elementAt(index)['images']}",
+                            ),
                           ),
                         ),
                         const Center(

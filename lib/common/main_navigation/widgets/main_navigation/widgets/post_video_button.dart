@@ -14,53 +14,21 @@ class PostVideoButton extends StatelessWidget {
     return Stack(
       clipBehavior: Clip.none,
       children: [
-        Positioned(
-          right: 20,
-          child: Container(
-            height: 30,
-            width: 25,
-            padding: const EdgeInsets.symmetric(
-              horizontal: Sizes.size8,
-            ),
-            decoration: BoxDecoration(
-              color: const Color(0xff61D4F0),
-              borderRadius: BorderRadius.circular(
-                Sizes.size8,
-              ),
-            ),
-          ),
-        ),
-        Positioned(
-          left: 20,
-          child: Container(
-            height: 30,
-            width: 25,
-            padding: const EdgeInsets.symmetric(
-              horizontal: Sizes.size8,
-            ),
-            decoration: BoxDecoration(
-              color: Theme.of(context).primaryColor,
-              borderRadius: BorderRadius.circular(
-                Sizes.size8,
-              ),
-            ),
-          ),
-        ),
         Container(
-          height: 30,
+          height: 50,
           padding: const EdgeInsets.symmetric(
             horizontal: Sizes.size12,
           ),
           decoration: BoxDecoration(
-            color: !inverted ? Colors.white : Colors.black,
+            color: !inverted ? Colors.white : Colors.green.shade500,
             borderRadius: BorderRadius.circular(
               Sizes.size6,
             ),
           ),
           child: Center(
             child: FaIcon(
-              FontAwesomeIcons.plus,
-              color: !inverted ? Colors.black : Colors.white,
+              FontAwesomeIcons.mugSaucer,
+              color: !inverted ? Colors.green.shade500 : Colors.white,
               size: 18,
             ),
           ),

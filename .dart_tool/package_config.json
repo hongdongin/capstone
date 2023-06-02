@@ -8,6 +8,18 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "archive",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/archive-3.3.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "args",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/args-2.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "async",
       "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/async-2.11.0",
       "packageUri": "lib/",
@@ -56,6 +68,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "checked_yaml",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/checked_yaml-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "cli_util",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/cli_util-0.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "clock",
       "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/clock-1.1.1",
       "packageUri": "lib/",
@@ -80,8 +104,32 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "cloud_functions",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/cloud_functions-4.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "cloud_functions_platform_interface",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/cloud_functions_platform_interface-5.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "cloud_functions_web",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/cloud_functions_web-4.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "collection",
       "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/collection-1.17.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "convert",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/convert-3.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -164,6 +212,24 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "firebase_messaging",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/firebase_messaging-14.6.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_messaging_platform_interface",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/firebase_messaging_platform_interface-4.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_messaging_web",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/firebase_messaging_web-3.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "firebase_storage",
       "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/firebase_storage-11.1.2",
       "packageUri": "lib/",
@@ -186,6 +252,12 @@
       "rootUri": "file:///Users/gimjeonghun/Documents/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "flutter_launcher_icons",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.13.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
     },
     {
       "name": "flutter_lints",
@@ -266,6 +338,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "image",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/image-4.0.17",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
       "name": "image_picker",
       "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/image_picker-0.8.6+1",
       "packageUri": "lib/",
@@ -304,6 +382,12 @@
     {
       "name": "js",
       "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/js-0.6.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "json_annotation",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/json_annotation-4.8.1",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
@@ -416,6 +500,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "petitparser",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/petitparser-5.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "platform",
       "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/platform-3.1.0",
       "packageUri": "lib/",
@@ -426,6 +516,12 @@
       "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "pointycastle",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/pointycastle-3.7.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
     },
     {
       "name": "process",
@@ -608,13 +704,25 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "xml",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/xml-6.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "yaml",
+      "rootUri": "file:///Users/gimjeonghun/.pub-cache/hosted/pub.dev/yaml-3.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "tiktok_clone",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-05-24T00:10:05.020701Z",
+  "generated": "2023-05-30T08:32:55.963551Z",
   "generator": "pub",
-  "generatorVersion": "3.0.1"
+  "generatorVersion": "3.0.2"
 }
