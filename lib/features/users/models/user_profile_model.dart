@@ -1,7 +1,6 @@
 class UserProfileModel {
   final String uid;
   final String name;
-  final String bio;
   final String link;
   final String birthday;
   final bool hasAvatar;
@@ -14,7 +13,6 @@ class UserProfileModel {
     required this.email,
     required this.uid,
     required this.name,
-    required this.bio,
     required this.link,
     required this.birthday,
   });
@@ -24,7 +22,6 @@ class UserProfileModel {
         uid = 'update uid',
         email = 'http:// update email',
         name = 'update name',
-        bio = 'update bio',
         link = 'update link',
         birthday = 'update birthday',
         creator = 'update creator';
@@ -33,7 +30,6 @@ class UserProfileModel {
       : uid = json["uid"] ?? '',
         email = json["email"] ?? '',
         name = json["name"] ?? '',
-        bio = json["bio"],
         creator = json["creator"],
         birthday = json["birthday"],
         hasAvatar = json["hasAvatar"] ?? false,
@@ -44,7 +40,6 @@ class UserProfileModel {
       "uid": uid,
       "email": email,
       "name": name,
-      "bio": bio,
       "link": link,
       "birthday": birthday,
       "creator": creator,
@@ -66,7 +61,6 @@ class UserProfileModel {
       uid: uid ?? this.uid,
       email: email ?? this.email,
       name: name ?? this.name,
-      bio: bio ?? this.bio,
       link: link ?? this.link,
       birthday: birthday ?? this.birthday,
       creator: creator ?? this.creator,

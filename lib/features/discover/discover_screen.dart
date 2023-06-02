@@ -146,7 +146,7 @@ class _DiscoverScreenState extends ConsumerState<DiscoverScreen> {
                   GridView.builder(
                     keyboardDismissBehavior:
                         ScrollViewKeyboardDismissBehavior.onDrag,
-                    itemCount: 20,
+                    itemCount: 7,
                     padding: const EdgeInsets.all(
                       Sizes.size10,
                     ),
