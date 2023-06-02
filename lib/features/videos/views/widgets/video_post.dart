@@ -240,7 +240,6 @@ class VideoPostState extends ConsumerState<VideoPost>
                       GestureDetector(
                         onTap: () => _onLikeTap(),
                         child: EventButton(
-                          color: like.isLikeVideo ? Colors.red : Colors.white,
                           icon: FontAwesomeIcons.solidHeart,
                           text: widget.videoData.likes.toString(),
                         ),
