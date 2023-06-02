@@ -45,7 +45,7 @@ class _UpdateProfileState extends ConsumerState<UpdateProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Update Profile")),
+      appBar: AppBar(title: const Text("프로필 수정")),
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.only(
@@ -66,7 +66,7 @@ class _UpdateProfileState extends ConsumerState<UpdateProfile> {
                 maxLines: null,
                 keyboardType: TextInputType.multiline,
                 decoration: const InputDecoration(
-                  labelText: "Bio",
+                  labelText: "닉네임",
                   floatingLabelBehavior: FloatingLabelBehavior.always,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -85,7 +85,7 @@ class _UpdateProfileState extends ConsumerState<UpdateProfile> {
                 keyboardType: TextInputType.emailAddress,
                 autocorrect: false,
                 decoration: const InputDecoration(
-                  labelText: "Link",
+                  labelText: "연락처",
                   floatingLabelBehavior: FloatingLabelBehavior.always,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -112,7 +112,7 @@ class _UpdateProfileState extends ConsumerState<UpdateProfile> {
                     color: Theme.of(context).primaryColor,
                   ),
                   child: Text(
-                    "Update profile",
+                    "프로필 수정",
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.onPrimary,
                     ),
