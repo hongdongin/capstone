@@ -112,10 +112,10 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
               ),
               Gaps.h24,
               NavTab(
-                text: "채팅",
+                text: "모임",
                 isSelected: _selectedIndex == 3,
-                icon: FontAwesomeIcons.message,
-                selectedIcon: FontAwesomeIcons.solidMessage,
+                icon: FontAwesomeIcons.userGroup,
+                selectedIcon: FontAwesomeIcons.userGroup,
                 onTap: () => _onTap(3),
                 selectedIndex: _selectedIndex,
               ),
