@@ -53,7 +53,7 @@ class Avatar extends ConsumerWidget {
                   ? NetworkImage(
                       "https://firebasestorage.googleapis.com/v0/b/capstone-bf0b4.appspot.com/o/avatars%2F$uid?alt=media&haha=${DateTime.now().toString()}")
                   : null,
-              child: Text(name),
+              child: hasAvatar ? null : Text(name),
             ),
     );
   }

@@ -63,7 +63,7 @@ class _LoginFormScreenState extends ConsumerState<LoginFormScreen> {
                 ),
                 validator: (value) {
                   if (value != null && value.isEmpty) {
-                    return "Plase write your email";
+                    return "이메일을 작성해 주새요.";
                   }
                   return null;
                 },
@@ -77,7 +77,7 @@ class _LoginFormScreenState extends ConsumerState<LoginFormScreen> {
               TextFormField(
                 obscureText: true,
                 decoration: InputDecoration(
-                  hintText: '패스워드',
+                  hintText: '비밀번호',
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colors.grey.shade400,
@@ -91,7 +91,7 @@ class _LoginFormScreenState extends ConsumerState<LoginFormScreen> {
                 ),
                 validator: (value) {
                   if (value != null && value.isEmpty) {
-                    return "Plase write your password";
+                    return "비밀번호를 작성해 주세요.";
                   }
                   return null;
                 },
