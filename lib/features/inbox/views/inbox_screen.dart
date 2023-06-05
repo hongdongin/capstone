@@ -55,7 +55,7 @@ class _InboxScreenState extends ConsumerState<InboxScreen> {
                 IconButton(
                   onPressed: () => _onDmPressed(chatRoomId: data.uid),
                   icon: const FaIcon(
-                    FontAwesomeIcons.paperPlane,
+                    FontAwesomeIcons.plus,
                     size: Sizes.size20,
                   ),
                 )

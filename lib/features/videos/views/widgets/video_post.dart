@@ -6,6 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 import 'package:tiktok_clone/features/authentication/repos/authentication_repo.dart';
+import 'package:tiktok_clone/features/users/views/widgets/avatar.dart';
 import 'package:tiktok_clone/features/videos/models/video_model.dart';
 import 'package:tiktok_clone/features/videos/view_models/playback_config_vm.dart';
 import 'package:tiktok_clone/features/videos/view_models/video_post_view_models.dart';
@@ -176,7 +177,7 @@ class VideoPostState extends ConsumerState<VideoPost>
                           );
                         },
                         child: AnimatedOpacity(
-                          opacity: _isPaused ? 0 : 1,
+                          opacity: _isPaused ? 1 : 0,
                           duration: _animationDuration,
                           child: const FaIcon(
                             FontAwesomeIcons.play,
@@ -235,12 +236,14 @@ class VideoPostState extends ConsumerState<VideoPost>
                     right: 10,
                     child: Column(
                       children: [
-                        CircleAvatar(
-                          radius: 25,
-                          backgroundColor: Colors.black,
-                          foregroundColor: Colors.white,
-                          child: Text(widget.videoData.creator),
-                        ),
+                        const CircleAvatar(
+                            backgroundColor: Colors.black,
+                            foregroundColor: Colors.white,
+                            child: Avatar(
+                                uid: "nau5EUHZHHe0StwNLTxjxxLR6cq2",
+                                hasAvatar: true,
+                                name: "name",
+                                avatarSize: 25)),
                         Gaps.v24,
                         GestureDetector(
                           onTap: () => _onLikeTap(),
