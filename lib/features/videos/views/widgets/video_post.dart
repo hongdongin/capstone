@@ -99,14 +99,14 @@ class VideoPostState extends ConsumerState<VideoPost>
 
   void _onVisibilityChanged(VisibilityInfo info) {
     if (!mounted) return;
-    if (info.visibleFraction == 1 &&
+    if (info.visibleFraction == 0 &&
         !_isPaused &&
         !_videoPlayerController.value.isPlaying) {
       if (ref.read(playbackConfigProvider).autoplay) {
         _videoPlayerController.play();
       }
     }
-    if (_videoPlayerController.value.isPlaying && info.visibleFraction == 0) {
+    if (_videoPlayerController.value.isPlaying && info.visibleFraction == 1) {
       _onTogglePause();
     }
   }
@@ -177,7 +177,7 @@ class VideoPostState extends ConsumerState<VideoPost>
                           );
                         },
                         child: AnimatedOpacity(
-                          opacity: _isPaused ? 1 : 0,
+                          opacity: _isPaused ? 0 : 1,
                           duration: _animationDuration,
                           child: const FaIcon(
                             FontAwesomeIcons.play,
@@ -237,13 +237,14 @@ class VideoPostState extends ConsumerState<VideoPost>
                     child: Column(
                       children: [
                         const CircleAvatar(
-                            backgroundColor: Colors.black,
-                            foregroundColor: Colors.white,
-                            child: Avatar(
-                                uid: "nau5EUHZHHe0StwNLTxjxxLR6cq2",
-                                hasAvatar: true,
-                                name: "name",
-                                avatarSize: 25)),
+                          backgroundColor: Colors.black,
+                          foregroundColor: Colors.white,
+                          child: Avatar(
+                              uid: "nau5EUHZHHe0StwNLTxjxxLR6cq2",
+                              hasAvatar: true,
+                              name: "name",
+                              avatarSize: 25),
+                        ),
                         Gaps.v24,
                         GestureDetector(
                           onTap: () => _onLikeTap(),
