@@ -26,16 +26,18 @@ class _VideoCommentsState extends ConsumerState<VideoComments> {
     Navigator.of(context).pop();
   }
 
-  void _stopWriting() {
+  void _stopWriting(String uid) {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState?.save();
       // Send the message to Firebase
       FirebaseFirestore.instance.collection("comments").add({
         'text': _message,
         'timestamp': DateTime.now(),
+        'avtar':
+            "https://firebasestorage.googleapis.com/v0/b/capstone-bf0b4.appspot.com/o/avatars%2F$uid?alt=media&haha=${DateTime.now().toString()}"
       });
-      Navigator.of(context).pop();
     }
+
     FocusScope.of(context).unfocus();
 
     setState(() {
@@ -80,7 +82,7 @@ class _VideoCommentsState extends ConsumerState<VideoComments> {
                 ],
               ),
               body: GestureDetector(
-                onTap: _stopWriting,
+                onTap: () => _stopWriting(data.uid),
                 child: Stack(
                   children: [
                     Scrollbar(
@@ -116,9 +118,6 @@ class _VideoCommentsState extends ConsumerState<VideoComments> {
                                         fontSize: Sizes.size14,
                                         color: Colors.grey.shade500),
                                   ),
-                                  Gaps.v3,
-                                  const Text(
-                                      "That's not it l've seen the same thing but also in a cave,")
                                 ],
                               ),
                             ),
@@ -129,13 +128,6 @@ class _VideoCommentsState extends ConsumerState<VideoComments> {
                                   FontAwesomeIcons.heart,
                                   size: Sizes.size20,
                                   color: Colors.grey.shade500,
-                                ),
-                                Gaps.v2,
-                                Text(
-                                  '52.2K',
-                                  style: TextStyle(
-                                    color: Colors.grey.shade500,
-                                  ),
                                 ),
                               ],
                             ),
@@ -222,7 +214,8 @@ class _VideoCommentsState extends ConsumerState<VideoComments> {
                                                 Gaps.h14,
                                                 if (_isWriting)
                                                   GestureDetector(
-                                                    onTap: _stopWriting,
+                                                    onTap: () =>
+                                                        _stopWriting(data.uid),
                                                     child: FaIcon(
                                                       FontAwesomeIcons
                                                           .circleArrowUp,
