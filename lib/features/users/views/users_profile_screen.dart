@@ -186,7 +186,6 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                                 ),
                               ],
                             ),
-                            Gaps.v20,
                           ],
                         ),
                       ),

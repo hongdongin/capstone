@@ -6,6 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 import 'package:tiktok_clone/features/authentication/repos/authentication_repo.dart';
+import 'package:tiktok_clone/features/users/views/widgets/avatar.dart';
 import 'package:tiktok_clone/features/videos/models/video_model.dart';
 import 'package:tiktok_clone/features/videos/view_models/playback_config_vm.dart';
 import 'package:tiktok_clone/features/videos/view_models/video_post_view_models.dart';
@@ -98,14 +99,14 @@ class VideoPostState extends ConsumerState<VideoPost>
 
   void _onVisibilityChanged(VisibilityInfo info) {
     if (!mounted) return;
-    if (info.visibleFraction == 1 &&
+    if (info.visibleFraction == 0 &&
         !_isPaused &&
         !_videoPlayerController.value.isPlaying) {
       if (ref.read(playbackConfigProvider).autoplay) {
         _videoPlayerController.play();
       }
     }
-    if (_videoPlayerController.value.isPlaying && info.visibleFraction == 0) {
+    if (_videoPlayerController.value.isPlaying && info.visibleFraction == 1) {
       _onTogglePause();
     }
   }
@@ -235,11 +236,14 @@ class VideoPostState extends ConsumerState<VideoPost>
                     right: 10,
                     child: Column(
                       children: [
-                        CircleAvatar(
-                          radius: 25,
+                        const CircleAvatar(
                           backgroundColor: Colors.black,
                           foregroundColor: Colors.white,
-                          child: Text(widget.videoData.creator),
+                          child: Avatar(
+                              uid: "nau5EUHZHHe0StwNLTxjxxLR6cq2",
+                              hasAvatar: true,
+                              name: "name",
+                              avatarSize: 25),
                         ),
                         Gaps.v24,
                         GestureDetector(

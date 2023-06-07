@@ -94,6 +94,8 @@ class ChatPageState extends ConsumerState<ChatPage> {
                                   .add({
                                 'text': _message,
                                 'timestamp': DateTime.now(),
+                                'avtar':
+                                    "https://firebasestorage.googleapis.com/v0/b/capstone-bf0b4.appspot.com/o/avatars%2F$data.uid?alt=media&haha=${DateTime.now().toString()}"
                               });
                               Navigator.of(context).pop();
                             }
